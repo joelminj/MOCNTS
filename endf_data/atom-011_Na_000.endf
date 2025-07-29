@@ -1,0 +1,114 @@
+ ENDF/B-VIII.1                                                         0  0
+ 11000.0000 22.7923002         -1          0          0          01100 1451
+ 0.0        0.0                 0          0          0          61100 1451
+ 0.0        1.0000E+11          1          0          6          81100 1451
+ 0.0        0.0                 0          0         75          21100 1451
+ 11-Na-  0 NDS,IAEA   Eval-Aug23 D.E.Cullen                       1100 1451
+ NDS-IAEA-224         DIST-AUG24 REV1-NOV23            20240830   1100 1451
+---- ENDF/B-VIII.1    MATERIAL 1100         REVISION 1            1100 1451
+----- ATOMIC RELAXATION DATA                                      1100 1451
+------ ENDF-6                                                     1100 1451
+==================================================================1100 1451
+The Livermore Evaluated Atomic Data Library (EADL) in the         1100 1451
+ENDF-6 Format. Translated from the Livermore ENDL format          1100 1451
+to the ENDF-6 Format.                                             1100 1451
+==================================================================1100 1451
+  Contents                                                        1100 1451
+==================================================================1100 1451
+  MF/MT    Description                                            1100 1451
+==================================================================1100 1451
+  28/533   Atomic Relaxation Data for Electrons and Photons       1100 1451
+==================================================================1100 1451
+  Warning                                                         1100 1451
+==================================================================1100 1451
+  MF/MT combinations used to define ALL electron interaction data 1100 1451
+  are newly defined MF/MT numbers for ENDF/B-VI that did not exist1100 1451
+  in earlier versions of ENDF/B.                                  1100 1451
+==================================================================1100 1451
+  Definition of Data                                              1100 1451
+==================================================================1100 1451
+  Atomic Relaxation Data for Electrons and Photons                1100 1451
+==================================================================1100 1451
+1) An atom can be ionized by a photon or an electron interaction. 1100 1451
+2) The atomic relaxation data included here describes how a       1100 1451
+   singly ionized atom returns to neutrality, by emitting photons 1100 1451
+   (x-rays) and/or electrons (Auger, Coster-Kronig).              1100 1451
+3) Data is given to define the transition probabilities between   1100 1451
+   subshells for radiative (x-ray emission) and non-radiative     1100 1451
+   (Auger, Coster-Kronig) transitions.                            1100 1451
+4) The complete spectrum of emitted photons and electrons can be  1100 1451
+   calculated using the data included here, e.g., see ref. 2,     1100 1451
+   below, for am example of a computer code that analytically     1100 1451
+   calculates these spectra.                                      1100 1451
+==================================================================1100 1451
+  References                                                      1100 1451
+==================================================================1100 1451
+1) S.T. Perkins, D.E. Cullen, etal., "Tables and Graphs of Atomic 1100 1451
+   Subshell and Relaxation Data Derived from the LLNL Evaluated   1100 1451
+   Atomic Data Library (EADL), Z = 1 - 100", UCRL-50400, Vol. 30, 1100 1451
+   Lawrence Livermore National Laboratory (1991).                 1100 1451
+2) D.E. Cullen "Program RELAX: A Code Designed to Calculate X-Ray 1100 1451
+   and Electron Emission Spectra as Singly Charged Atoms Relax    1100 1451
+   Back to Neutrality", UCRL-ID-110438, Lawrence Livermore        1100 1451
+   National Laboratory (1992).                                    1100 1451
+3) D.E. Cullen "A Survey of Atomic Binding Energies for use       1100 1451
+   in EPICS2017" ,IAEA-NDS-224, (2017), Nuclear Data Section,     1100 1451
+   IAEA, Vienna, Austria                                          1100 1451
+4) D.E. Cullen,"EPICS2017: April 2019 Status Report",             1100 1451
+   IAEA-NDS-228, April 2019, Nuclear Data Section,                1100 1451
+   IAEA, Vienna, Austria.                                         1100 1451
+5) D.E. Cullen,"EPICS2023: August 2023 Status Report",            1100 1451
+   IAEA-NDS-242, August 2023, Nuclear Data Section,               1100 1451
+   IAEA, Vienna, Austria.                                         1100 1451
+                                                                  1100 1451
+  These are the primary references to the contents of this library1100 1451
+  and they contain a complete list of references to the sources   1100 1451
+  of data used in this library, methods of evaluation, accuracy   1100 1451
+  of the data, etc.                                               1100 1451
+==================================================================1100 1451
+  History                                                         1100 1451
+==================================================================1100 1451
+ (1) November, 1991 - Initial release in the ENDL format.         1100 1451
+ (2) November, 2001 - Initial release in the ENDF-6 format.       1100 1451
+ (3) September,2014 - Insure Standard C, C++, FORTRAN Format      1100 1451
+ (4) September,2014 - Updated based on recently publshed data     1100 1451
+ (5) September,2017 - New Binding Energies (see: ref.3)           1100 1451
+                      Same Transition Probabilities               1100 1451
+ (6) August,   2023 - Reformatted, but data same as 2017 version  1100 1451
+==================================================================1100 1451
+ ***************** Program FIXUP (Version 2023-2) ****************1100 1451
+ **************** Program DICTIN (VERSION 2023-1) ****************1100 1451
+                                1        451         81          01100 1451
+                               28        533         26          01100 1451
+                                                                  1100 1  0
+                                                                  1100 0  0
+ 11000.0000 22.7923002          0          0          5          0110028533
+ 1.00000000 0.0                 0          0         72         11110028533
+ 1075.00000 2.00000000 0.0        0.0        0.0        0.0       110028533
+ 3.00000000 0.0        1027.58000 .006689960 0.0        0.0       110028533
+ 4.00000000 0.0        1027.78000 .013295900 0.0        0.0       110028533
+ 2.00000000 2.00000000 935.040000 .087055200 0.0        0.0       110028533
+ 2.00000000 3.00000000 963.100000 .089002100 0.0        0.0       110028533
+ 2.00000000 4.00000000 963.300000 .175052000 0.0        0.0       110028533
+ 2.00000000 5.00000000 994.370000 .005738250 0.0        0.0       110028533
+ 3.00000000 3.00000000 991.160000 .014629600 0.0        0.0       110028533
+ 3.00000000 4.00000000 991.360000 .382369000 0.0        0.0       110028533
+ 3.00000000 5.00000000 1022.43000 .002699320 0.0        0.0       110028533
+ 4.00000000 4.00000000 991.560000 .218165000 0.0        0.0       110028533
+ 4.00000000 5.00000000 1022.63000 .005304070 0.0        0.0       110028533
+ 2.00000000 0.0                 0          0         30          4110028533
+ 66.0000000 2.00000000 0.0        0.0        0.0        0.0       110028533
+ 3.00000000 0.0        28.0600000 3.80328D-5 0.0        0.0       110028533
+ 4.00000000 0.0        28.2600000 7.79865D-5 0.0        0.0       110028533
+ 3.00000000 5.00000000 22.9100000 .334898000 0.0        0.0       110028533
+ 4.00000000 5.00000000 23.1100000 .664986000 0.0        0.0       110028533
+ 3.00000000 0.0                 0          0          6          0110028533
+ 34.0000000 2.00000000 0.0        0.0        0.0        0.0       110028533
+ 4.00000000 0.0                 0          0          6          0110028533
+ 34.0000000 4.00000000 0.0        0.0        0.0        0.0       110028533
+ 5.00000000 0.0                 0          0          6          0110028533
+ 5.14000000 1.00000000 0.0        0.0        0.0        0.0       110028533
+                                                                  110028  0
+                                                                  1100 0  0
+                                                                     0 0  0
+                                                                    -1 0  0

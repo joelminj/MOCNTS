@@ -1,0 +1,105 @@
+ ENDF/B-VIII.1                                                         0  0
+ 9000.00000 18.8351893         -1          0          0          0 900 1451
+ 0.0        0.0                 0          0          0          6 900 1451
+ 0.0        1.0000E+11          1          0          6          8 900 1451
+ 0.0        0.0                 0          0         75          2 900 1451
+  9-F -  0 NDS,IAEA   Eval-Aug23 D.E.Cullen                        900 1451
+ NDS-IAEA-224         DIST-AUG24 REV1-NOV23            20240830    900 1451
+---- ENDF/B-VIII.1    MATERIAL  900         REVISION 1             900 1451
+----- ATOMIC RELAXATION DATA                                       900 1451
+------ ENDF-6                                                      900 1451
+================================================================== 900 1451
+The Livermore Evaluated Atomic Data Library (EADL) in the          900 1451
+ENDF-6 Format. Translated from the Livermore ENDL format           900 1451
+to the ENDF-6 Format.                                              900 1451
+================================================================== 900 1451
+  Contents                                                         900 1451
+================================================================== 900 1451
+  MF/MT    Description                                             900 1451
+================================================================== 900 1451
+  28/533   Atomic Relaxation Data for Electrons and Photons        900 1451
+================================================================== 900 1451
+  Warning                                                          900 1451
+================================================================== 900 1451
+  MF/MT combinations used to define ALL electron interaction data  900 1451
+  are newly defined MF/MT numbers for ENDF/B-VI that did not exist 900 1451
+  in earlier versions of ENDF/B.                                   900 1451
+================================================================== 900 1451
+  Definition of Data                                               900 1451
+================================================================== 900 1451
+  Atomic Relaxation Data for Electrons and Photons                 900 1451
+================================================================== 900 1451
+1) An atom can be ionized by a photon or an electron interaction.  900 1451
+2) The atomic relaxation data included here describes how a        900 1451
+   singly ionized atom returns to neutrality, by emitting photons  900 1451
+   (x-rays) and/or electrons (Auger, Coster-Kronig).               900 1451
+3) Data is given to define the transition probabilities between    900 1451
+   subshells for radiative (x-ray emission) and non-radiative      900 1451
+   (Auger, Coster-Kronig) transitions.                             900 1451
+4) The complete spectrum of emitted photons and electrons can be   900 1451
+   calculated using the data included here, e.g., see ref. 2,      900 1451
+   below, for am example of a computer code that analytically      900 1451
+   calculates these spectra.                                       900 1451
+================================================================== 900 1451
+  References                                                       900 1451
+================================================================== 900 1451
+1) S.T. Perkins, D.E. Cullen, etal., "Tables and Graphs of Atomic  900 1451
+   Subshell and Relaxation Data Derived from the LLNL Evaluated    900 1451
+   Atomic Data Library (EADL), Z = 1 - 100", UCRL-50400, Vol. 30,  900 1451
+   Lawrence Livermore National Laboratory (1991).                  900 1451
+2) D.E. Cullen "Program RELAX: A Code Designed to Calculate X-Ray  900 1451
+   and Electron Emission Spectra as Singly Charged Atoms Relax     900 1451
+   Back to Neutrality", UCRL-ID-110438, Lawrence Livermore         900 1451
+   National Laboratory (1992).                                     900 1451
+3) D.E. Cullen "A Survey of Atomic Binding Energies for use        900 1451
+   in EPICS2017" ,IAEA-NDS-224, (2017), Nuclear Data Section,      900 1451
+   IAEA, Vienna, Austria                                           900 1451
+4) D.E. Cullen,"EPICS2017: April 2019 Status Report",              900 1451
+   IAEA-NDS-228, April 2019, Nuclear Data Section,                 900 1451
+   IAEA, Vienna, Austria.                                          900 1451
+5) D.E. Cullen,"EPICS2023: August 2023 Status Report",             900 1451
+   IAEA-NDS-242, August 2023, Nuclear Data Section,                900 1451
+   IAEA, Vienna, Austria.                                          900 1451
+                                                                   900 1451
+  These are the primary references to the contents of this library 900 1451
+  and they contain a complete list of references to the sources    900 1451
+  of data used in this library, methods of evaluation, accuracy    900 1451
+  of the data, etc.                                                900 1451
+================================================================== 900 1451
+  History                                                          900 1451
+================================================================== 900 1451
+ (1) November, 1991 - Initial release in the ENDL format.          900 1451
+ (2) November, 2001 - Initial release in the ENDF-6 format.        900 1451
+ (3) September,2014 - Insure Standard C, C++, FORTRAN Format       900 1451
+ (4) September,2014 - Updated based on recently publshed data      900 1451
+ (5) September,2017 - New Binding Energies (see: ref.3)            900 1451
+                      Same Transition Probabilities                900 1451
+ (6) August,   2023 - Reformatted, but data same as 2017 version   900 1451
+================================================================== 900 1451
+ ***************** Program FIXUP (Version 2023-2) **************** 900 1451
+ **************** Program DICTIN (VERSION 2023-1) **************** 900 1451
+                                1        451         81          0 900 1451
+                               28        533         17          0 900 1451
+                                                                   900 1  0
+                                                                   900 0  0
+ 9000.00000 18.8351893          0          0          4          0 90028533
+ 1.00000000 0.0                 0          0         54          8 90028533
+ 694.000000 2.00000000 0.0        0.0        0.0        0.0        90028533
+ 3.00000000 0.0        671.320000 .003068410 0.0        0.0        90028533
+ 4.00000000 0.0        671.390000 .006107430 0.0        0.0        90028533
+ 2.00000000 2.00000000 616.510000 .125970000 0.0        0.0        90028533
+ 2.00000000 3.00000000 635.390000 .103000000 0.0        0.0        90028533
+ 2.00000000 4.00000000 635.460000 .203651000 0.0        0.0        90028533
+ 3.00000000 3.00000000 654.270000 .013090300 0.0        0.0        90028533
+ 3.00000000 4.00000000 654.340000 .346901000 0.0        0.0        90028533
+ 4.00000000 4.00000000 654.410000 .198211000 0.0        0.0        90028533
+ 2.00000000 0.0                 0          0          6          0 90028533
+ 37.8500000 2.00000000 0.0        0.0        0.0        0.0        90028533
+ 3.00000000 0.0                 0          0          6          0 90028533
+ 17.4200000 1.67000000 0.0        0.0        0.0        0.0        90028533
+ 4.00000000 0.0                 0          0          6          0 90028533
+ 17.4200000 3.33000000 0.0        0.0        0.0        0.0        90028533
+                                                                   90028  0
+                                                                   900 0  0
+                                                                     0 0  0
+                                                                    -1 0  0

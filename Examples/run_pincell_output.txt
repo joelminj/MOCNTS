@@ -1,0 +1,634 @@
+julia> include("examples/run_pincell.jl")
+Starting MOCNTS Pincell Benchmark...
+Step 1: Processing nuclear data (using dummy data for now)...
+Step 2: Flattening geometry...
+Geometry flattening complete. Found 2 FSRs.
+FSR count: 2
+FSR 1: MOCNTS.GeometryTracer.FlattenedGeometry.FSR(1, MOCNTS.GeometryTracer.Primitives.RegionIntersection(MOCNTS.GeometryTracer.Primitives.Region[MOCNTS.GeometryTracer.Primitives.Halfspace(MOCNTS.GeometryTracer.Primitives.ZCylinder(0.0, 0.0, 0.41), -1), MOCNTS.GeometryTracer.Primitives.RegionIntersection(MOCNTS.GeometryTracer.Primitives.Region[MOCNTS.GeometryTracer.Primitives.Halfspace(MOCNTS.GeometryTracer.Primitives.XPlane(-0.63), 1), MOCNTS.GeometryTracer.Primitives.Halfspace(MOCNTS.GeometryTracer.Primitives.XPlane(0.63), -1), MOCNTS.GeometryTracer.Primitives.Halfspace(MOCNTS.GeometryTracer.Primitives.YPlane(-0.63), 1), MOCNTS.GeometryTracer.Primitives.Halfspace(MOCNTS.GeometryTracer.Primitives.YPlane(0.63), -1)])]), 101), Volume: 1.059498274931556
+FSR 2: MOCNTS.GeometryTracer.FlattenedGeometry.FSR(2, MOCNTS.GeometryTracer.Primitives.RegionIntersection(MOCNTS.GeometryTracer.Primitives.Region[MOCNTS.GeometryTracer.Primitives.Halfspace(MOCNTS.GeometryTracer.Primitives.XPlane(-0.63), 1), MOCNTS.GeometryTracer.Primitives.Halfspace(MOCNTS.GeometryTracer.Primitives.XPlane(0.63), -1), MOCNTS.GeometryTracer.Primitives.Halfspace(MOCNTS.GeometryTracer.Primitives.YPlane(-0.63), 1), MOCNTS.GeometryTracer.Primitives.Halfspace(MOCNTS.GeometryTracer.Primitives.YPlane(0.63), -1)]), 102), Volume: 0.5281017250684441
+Step 3: Generating tracks...
+Using bounding box: (-0.64, -0.64, 0.64, 0.64)
+Step 4: Starting MOC solver...
+Number of tracks generated: 80000
+Sample track starting points and angles:
+Track 1: p₀ = (-0.59, -0.59), ϕ = 0.01227184630308513
+Track 2: p₀ = (-0.59, -0.54), ϕ = 0.01227184630308513
+Track 3: p₀ = (-0.59, -0.49), ϕ = 0.01227184630308513
+Track 4: p₀ = (-0.59, -0.44), ϕ = 0.01227184630308513
+Track 5: p₀ = (-0.59, -0.39), ϕ = 0.01227184630308513
+Initializing MOC solver...
+Starting power iterations...
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=1.572424852853407
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=1.572424852853407
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=1.572424852853407
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=1.572424852853407
+[DIAG] update_keff! called. Iteration likely early or unstable.
+[DIAG] FSR 1, Group 1: macro_nu_fission_xs=0.0007460934597681379, macro_absorption_xs=0.023305368817929946, flux_times_volume=20.409611375142347
+[DIAG] FSR 1, Group 2: macro_nu_fission_xs=0.0002131695599337537, macro_absorption_xs=0.012989304182036187, flux_times_volume=20.36025019118774
+[DIAG] FSR 2, Group 1: macro_nu_fission_xs=0.0, macro_absorption_xs=0.012327270225028851, flux_times_volume=419.149609631767
+[DIAG] FSR 2, Group 2: macro_nu_fission_xs=0.0, macro_absorption_xs=0.012327270225028851, flux_times_volume=419.0970385596785
+[DIAG] total_fission_production=0.01956766313679971, total_absorption=11.07341195096465
+Iteration: 1, k_eff = 0.001767, Flux Err = 1.10166994, k_eff Err = 564.90364795
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=1.0090578205224188
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=1.0090578205224188
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=1.0090419694644983
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=1.0090419694644983
+[DIAG] total_fission_production=0.012446219974291878, total_absorption=6.9939373159006895
+Iteration: 2, k_eff = 3.0e-6, Flux Err = 0.33154051, k_eff Err = 560.93264544
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.8445631402869166
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.8445631402869166
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.8401849551704673
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.8401849551704673
+[DIAG] total_fission_production=1.182712998670293, total_absorption=63.03606252833775
+Iteration: 3, k_eff = 0.0, Flux Err = 0.35599918, k_eff Err = 52.29785214
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.7290822078773629
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.7290822078773629
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.5775393934889018
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.5775393934889018
+[DIAG] total_fission_production=111.2692432098018, total_absorption=5437.74559046324
+Iteration: 4, k_eff = 0.0, Flux Err = 0.16875713, k_eff Err = 47.87015885
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6819330596403752
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6819330596403752
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4603379461453574
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4603379461453574
+[DIAG] total_fission_production=6918.4349651819375, total_absorption=337854.13029817794
+Iteration: 5, k_eff = 0.0, Flux Err = 0.05116566, k_eff Err = 47.83389553
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6676474844232843
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6676474844232843
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4248290505300347
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4248290505300347
+[DIAG] total_fission_production=359910.6382801488, total_absorption=1.75756557103041e7
+Iteration: 6, k_eff = 0.0, Flux Err = 0.01535665, k_eff Err = 47.83338763
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.663359641074387
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.663359641074387
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.41417169359364203
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.41417169359364203
+[DIAG] total_fission_production=1.7899034456767768e7, total_absorption=8.740703208601617e8
+Iteration: 7, k_eff = 0.0, Flux Err = 0.00460712, k_eff Err = 47.8333783
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6620732469052468
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6620732469052468
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.41097440175949834
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.41097440175949834
+[DIAG] total_fission_production=8.78808048923389e8, total_absorption=4.291516574506462e10
+Iteration: 8, k_eff = 0.0, Flux Err = 0.00138214, k_eff Err = 47.83337812
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6616873278301743
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6616873278301743
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4100152125374311
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4100152125374311
+[DIAG] total_fission_production=4.298457374286319e10, total_absorption=2.0990819426086436e12
+Iteration: 9, k_eff = 0.0, Flux Err = 0.00041464, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615715520908677
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615715520908677
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40972745573694824
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40972745573694824
+[DIAG] total_fission_production=2.1000987709248892e12, total_absorption=1.025549173549307e14
+Iteration: 10, k_eff = 0.0, Flux Err = 0.00012439, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615368193687452
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615368193687452
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40964112869611985
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40964112869611985
+[DIAG] total_fission_production=1.0256981390363475e14, total_absorption=5.008830505321963e15
+Iteration: 11, k_eff = 0.0, Flux Err = 3.732e-5, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615263995521091
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615263995521091
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40961523058386207
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40961523058386207
+[DIAG] total_fission_production=5.009048739960613e15, total_absorption=2.4460877110424726e17
+Iteration: 12, k_eff = 0.0, Flux Err = 1.12e-5, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615232736071212
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615232736071212
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096074611501862
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096074611501862
+[DIAG] total_fission_production=2.446119682446357e17, total_absorption=1.1945228736221383e19
+Iteration: 13, k_eff = 0.0, Flux Err = 3.36e-6, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615223358236217
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615223358236217
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960513032008156
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960513032008156
+[DIAG] total_fission_production=1.194527557437122e19, total_absorption=5.8332815878558994e20
+Iteration: 14, k_eff = 0.0, Flux Err = 1.01e-6, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661522054488572
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661522054488572
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096044310710503
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096044310710503
+[DIAG] total_fission_production=5.83328844965112e20, total_absorption=2.84859180503197e22
+Iteration: 15, k_eff = 0.0, Flux Err = 3.0e-7, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219700880576
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219700880576
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960422129634116
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960422129634116
+[DIAG] total_fission_production=2.8485928102858947e22, total_absorption=1.3910640979426785e24
+Iteration: 16, k_eff = 0.0, Flux Err = 9.0e-8, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219447679029
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219447679029
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041583639282
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041583639282
+[DIAG] total_fission_production=1.3910642452125042e24, total_absorption=6.793036626574358e25
+Iteration: 17, k_eff = 0.0, Flux Err = 3.0e-8, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219371718568
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219371718568
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041394842046
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041394842046
+[DIAG] total_fission_production=6.793036842324828e25, total_absorption=3.317269366558436e27
+Iteration: 18, k_eff = 0.0, Flux Err = 1.0e-8, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219348930442
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219348930442
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413382028826
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413382028826
+[DIAG] total_fission_production=3.317269398165944e27, total_absorption=1.6199347082285907e29
+Iteration: 19, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219342093971
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219342093971
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041321211113
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041321211113
+[DIAG] total_fission_production=1.619934712859097e29, total_absorption=7.910688435119707e30
+Iteration: 20, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219340043056
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219340043056
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413161135983
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413161135983
+[DIAG] total_fission_production=7.910688441903316e30, total_absorption=3.863056398165026e32
+Iteration: 21, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339427776
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339427776
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413145843405
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413145843405
+[DIAG] total_fission_production=3.8630563991588525e32, total_absorption=1.886460938114308e34
+Iteration: 22, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933924319
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933924319
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041314125562
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041314125562
+[DIAG] total_fission_production=1.8864609382598955e34, total_absorption=9.212226029318788e35
+Iteration: 23, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339187823
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339187823
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313987934
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313987934
+[DIAG] total_fission_production=9.212226029532114e35, total_absorption=4.49864116961279e37
+Iteration: 24, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339171194
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339171194
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139466334
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139466334
+[DIAG] total_fission_production=4.498641169644014e37, total_absorption=2.19683845231309e39
+Iteration: 25, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339166224
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339166224
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313934255
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313934255
+[DIAG] total_fission_production=2.196838452317667e39, total_absorption=1.0727904279490059e41
+Iteration: 26, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164727
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164727
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139305374
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139305374
+[DIAG] total_fission_production=1.0727904279496883e41, total_absorption=5.2387980603924755e42
+Iteration: 27, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164264
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164264
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139294144
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139294144
+[DIAG] total_fission_production=5.2387980603934355e42, total_absorption=2.5582820654011445e44
+Iteration: 28, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164136
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164136
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139290835
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139290835
+[DIAG] total_fission_production=2.558282065401295e44, total_absorption=1.249295554190917e46
+Iteration: 29, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164091
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164091
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289803
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289803
+[DIAG] total_fission_production=1.2492955541909332e46, total_absorption=6.10073221725219e47
+Iteration: 30, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164089
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164089
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928956
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928956
+[DIAG] total_fission_production=6.100732217252205e47, total_absorption=2.979193631303888e49
+Iteration: 31, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164087
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164087
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289475
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289475
+[DIAG] total_fission_production=2.9791936313039195e49, total_absorption=1.454840890688905e51
+Iteration: 32, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164065
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164065
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928933
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928933
+[DIAG] total_fission_production=1.454840890688906e51, total_absorption=7.104479530906267e52
+Iteration: 33, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164085
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164085
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928944
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928944
+[DIAG] total_fission_production=7.104479530906214e52, total_absorption=3.469357352278237e54
+Iteration: 34, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164091
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164091
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928948
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928948
+[DIAG] total_fission_production=3.4693573522782244e54, total_absorption=1.694204393924361e56
+Iteration: 35, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164083
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164083
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928943
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928943
+[DIAG] total_fission_production=1.6942043939243577e56, total_absorption=8.273372376897858e57
+Iteration: 36, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164095
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164095
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.409604131392895
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.409604131392895
+[DIAG] total_fission_production=8.273372376897878e57, total_absorption=4.040167215495525e59
+Iteration: 37, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916409
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916409
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928947
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928947
+[DIAG] total_fission_production=4.040167215495528e59, total_absorption=1.9729501327347717e61
+Iteration: 38, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164085
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164085
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289437
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289437
+[DIAG] total_fission_production=1.972950132734784e61, total_absorption=9.634581982965634e62
+Iteration: 39, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164069
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164069
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928935
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928935
+[DIAG] total_fission_production=9.634581982965594e62, total_absorption=4.704891849335163e64
+Iteration: 40, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164088
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164088
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928946
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928946
+[DIAG] total_fission_production=4.704891849335161e64, total_absorption=2.297557626587009e66
+Iteration: 41, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164085
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164085
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289437
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289437
+[DIAG] total_fission_production=2.2975576265870074e66, total_absorption=1.1219750031521033e68
+Iteration: 42, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916408
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916408
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289414
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289414
+[DIAG] total_fission_production=1.1219750031521114e68, total_absorption=5.478982956210515e69
+Iteration: 43, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164073
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164073
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928937
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928937
+[DIAG] total_fission_production=5.478982956210516e69, total_absorption=2.675572463745481e71
+Iteration: 44, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916408
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916408
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289414
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289414
+[DIAG] total_fission_production=2.6755724637454546e71, total_absorption=1.3065724179044068e73
+Iteration: 45, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164091
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164091
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928948
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928948
+[DIAG] total_fission_production=1.3065724179044099e73, total_absorption=6.3804344915361e74
+Iteration: 46, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164097
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164097
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289514
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289514
+[DIAG] total_fission_production=6.380434491536011e74, total_absorption=3.11578170049517e76
+Iteration: 47, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164089
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164089
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289464
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289464
+[DIAG] total_fission_production=3.115781700495223e76, total_absorption=1.5215414589741565e78
+Iteration: 48, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164083
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164083
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928943
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928943
+[DIAG] total_fission_production=1.5215414589741495e78, total_absorption=7.430200938047846e79
+Iteration: 49, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164079
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164079
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289403
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289403
+[DIAG] total_fission_production=7.430200938047872e79, total_absorption=3.6284181186222596e81
+Iteration: 50, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164095
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164095
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.409604131392895
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.409604131392895
+[DIAG] total_fission_production=3.628418118622266e81, total_absorption=1.7718791393823572e83
+Iteration: 51, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164075
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164075
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928938
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928938
+[DIAG] total_fission_production=1.7718791393823537e83, total_absorption=8.652684398374924e84
+Iteration: 52, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164096
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164096
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289503
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289503
+[DIAG] total_fission_production=8.652684398374937e84, total_absorption=4.225398089170938e86
+Iteration: 53, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164076
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164076
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289387
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289387
+[DIAG] total_fission_production=4.2253980891709275e86, total_absorption=2.0634046256584364e88
+Iteration: 54, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164083
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164083
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928943
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928943
+[DIAG] total_fission_production=2.0634046256584265e88, total_absorption=1.0076301828460433e90
+Iteration: 55, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164098
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164098
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928952
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928952
+[DIAG] total_fission_production=1.0076301828460542e90, total_absorption=4.920598571685237e91
+Iteration: 56, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164081
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164081
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928942
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928942
+[DIAG] total_fission_production=4.920598571685213e91, total_absorption=2.4028945059270696e93
+Iteration: 57, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164083
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164083
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928943
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928943
+[DIAG] total_fission_production=2.402894505927076e93, total_absorption=1.17341455973253e95
+Iteration: 58, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164091
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164091
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928948
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928948
+[DIAG] total_fission_production=1.1734145597325214e95, total_absorption=5.730179687855442e96
+Iteration: 59, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164092
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164092
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289487
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289487
+[DIAG] total_fission_production=5.730179687855492e96, total_absorption=2.7982403135168145e98
+Iteration: 60, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164078
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164078
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.409604131392894
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.409604131392894
+[DIAG] total_fission_production=2.7982403135168406e98, total_absorption=1.3664752728061767e100
+Iteration: 61, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164069
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164069
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928935
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928935
+[DIAG] total_fission_production=1.3664752728061658e100, total_absorption=6.672960367881803e101
+Iteration: 62, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164072
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164072
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289364
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289364
+[DIAG] total_fission_production=6.672960367881754e101, total_absorption=3.258631967769051e103
+Iteration: 63, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164089
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164089
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289464
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289464
+[DIAG] total_fission_production=3.258631967769069e103, total_absorption=1.5913000701272216e105
+Iteration: 64, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164072
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164072
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289364
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289364
+[DIAG] total_fission_production=1.5913000701272295e105, total_absorption=7.770855801554465e106
+Iteration: 65, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164065
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164065
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928932
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928932
+[DIAG] total_fission_production=7.770855801554304e106, total_absorption=3.7947713961782164e108
+Iteration: 66, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164101
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164101
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928955
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928955
+[DIAG] total_fission_production=3.79477139617824e108, total_absorption=1.8531150644144063e110
+Iteration: 67, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164087
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164087
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289453
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289453
+[DIAG] total_fission_production=1.853115064414407e110, total_absorption=9.049386862718723e111
+Iteration: 68, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164087
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164087
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289453
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289453
+[DIAG] total_fission_production=9.049386862718823e111, total_absorption=4.419121303567017e113
+Iteration: 69, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164067
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164067
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928933
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928933
+[DIAG] total_fission_production=4.419121303567018e113, total_absorption=2.158006215436864e115
+Iteration: 70, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164076
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164076
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289387
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289387
+[DIAG] total_fission_production=2.1580062154368463e115, total_absorption=1.0538273348833139e117
+Iteration: 71, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164086
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164086
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928945
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928945
+[DIAG] total_fission_production=1.0538273348833145e117, total_absorption=5.146194871002537e118
+Iteration: 72, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916409
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916409
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928947
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928947
+[DIAG] total_fission_production=5.146194871002558e118, total_absorption=2.5130607997813188e120
+Iteration: 73, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164069
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164069
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928935
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928935
+[DIAG] total_fission_production=2.5130607997813237e120, total_absorption=1.2272124825632952e122
+Iteration: 74, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916407
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916407
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289353
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289353
+[DIAG] total_fission_production=1.2272124825632863e122, total_absorption=5.992893118583565e123
+Iteration: 75, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164086
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164086
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928945
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928945
+[DIAG] total_fission_production=5.992893118583579e123, total_absorption=2.9265321564975356e125
+Iteration: 76, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164083
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164083
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928943
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928943
+[DIAG] total_fission_production=2.9265321564975326e125, total_absorption=1.429124513576899e127
+Iteration: 77, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164081
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164081
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928942
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928942
+[DIAG] total_fission_production=1.4291245135768947e127, total_absorption=6.978897774185889e128
+Iteration: 78, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164089
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164089
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289464
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289464
+[DIAG] total_fission_production=6.97889777418592e128, total_absorption=3.4080315381782467e130
+Iteration: 79, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164096
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164096
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289503
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289503
+[DIAG] total_fission_production=3.40803153817823e130, total_absorption=1.6642569272441253e132
+Iteration: 80, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164096
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164096
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289503
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289503
+[DIAG] total_fission_production=1.664256927244117e132, total_absorption=8.127128780506018e133
+Iteration: 81, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164101
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164101
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928955
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928955
+[DIAG] total_fission_production=8.127128780506029e133, total_absorption=3.9687515271036435e135
+Iteration: 82, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164089
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164089
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289464
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289464
+[DIAG] total_fission_production=3.9687515271036655e135, total_absorption=1.9380754395904717e137
+Iteration: 83, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164088
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164088
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928946
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928946
+[DIAG] total_fission_production=1.9380754395904895e137, total_absorption=9.464277075277131e138
+Iteration: 84, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164085
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164085
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289437
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289437
+[DIAG] total_fission_production=9.464277075277037e138, total_absorption=4.621726209818842e140
+Iteration: 85, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164085
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164085
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289437
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289437
+[DIAG] total_fission_production=4.621726209818847e140, total_absorption=2.2569450353820225e142
+Iteration: 86, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164071
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164071
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928936
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928936
+[DIAG] total_fission_production=2.256945035382045e142, total_absorption=1.1021425029275503e144
+Iteration: 87, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164065
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164065
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928932
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928932
+[DIAG] total_fission_production=1.1021425029275436e144, total_absorption=5.382134157971563e145
+Iteration: 88, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164085
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164085
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289437
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289437
+[DIAG] total_fission_production=5.382134157971569e145, total_absorption=2.6282779239036913e147
+Iteration: 89, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164079
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164079
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289403
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289403
+[DIAG] total_fission_production=2.628277923903717e147, total_absorption=1.283476896436744e149
+Iteration: 90, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164061
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164061
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928929
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928929
+[DIAG] total_fission_production=1.283476896436734e149, total_absorption=6.267651258281635e150
+Iteration: 91, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164089
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164089
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289464
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289464
+[DIAG] total_fission_production=6.267651258281563e150, total_absorption=3.060705837752119e152
+Iteration: 92, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164091
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164091
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928948
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928948
+[DIAG] total_fission_production=3.06070583775213e152, total_absorption=1.494646054671902e154
+Iteration: 93, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164087
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164087
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289453
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289453
+[DIAG] total_fission_production=1.4946460546719072e154, total_absorption=7.298861593268879e155
+Iteration: 94, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164078
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164078
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.409604131392894
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.409604131392894
+[DIAG] total_fission_production=7.298861593268877e155, total_absorption=3.5642806797753755e157
+Iteration: 95, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916409
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916409
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928947
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928947
+[DIAG] total_fission_production=3.5642806797753676e157, total_absorption=1.7405586613583619e159
+Iteration: 96, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916411
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916411
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.409604131392896
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.409604131392896
+[DIAG] total_fission_production=1.7405586613583556e159, total_absorption=8.499735923772722e160
+Iteration: 97, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916408
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.661521933916408
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289414
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289414
+[DIAG] total_fission_production=8.499735923772791e160, total_absorption=4.1507081822506305e162
+Iteration: 98, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164082
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164082
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289426
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.40960413139289426
+[DIAG] total_fission_production=4.15070818225061e162, total_absorption=2.0269310209998945e164
+Iteration: 99, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+[DIAG] Track 1, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164088
+[DIAG] Track 2, Segment 1, FSR 2, Group 1: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.6615219339164088
+[DIAG] Track 1, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928946
+[DIAG] Track 2, Segment 1, FSR 2, Group 2: macro_total_xs=1.2139018497526703, volume=0.5281017250684441, Q=0.4096041313928946
+[DIAG] total_fission_production=2.0269310209999035e164, total_absorption=9.898188895717537e165
+Iteration: 100, k_eff = 0.0, Flux Err = 0.0, k_eff Err = 47.83337811
+Warning: Solution did not converge after 100 iterations.
+Solver finished.
+
+--- 🏁 Final Results 🏁 ---
+Converged k_eff: 0.0
+Group 1 Flux (Fuel): 0.3188061970875237
+Group 2 Flux (Fuel): 5.57374509441743e-53
+Group 1 Flux (Mod):  0.6811938029124762
+Group 2 Flux (Mod):  4.0491873853795785e-52

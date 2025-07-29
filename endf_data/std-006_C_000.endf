@@ -1,0 +1,1778 @@
+ ENDF/B-VIII.1                                                         0  0
+ 6.000000+3 1.189800+1          0          0          0          0 600 1451
+ 0.000000+0 0.000000+0          0          0          0          6 600 1451
+ 1.000000+0 1.500000+8          1          0         19          8 600 1451
+ 0.000000+0 0.000000+0          0          0        371          4 600 1451
+  6-C -  0 LANL,ORNL  EVAL-JUN96 M.B.Chadwick, P.G.Young, C.Y. Fu  600 1451
+ CH96A,CH96b,Fu90,Ch99DIST-AUG24 REV1-NOV19            20240830    600 1451
+---- ENDF/B-VIII.1    MATERIAL  600         REVISION 1             600 1451
+----- NEUTRON STANDARDS DATA                                       600 1451
+------ ENDF-6                                                      600 1451
+                                                                   600 1451
+*************************************************************      600 1451
+                                                                   600 1451
+Carbon scattering, C(n,n), section of the ENDF/B-VII standards     600 1451
+sub-library submitted by A.D. Carlson, NIST, on 28 February 2006.  600 1451
+This evaluation is carried over directly from ENDF/B-VI.           600 1451
+This cross section is recommended as a standard below 1.8 MeV.     600 1451
+                                                                   600 1451
+*************************************************************      600 1451
+                                                                   600 1451
+ ENDF/B-VII  CONVERTED FROM ENDF/B-VI BY NNDC OCT 2004             600 1451
+                                                                   600 1451
+*************************************************************      600 1451
+                                                                   600 1451
+                                                                   600 1451
+ ENDF/B-VI MOD 3 Evaluation, June 1996, M.B. Chadwick and          600 1451
+           P.G. Young (LANL)                                       600 1451
+                                                                   600 1451
+ Los Alamos LA150 Library, produced with FKK/GNASH/GSCAN code      600 1451
+   in cooperation with ECN Petten.                                 600 1451
+                                                                   600 1451
+  This evaluation provides a complete representation of the        600 1451
+ nuclear data needed for transport, damage, heating, radioactivity 600 1451
+ and shielding applications over the incident neutron energy       600 1451
+ range from 1.0E-11 to 150 MeV.  The discussion here is divided    600 1451
+ into the region below and above 20 MeV.                           600 1451
+                                                                   600 1451
+ INCIDENT NEUTRON ENERGIES < 20 MeV                                600 1451
+   Below 20 MeV the evaluation is based completely on the ENDF/B-  600 1451
+ VI.1 (Release 1) evaluation by Fu [Fu90].  The following minor    600 1451
+ modifications were made to the ENDF/B-VI.1 evaluation:            600 1451
+                                                                   600 1451
+ 1.  The energy range from En = 20 MeV to 32 MeV was replaced by   600 1451
+ the LANL evaluation (described below);                            600 1451
+                                                                   600 1451
+ 2.  The elastic, nonelastic, and total cross sections from 19 to  600 1451
+ 20 MeV were varied to join smoothly with the higher energy        600 1451
+ values at 20 MeV.                                                 600 1451
+                                                                   600 1451
+ 3.  The new flag, LTT=3, is used in MF=4,MT=2 to indicate that    600 1451
+ Legendre polynomials are used below 20 MeV and probability        600 1451
+ tabulations at higher energies. A small discontinuity exists for  600 1451
+ MF=4,MT=2 at 20 MeV where the two different representations join. 600 1451
+ The higher energy evaluation utilizes a tabulation in order to    600 1451
+ overcome the inaccuracies caused by the ENDF-6 limitation of 20   600 1451
+ for the maximum number of Legendre coefficients.                  600 1451
+                                                                   600 1451
+ INCIDENT NEUTRON ENERGIES > 20 MeV (12C analysis)                 600 1451
+   The evaluation above 20 MeV utilizes MF=6, MT=5 to represent    600 1451
+ all reaction data.  Production cross sections and emission        600 1451
+ spectra are given for neutrons, protons, deuterons, alpha         600 1451
+ particles, gamma rays, and all residual nuclides produced (A>5)   600 1451
+ in the reaction chains. To summarize, the ENDF sections with      600 1451
+ non-zero data above En = 20 MeV are:                              600 1451
+                                                                   600 1451
+  MF=3 MT=  1  Total Cross Section                                 600 1451
+       MT=  2  Elastic Scattering Cross Section                    600 1451
+       MT=  3  Nonelastic Cross Section                            600 1451
+       MT=  5  Sum of Binary (n,n') and (n,x) Reactions            600 1451
+       MT=102  Radiative Capture Cross Section (Estimate Only)     600 1451
+                                                                   600 1451
+  MF=4 MT=  2  Elastic Angular Distributions                       600 1451
+                                                                   600 1451
+  MF=6 MT=  5  Production Cross Sections and Energy-Angle          600 1451
+               Distributions for Emission Neutrons, Protons,       600 1451
+               Deuterons, and Alphas; and Angle-Integrated         600 1451
+               Spectra for Gamma Rays and Residual Nuclei That     600 1451
+               Are Stable Against Particle Emission                600 1451
+                                                                   600 1451
+ MF=33 MT=  1  Covariance file for total cross section             600 1451
+       MT=  2  Covariance file for elastic cross section           600 1451
+       MT=  3  Covariance file for nonelastic cross section        600 1451
+       MT=  5  Covariance file for composite reaction cross sect.  600 1451
+       MT=102  Covariance file for capture cross section           600 1451
+                                                                   600 1451
+   The evaluation is based on nuclear model calculations that have 600 1451
+ been benchmarked to experimental data, especially for n + C12 and 600 1451
+ p + C12 reactions [Ch96a]. We use the GNASH code system [Yo92],   600 1451
+ which utilizes Hauser-Feshbach statistical, preequilibrium and    600 1451
+ direct-reaction theories. Coupled-channel and spherical optical   600 1451
+ model calculations are used to obtain particle transmission       600 1451
+ coefficients for the Hauser-Feshbach calculations, as well as for 600 1451
+ the elastic neutron angular distributions.                        600 1451
+   Cross sections and spectra for producing individual residual    600 1451
+ nuclei are included for reactions that exceed a cross section of  600 1451
+ approximately 1 nb at any energy.  The energy-angle-correlations  600 1451
+ for all outgoing particles are based on Kalbach systematics       600 1451
+ [Ka88].                                                           600 1451
+   A model was developed to calculate the energy distributions of  600 1451
+ all recoil nuclei in the GNASH calculations (Ch96b). The recoil   600 1451
+ energy distributions are represented in the laboratory system in  600 1451
+ MT=5, MF=6, and are given as isotropic in the lab system. Note    600 1451
+ that all other data in MT=5,MF=6 are given in the center-of-mass  600 1451
+ system. This method of representation requires a modification of  600 1451
+ the original ENDF-6 format.                                       600 1451
+   Preequilibrium corrections were performed in the course of the  600 1451
+ GNASH calculations using either Feshbach, Kerman, Koonin (FKK)    600 1451
+ theory [Ch93] or the exciton model of Kalbach [Ka77, Ka85].       600 1451
+ Discrete level data from nuclear data sheets were matched to      600 1451
+ continuum level densities using the formulation of Ignatyuk       600 1451
+ [Ig75] and pairing and shell parameters from the Cook [Co67]      600 1451
+ analysis.  Neutron and charged-particle transmission coefficients 600 1451
+ were obtained from the optical potentials, as  discussed below.   600 1451
+ Gamma-ray transmission coefficients were  calculated using the    600 1451
+ Kopecky-Uhl model [Ko90].                                         600 1451
+                                                                   600 1451
+****************************************************************   600 1451
+                                                                   600 1451
+ ENDF/B-VI MOD 2 Revision, July 1991                               600 1451
+                                                                   600 1451
+   The only changes for MOD 2 are completion of some references,   600 1451
+ and addition of total elastic scattering uncertainties as         600 1451
+ recommended by the Standards Subcommittee.                        600 1451
+   "Following concerns expressed about the seemingly small         600 1451
+  standards uncertainties, the standards subcommitte  has provided 600 1451
+  expanded uncertainties.  These uncertainties are estimates such  600 1451
+  that if a modern day experiment were performed today on a given  600 1451
+  standard using the best techniques, those results should fall    600 1451
+  within these expanded uncertainties (2/3 of the time). They take 600 1451
+  into account data inconsistencies and concerns about R-Matrix    600 1451
+  parameters.  Note that it is not assumed that the uncertainties  600 1451
+  are totally correlated within the energy ranges given. It is     600 1451
+  recommended that these expanded uncertainties be put in file 1   600 1451
+  and in the documentation for the standards."                     600 1451
+ Quote from Standards Subcommittee CSEWG minutes for the May 1990  600 1451
+ meeting.                                                          600 1451
+                                                                   600 1451
+ C(n,n) Total elastic scattering cross section                     600 1451
+                                                                   600 1451
+     Energy (keV)                 Uncertainty (%)                  600 1451
+     1 - 500                        0.46                           600 1451
+     500 - 1500                     0.53                           600 1451
+     1500 - 1800                    0.60                           600 1451
+                                                                   600 1451
+****************************************************************   600 1451
+                                                                   600 1451
+ ENDF/B-VI MOD 1 Evaluation, C.Y. Fu, E.J. Axton, and F.G. Perey   600 1451
+           ORNL                                                    600 1451
+                                                                   600 1451
+ NEW EVALUATION FOR VERSION VI:                                    600 1451
+ 1. Total and elastic scattering from 0.1 to 0.25 MeV and from 1.6 600 1451
+    to 1.9 MeV due to inclusion of C13 resonances [Fu88].          600 1451
+ 2. Elastic angular distribution: 0.1 to 2.0 MeV due to 13C        600 1451
+    effects [Fu88].                                                600 1451
+ 3. New evaluation for all File 3 data 5-32 MeV by Axton [Ax88],   600 1451
+    including new data for (n,n'3a) [An86, Br84, Me84, Ol87], for  600 1451
+    (n,n') [Ba85, Gu81, Sa81], and for kerma factors [Be81, Br83,  600 1451
+    Bu85, De84, De85, De86, Di82, Ha84, Mc86, We79].               600 1451
+ 4. Extention of energy and angular distributions to 32 MeV were   600 1451
+    mostly based on extrapolation.  File 33 was extended to 32 MeV 600 1451
+    with the addition of the new LB=8 subsubsection.               600 1451
+                                                                   600 1451
+   Retained from ENDF/B-V (with negligible changes such as         600 1451
+ Q-values):  all data between 2.0 and 5.0 MeV [Fu78], all energy   600 1451
+ and angular data for neutron and gamma-ray productions, and       600 1451
+ uncertainty files (LB=8 subsubsection added).                     600 1451
+                                                                   600 1451
+   Data and evaluation techniques used in the new evaluation and   600 1451
+ ENDF/B-V evaluation, as adopted here, are summerized below.       600 1451
+                                                                   600 1451
+ MF-MT                                                             600 1451
+ 3-1 TOTAL                                                         600 1451
+    1.E-5 eV TO 4.81 MeV -- sum of 3-2 and 3-102.                  600 1451
+    4.81 MeV TO 20 MeV -- [Sc67, Ci69, Pe72].                      600 1451
+ 3-2 ELASTIC SCATTERING                                            600 1451
+    1.E-5 eV to 4.81 MeV --  R-Matrix analysis with data [Sc67,    600 1451
+      Ci69, Pe72, Ah70, Bl75, Di68, Fr70, He75, La57, La61, La69,  600 1451
+      Me70, Ki76, Ho72, Ho75, St70, Me54, Wi58, Kn73, Pu64, El62,  600 1451
+      We65, Ke65, Go65, Ga72, Pk72]. Bayes theorem (or nonlinear   600 1451
+      least square) used for energies less then 2 MeV, resulting   600 1451
+      weights were then used in the R-Matrix analysis.  A thermal  600 1451
+      total cross section of 4.746 +- 0.25 (evaluated by Lubitz    600 1451
+      [Lu76]) was also used in the R-Matrix fit.                   600 1451
+    4.81 MeV to 8 MeV -- [Ga72, Ve73, Pk72].                       600 1451
+    8 MeV to 14 MeV -- [Ha75, Ve73, Pu76].                         600 1451
+    14 MeV to 32 MeV -- [Bo68, Me84].                              600 1451
+    R-Matrix analysis for C13 below 2 MeV with data of [La81,      600 1451
+     He75, Co61, Au79].                                            600 1451
+ 3-3 NONELASTIC                                                    600 1451
+    1.E-5 eV to 4.81 MeV -- same as 3-102.                         600 1451
+    4.81 MeV to 32 MeV -- 3-1 minus 3-2.                           600 1451
+ 3-4 INELASTIC -- sum of 3-51 through 3-91                         600 1451
+ 3-16 (N,2N) -- [An81, We81]                                       600 1451
+ 3-24 (N,2NA) -- empirical estimate                                600 1451
+ 3-28 (N,NP) -- empirical estimate                                 600 1451
+ 3-32 (N,ND) -- empirical estimate                                 600 1451
+ 3-33 (N,NT) -- include (N,NPT) and (N,N2P)                        600 1451
+ 3-41 (N,2NP) -- include (N,2NHE-3)                                600 1451
+ 3-51 INELASTIC SCATTERING TO 4.439-MeV LEVEL                      600 1451
+    4.81 MeV to 6.32 MeV -- 3-3 minus 3-102.                       600 1451
+    6.32 MeV to 8.796 MeV -- 3-3 minus 3-102 minus 3-107.          600 1451
+    8.796 MeV TO 32 MeV -- same refs. as in 3-2 and gamma-ray data 600 1451
+      of [Mo72]. New data considered for Version-VI: [Ba85, Gu81,  600 1451
+      Sa81].                                                       600 1451
+ 3-52 to 3-91  (N,N PRIME 3A)                                      600 1451
+    MT=52 to 57: real levels                                       600 1451
+    MT=58 to 73: pseudo levels with 1-MeV width                    600 1451
+    MT=91: an evaporation component with T=0.3 to reproduce        600 1451
+      correct threshold effect and the decay of the 2.43-MeV       600 1451
+      level of 9Be.                                                600 1451
+    New data considered for ENDF/B-VI: [An86, Br84].               600 1451
+ 3-102 CAPTURE                                                     600 1451
+    1.E-5 eV to 1 MeV -- 1/v with 3.36 mb at thermal.              600 1451
+    1 MeV to 32 MeV -- derived from (G,N) cross section of [Co57]. 600 1451
+ 3-103 (N,P) -- [Ri68].                                            600 1451
+ 3-104 (N,D) -- derived from (D,N) of [Am57].                      600 1451
+ 3-105 (N,T) -- estimated shape normalized to [Qa78]               600 1451
+ 3-107 (N,A) -- [Da63, Ve68, Re60, Gr55, Ob72, Va70].              600 1451
+ 3-111 (N,2P) -- estimate                                          600 1451
+ 3-112 (N,PA) -- includes (N,LI-6), (N,DA), (N,TA), (N,DT),        600 1451
+                 (N,HE6), (N,HE-3 A), (N,PTA)                      600 1451
+ 3-115 (N,PD) -- estimate                                          600 1451
+ 3-116 (N,PT) -- estimate                                          600 1451
+ 3-203 PROTON PRODUCTION --                                        600 1451
+    (3-28)+(3-41)+(3-103)+2*(3-111)+(3-112)+(3-115)+(3-116)        600 1451
+ 3-204 DEUTERON PRODUCTION -- (3-32)+(3-104)+(3-115)               600 1451
+ 3-205 TRITON PRODUCTION -- (3-33)+(3-105)+(3-116)                 600 1451
+ 3-207 ALPHA PRODUCTION -- (3-24)+3*(3-52 to 3-91)+(3-107)+(3-112) 600 1451
+ 4-2 ANGULAR DISTRIBUTION OF ELASTICALLY SCATTERED NEUTRONS        600 1451
+    Same data and analysis as in 3-2. Legendre coefficients in     600 1451
+      center-of-mass.                                              600 1451
+ 4-51 INELASTIC SCATTERING TO 4.439-MeV LEVEL                      600 1451
+    Same data sources as in 3-51.                                  600 1451
+ 4-52 INELASTIC SCATTERING TO 7.653-MeV LEVEL -- [Gr69].           600 1451
+ 4-53 INELASTIC SCATTERING TO 9.638-MeV LEVEL -- [Gr69].           600 1451
+ 4-54 to 4-91 -- isotropic in center-of-mass.                      600 1451
+ 5-28  evaporation spectrum with T=0.3 to 0.5 MeV.                 600 1451
+ 5-91  evaporation spectrum with T=0.3 MeV.  This is a small       600 1451
+    component of (N,N PRIME 3A) and is used mainly for the decay   600 1451
+    of the 2.43-MeV level of 9Be [An75] and for reproducing the    600 1451
+    correct threshold effect [Fr55].                               600 1451
+ 12-51  MULTIMLICITY OF THE SINGLE GAMMA-RAY -- from 3-51          600 1451
+ 12-102 MULTIMLICITY OF (N,G) GAMMA-RAYS -- [Aj70].                600 1451
+ 14-51 ANGULAR DISTRIBUTION OF 4.439-MeV GAMMA-RAYS -- [Mo72,      600 1451
+     Dr69, Ha59, Pr66, Ne64, An58, Ko65, En64].                    600 1451
+ 14-102 ANGULAR DISTRIBUTION OF CAPTURE GAMMA-RAYS -- isotropic    600 1451
+     in center-of-mass.                                            600 1451
+ 33-1 to 33-107 UNCERTAINTY FILES FOR FILE 3 DATA.                 600 1451
+                                                                   600 1451
+ ***************************************************************** 600 1451
+ REFERENCES                                                        600 1451
+                                                                   600 1451
+ [Aj70] F. Ajsenberg-Selove, Nucl.Phys. A152, 1 (1970)             600 1451
+ [Aj75] F. Ajsenberg-Selove, Nucl.Phys. A248, 1 (1975)             600 1451
+ [Am57] O. Ames et al., Phys.Rev. 106, 775 (1957)                  600 1451
+ [An58] J.D. Anderson et al., Phys.Rev. 111, 572 (1958)            600 1451
+ [An75] B. Antolkovic and Z. Dolenec, Nucl.Phys. A237, 235 (1975)  600 1451
+ [An81] B. Anders,et,al., Z.Phys. 301,353 (1981)                   600 1451
+ [An86] B. Antolkovic et al., Fast Neutron Physics, Proc. Conf.,   600 1451
+    Dubrovnic, Yugoslavia (1986) p.137                             600 1451
+ [Au79] G.F. Auchampaugh et al., Nucl.Sci.Eng. 69, 30 (1979)       600 1451
+ [Ax88] E.J. Axton, "An evaluation of Kerma in Carbon and the      600 1451
+   Carbon  Cross Sections," NBS, to be published (1988)            600 1451
+ [Ba85] M. Baba et al., Nucl. Data Basic and Applied Science,      600 1451
+   Proc. Conf. Santa Fe, NM (1985) p.223                           600 1451
+ [Be56] J.R. Beyster, M. Walt and E.W. Salmi, Phys.Rev. 104, 1319  600 1451
+   (1956)                                                          600 1451
+ [Be81] M.A. Behrooz and D.E. Watt, Rad.Prot.Dos. 1, 291 (1981)    600 1451
+ [Bl75] R.C. Block et al., J.Nucl.Sci.Tech. 12, 1 (1975)           600 1451
+ [Bo68] F. Boreli et al., Phys.Rev. 174, 1147 (1968)               600 1451
+ [Br83] D.J. Brenner, Phys.Med.Biol. 29, 437 (1983)                600 1451
+ [Br84] D.J. Brenner and R.E. Prael, Nucl.Sci.Eng. 88, 97 (1984)   600 1451
+ [Bu85] G. Buhler et al., Neutron Dosimetry, Proc. Symp., Munich,  600 1451
+   Germany, Report EUR-9762 (1982) p.62                            600 1451
+ [Ch93] M.B. Chadwick and P G. Young, Phys. Rev. C 47, 2255 (1993) 600 1451
+ [Ch96a] M.B. Chadwick, L.J. Cox, P.G.Young, et al., Nucl.Sci.     600 1451
+   Eng. 123, 17 (1996)                                             600 1451
+ [Ch96b] M.B. Chadwick, P.G. Young, R.E. MacFarlane, and A.J.      600 1451
+   Koning, "High-Energy Nuclear Data Libraries for Accelerator-    600 1451
+   Driven Technologies:  Calculational Method for Heavy Recoils,"  600 1451
+   Proc. of 2nd Int. Conf. on Accelerator Driven Transmutation     600 1451
+   Technology and Applications, Kalmar, Sweden, 3-7 June 1996.     600 1451
+ [Ch99]  M.B. Chadwick, P.G. Young, G.M. Hale, et al., Los Alamos  600 1451
+  National Laboratory report, LA-UR-99-1222 (1999)                 600 1451
+ [Ci69] S. Cierjacks et al., Report KFK 1000 (1969) and private    600 1451
+   communication                                                   600 1451
+ [Co57] B.C. Cook, Phys.Rev. 106, 300 (1957)                       600 1451
+ [Co61] H.O. Cohn et al., Phys.Rev. 122, 534 (1961)                600 1451
+ [Co67] J.L. Cook, H. Ferguson, and A.R. de L Musgrove, Aust.J.    600 1451
+   Phys. 20, 477 (1967)                                            600 1451
+ [Da63] E.A. Davis et al., Nucl.Phys. 48, 169 (1963)               600 1451
+ [De84] P.M. Deluca, Jr. et al., Rad.Res. 100, 78 (1984)           600 1451
+ [De85] P.M. Deluca, Jr. et al., Neutron Dosimetry, Proc. Symp.,   600 1451
+   Munich, Germany, Report EUR-9762 (1985)  p.193                  600 1451
+ [De86] P.M. Deluca et al., U. Wisconsin, private communication    600 1451
+   (1986)                                                          600 1451
+ [Di68] K.M. Diment and C.A. Uttley, report EANDC(UK) 94AL (1968)  600 1451
+ [Di82] P.J. Dimbylow, Phys.Med.Biol. 27, 989 (1982)               600 1451
+ [Dr69] D.M. Drake et al., Nucl.Sci.Eng. 40, 294 (1969)            600 1451
+ [El62] A.J. Elwyn and R.O. Lane, Nucl.Phys. 31,78 (1962)          600 1451
+ [En64] F.C. Engesser, W.E. Thompson, J.M. Ferguson, report        600 1451
+   USNRDL-TR-791 (1964)                                            600 1451
+ [Fr55] G.M. Frye et al., Phys. Rev. 99, 1375 (1955)               600 1451
+ [Fr70] N.C. Francis et al., Neutron Standards and Flux            600 1451
+   Normalization, Proc. Symp., Argonne, IL (1970) p.166            600 1451
+ [Fu78] C.Y. Fu and F.G. Perey, Atomic Data and Nuclear Data       600 1451
+   Tables 22, 249 (1978)                                           600 1451
+ [Fu90] C.Y. Fu, Nucl.Sci.Eng. 106, 494 (1990); E.J. Axton,        600 1451
+   report NISTIR 4838 [ENDF-353] (1992)                            600 1451
+ [Ga72] W. Galati et al., Phys.Rev. C5, 1508 (1972)                600 1451
+ [Go65] G.V. Gorlov et al., Doklady Akad.Nauk. 158, 574 (1964)     600 1451
+   English translation: Sov.Phys. Doklady 9, 806 (1965)            600 1451
+ [Gr55] E.R. Graves and R.W. Davis, Phys.Rev. 97, 1205 (1955)      600 1451
+ [Gr69] G.A. Grin et al., Helv.Phys.Acta 42, 990 (1969)            600 1451
+ [Gu81] K. Gul et al., Phys.Rev. C24, 2458 (1981)                  600 1451
+ [Ha59] H.E. Hall and T.W. Bonner, Nucl.Phys. 14, 295 (1959/60)    600 1451
+ [Ha75] G. Haouat et al., report CEA-R 4641 (1975)                 600 1451
+ [Ha84] R.C. Haight et al., Nucl.Sci.Eng. 87, 41 (1984)            600 1451
+ [He75] H.T. Heaton et al., Nucl.Sci.Eng. 56, 27 (1975)            600 1451
+ [Ho72] R.J. Holt, Phys.Rev.Lett. 28, 114 (1972)                   600 1451
+ [Ho75] R.J. Holt, Bull.Am.Phys.Soc. 20, 145 (1975)                600 1451
+ [Ig75] A.V. Ignatyuk, G.N. Smirenkin, and A.S. Tishin, Sov.J.     600 1451
+   Nucl.Phys. 21, 255 (1975); translation of Yad.Fiz. 21, 485      600 1451
+   (1975)                                                          600 1451
+ [Ka77] C. Kalbach, Z.Phys.A  283, 401 (1977)                      600 1451
+ [Ka85] C. Kalbach, "PRECO-D2: Program for Calculating Pre-        600 1451
+   equilibrium and Direct Reaction Double Differential Cross       600 1451
+   Sections," Los Alamos National Laboratory report LA-10248-MS    600 1451
+   (1985)                                                          600 1451
+ [Ka88] C. Kalbach, Phys.Rev.C 37, 2350 (1988); see also           600 1451
+   C. Kalbach and F. M. Mann, Phys.Rev. C 23, 112 (1981)           600 1451
+ [Ke65] C.A. Kelsey et al., Nucl.Phys. 68, 413 (1965)              600 1451
+ [Ki76] W.E. Kinney, ORNL, private communication (1976)            600 1451
+ [Kn73] H.D. Knox et al., Nucl.Phys. A217, 611 (1973)              600 1451
+ [Ko90] J. Kopecky and M. Uhl, Phys.Rev.C 41, 1941 (1990)          600 1451
+ [La57] A. Langsdorf Jr. et al., Phys.Rev. 107, 1077 (1957)        600 1451
+ [La61] R.O. Lane et al., Ann.Phys. 12, 135 (1961)                 600 1451
+ [La69] R.O. Lane et al., Phys.Rev. 188, 1618 (1969)               600 1451
+ [La75] J. Lashkar et al., report INDC(F/R)-7/L (1975)             600 1451
+ [La81] R.O. Lane et al., Phys.Rev. C23, 1883 (1981)               600 1451
+ [Lu76] C.R. Lubitz, KAPL, private communication (1976)            600 1451
+ [Mc86] J.C. McDonald, Rad.Res. (submitted 1986)                   600 1451
+ [Me54] R.W. Meier et al., Helv.Phys.Acta 27, 577 (1954)           600 1451
+ [Me70] J.W. Meadows and J.F. Whalen, Nucl.Sci.Eng. 41, 351 (1970) 600 1451
+ [Me84] A.S. Meigooni et al., Phys.Med.Biol. 29, 643 (1984)        600 1451
+ [Mo72] G.L. Morgan et al., report ORNL-TM-3702 (1972)             600 1451
+ [Ne64] D.O. Nellis and I.L. Morgan et al., Texas Nuc.Corp. (1964) 600 1451
+ [Ob72] A.W. Obst et al., Phys.Rev. C5, 738 (1972)                 600 1451
+ [Ol87] N. Olsson, private communication (1987)                    600 1451
+ [Pe72] F.G. PEREY, T.A. Love and W.E. Kinney, report ORNL-4823    600 1451
+   (1972)                                                          600 1451
+ [Pk72] F.G. Perey and W.E. Kinney, private communication (1972)   600 1451
+   and report ORNL-4441 (1969)                                     600 1451
+ [Pr60] J.T. Prudhomme et al., report AFSWC-TR-30 (1960)           600 1451
+ [Pu64] F.O. Purser et al., progress report WASH-1048 (1964) p.33  600 1451
+ [Pu76] F.O. Purser, TUNL, private communication (1976)            600 1451
+ [Qa78] S.M. Qaim and R. Woelfe, Nucl.Phys. A295, 150 (1978)       600 1451
+ [Re60] T. Retz-Schmidt et al., Bull.Am.Phys.Soc. 5, 110 (1960)    600 1451
+ [Ri68] E.M. Rimmer and P.S.Fisher, Nucl.Phys A108, 567 (1968)     600 1451
+ [Sa81] Sa Jun et al., Chinese J.Nucl.Phys. 3, 302 (1981)          600 1451
+ [Sc67] R.B. Schwartz, H.T.Heaton, R.A. Schrack, Bull.Am.Soc. 15,  600 1451
+   567 (1967)                                                      600 1451
+ [St70] P. Stoler et al., Bull.Am.Phys.Soc. 15, 1668 (1970)        600 1451
+ [Va70] L. van der Zwan and K.W. Geiger, Nucl.Phys. A152, 481      600 1451
+   (1970)                                                          600 1451
+ [Ve68] V.V. Verbinski et al., Phys.Rev. 170, 916 (1968)           600 1451
+ [Ve73] D.E. Velkley et al., Phys.Rev. C7, 1736 (1973)             600 1451
+ [We65] B.E. Wenzel et al., Phys.Rev. 137, B80 (1965)              600 1451
+ [We79] A.H. Wells, Rad.Res. 80, 1 (1979)                          600 1451
+ [We81] P. Welch et al., Bull.Am.Phys.Soc. 26, 708 (1981)          600 1451
+ [Wi58] J.E. Wills et al., Phys.Rev. 109, 891 (1958)               600 1451
+ [Yo92] P.G. Young, E.D. Arthur, and M.B. Chadwick,                600 1451
+  "Comprehensive Nuclear Model Calculations: Introduction to the   600 1451
+  Theory and Use of the GNASH Code," LA-12343-MS (1992).           600 1451
+                                                                   600 1451
+****************************** CONTENTS ************************** 600 1451
+                                1        451        379          0 600 1451
+                                3          2        316          0 600 1451
+                                4          2       1033          1 600 1451
+                               33          2         39          1 600 1451
+ 0.000000+0 0.000000+0          0          0          0          0 600 1  0
+ 0.000000+0 0.000000+0          0          0          0          0 600 0  0
+ 6.000000+3 1.189800+1          0          0          0          0 600 3  2
+ 0.000000+0 0.000000+0          0          0          1        939 600 3  2
+        939          2                                             600 3  2
+ 1.000000-5 4.739180+0 1.000000-3 4.739198+0 2.530000-2 4.739240+0 600 3  2
+ 1.000000-1 4.739190+0 1.000000+1 4.739129+0 1.000000+3 4.734583+0 600 3  2
+ 5.000000+3 4.716090+0 1.000000+4 4.699099+0 1.500000+4 4.682099+0 600 3  2
+ 2.000000+4 4.665299+0 2.500000+4 4.648599+0 3.000000+4 4.631899+0 600 3  2
+ 3.500000+4 4.615399+0 4.000000+4 4.598899+0 4.500000+4 4.582499+0 600 3  2
+ 5.000000+4 4.566199+0 7.500000+4 4.486199+0 1.000000+5 4.408399+0 600 3  2
+ 1.250000+5 4.330099+0 1.300000+5 4.314799+0 1.350000+5 4.301199+0 600 3  2
+ 1.400000+5 4.289099+0 1.425000+5 4.284799+0 1.450000+5 4.283799+0 600 3  2
+ 1.475000+5 4.292399+0 1.487500+5 4.306999+0 1.500000+5 4.339999+0 600 3  2
+ 1.510000+5 4.393699+0 1.520000+5 4.476499+0 1.529000+5 4.520599+0 600 3  2
+ 1.540000+5 4.454499+0 1.550000+5 4.373099+0 1.560000+5 4.320999+0 600 3  2
+ 1.580000+5 4.270999+0 1.600000+5 4.248399+0 1.612500+5 4.239299+0 600 3  2
+ 1.625000+5 4.231999+0 1.650000+5 4.220399+0 1.700000+5 4.202099+0 600 3  2
+ 1.750000+5 4.186099+0 1.800000+5 4.171199+0 2.000000+5 4.115899+0 600 3  2
+ 2.250000+5 4.048399+0 2.500000+5 3.982799+0 2.750000+5 3.918199+0 600 3  2
+ 3.000000+5 3.855099+0 3.250000+5 3.793699+0 3.500000+5 3.733799+0 600 3  2
+ 3.750000+5 3.675299+0 4.000000+5 3.618199+0 4.250000+5 3.562599+0 600 3  2
+ 4.500000+5 3.508199+0 4.750000+5 3.455099+0 5.000000+5 3.403299+0 600 3  2
+ 5.250000+5 3.352699+0 5.500000+5 3.303199+0 5.750000+5 3.254899+0 600 3  2
+ 6.000000+5 3.207599+0 6.250000+5 3.161499+0 6.500000+5 3.116299+0 600 3  2
+ 6.750000+5 3.072199+0 7.000000+5 3.028999+0 7.250000+5 2.986799+0 600 3  2
+ 7.500000+5 2.945399+0 7.750000+5 2.904999+0 8.000000+5 2.865399+0 600 3  2
+ 8.250000+5 2.826699+0 8.500000+5 2.788799+0 8.750000+5 2.751699+0 600 3  2
+ 9.000000+5 2.715399+0 9.250000+5 2.679799+0 9.500000+5 2.644999+0 600 3  2
+ 9.750000+5 2.610799+0 1.000000+6 2.577399+0 1.025000+6 2.544599+0 600 3  2
+ 1.050000+6 2.512499+0 1.053000+6 2.508699+0 1.075000+6 2.481099+0 600 3  2
+ 1.100000+6 2.450298+0 1.125000+6 2.420098+0 1.150000+6 2.390498+0 600 3  2
+ 1.175000+6 2.361498+0 1.200000+6 2.333098+0 1.225000+6 2.305198+0 600 3  2
+ 1.250000+6 2.277898+0 1.275000+6 2.251098+0 1.300000+6 2.224898+0 600 3  2
+ 1.325000+6 2.199097+0 1.350000+6 2.173897+0 1.375000+6 2.149197+0 600 3  2
+ 1.400000+6 2.124997+0 1.425000+6 2.101197+0 1.450000+6 2.077997+0 600 3  2
+ 1.475000+6 2.055197+0 1.500000+6 2.032797+0 1.525000+6 2.010497+0 600 3  2
+ 1.550000+6 1.988796+0 1.553000+6 1.986196+0 1.575000+6 1.967396+0 600 3  2
+ 1.600000+6 1.946496+0 1.625000+6 1.925896+0 1.650000+6 1.905896+0 600 3  2
+ 1.675000+6 1.885796+0 1.680000+6 1.881896+0 1.700000+6 1.865496+0 600 3  2
+ 1.710000+6 1.857396+0 1.715000+6 1.853696+0 1.720000+6 1.850696+0 600 3  2
+ 1.725000+6 1.850096+0 1.730000+6 1.854696+0 1.732000+6 1.858296+0 600 3  2
+ 1.734000+6 1.861596+0 1.736000+6 1.862496+0 1.738000+6 1.859796+0 600 3  2
+ 1.740000+6 1.854396+0 1.745000+6 1.840796+0 1.750000+6 1.832696+0 600 3  2
+ 1.755000+6 1.827996+0 1.760000+6 1.824396+0 1.770000+6 1.817996+0 600 3  2
+ 1.775000+6 1.814695+0 1.780000+6 1.811495+0 1.790000+6 1.804795+0 600 3  2
+ 1.800000+6 1.797995+0 1.820000+6 1.784395+0 1.825000+6 1.780995+0 600 3  2
+ 1.850000+6 1.764395+0 1.875000+6 1.747995+0 1.900000+6 1.731895+0 600 3  2
+ 1.925000+6 1.716095+0 1.950000+6 1.700595+0 1.975000+6 1.685195+0 600 3  2
+ 1.983000+6 1.680695+0 1.991000+6 1.675495+0 2.000000+6 1.670395+0 600 3  2
+ 2.025000+6 1.659094+0 2.050000+6 1.684894+0 2.052000+6 1.695094+0 600 3  2
+ 2.053000+6 1.701994+0 2.054000+6 1.708894+0 2.056000+6 1.727794+0 600 3  2
+ 2.058000+6 1.754194+0 2.060000+6 1.791794+0 2.061000+6 1.816494+0 600 3  2
+ 2.062000+6 1.846694+0 2.063000+6 1.883594+0 2.064000+6 1.929394+0 600 3  2
+ 2.065000+6 1.986794+0 2.066000+6 2.059494+0 2.067000+6 2.152494+0 600 3  2
+ 2.068000+6 2.273594+0 2.069000+6 2.432794+0 2.070000+6 2.644894+0 600 3  2
+ 2.071000+6 2.929694+0 2.072000+6 3.312194+0 2.073000+6 3.817594+0 600 3  2
+ 2.074000+6 4.451094+0 2.075000+6 5.156494+0 2.076000+6 5.766394+0 600 3  2
+ 2.077000+6 6.043494+0 2.078000+6 5.871894+0 2.079000+6 5.372794+0 600 3  2
+ 2.080000+6 4.765394+0 2.081000+6 4.198894+0 2.082000+6 3.728194+0 600 3  2
+ 2.083000+6 3.355894+0 2.084000+6 3.065794+0 2.085000+6 2.839894+0 600 3  2
+ 2.086000+6 2.662594+0 2.087000+6 2.521794+0 2.088000+6 2.408494+0 600 3  2
+ 2.089000+6 2.316594+0 2.090000+6 2.240694+0 2.091000+6 2.177594+0 600 3  2
+ 2.092000+6 2.124494+0 2.093000+6 2.079394+0 2.094000+6 2.040694+0 600 3  2
+ 2.095000+6 2.007294+0 2.096000+6 1.978294+0 2.097000+6 1.952794+0 600 3  2
+ 2.098000+6 1.930294+0 2.099000+6 1.910394+0 2.100000+6 1.892594+0 600 3  2
+ 2.102000+6 1.862394+0 2.104000+6 1.837594+0 2.106000+6 1.816994+0 600 3  2
+ 2.108000+6 1.799594+0 2.110000+6 1.784794+0 2.112000+6 1.772094+0 600 3  2
+ 2.114000+6 1.760894+0 2.116000+6 1.751094+0 2.118000+6 1.742394+0 600 3  2
+ 2.120000+6 1.734694+0 2.140000+6 1.686293+0 2.160000+6 1.661093+0 600 3  2
+ 2.180000+6 1.644493+0 2.200000+6 1.631993+0 2.220000+6 1.621893+0 600 3  2
+ 2.240000+6 1.613592+0 2.260000+6 1.606492+0 2.280000+6 1.600392+0 600 3  2
+ 2.300000+6 1.595292+0 2.320000+6 1.591092+0 2.340000+6 1.587791+0 600 3  2
+ 2.360000+6 1.585291+0 2.380000+6 1.583691+0 2.400000+6 1.582891+0 600 3  2
+ 2.420000+6 1.583091+0 2.440000+6 1.584290+0 2.460000+6 1.586590+0 600 3  2
+ 2.480000+6 1.589890+0 2.500000+6 1.594490+0 2.520000+6 1.600390+0 600 3  2
+ 2.540000+6 1.607689+0 2.553000+6 1.613389+0 2.560000+6 1.616489+0 600 3  2
+ 2.580000+6 1.626989+0 2.600000+6 1.639489+0 2.620000+6 1.653989+0 600 3  2
+ 2.640000+6 1.670889+0 2.660000+6 1.690489+0 2.680000+6 1.713188+0 600 3  2
+ 2.700000+6 1.739588+0 2.720000+6 1.770188+0 2.740000+6 1.805888+0 600 3  2
+ 2.760000+6 1.847788+0 2.780000+6 1.897888+0 2.785000+6 1.911988+0 600 3  2
+ 2.790000+6 1.926988+0 2.795000+6 1.943087+0 2.800000+6 1.961087+0 600 3  2
+ 2.802000+6 1.969287+0 2.804000+6 1.978587+0 2.806000+6 1.990287+0 600 3  2
+ 2.808000+6 2.006987+0 2.810000+6 2.038887+0 2.811000+6 2.071787+0 600 3  2
+ 2.812000+6 2.139987+0 2.813000+6 2.327987+0 2.814000+6 3.160487+0 600 3  2
+ 2.815000+6 5.070887+0 2.816000+6 2.776187+0 2.817000+6 2.289487+0 600 3  2
+ 2.818000+6 2.158887+0 2.819000+6 2.108987+0 2.820000+6 2.086287+0 600 3  2
+ 2.822000+6 2.069687+0 2.824000+6 2.067287+0 2.826000+6 2.070187+0 600 3  2
+ 2.828000+6 2.075587+0 2.830000+6 2.082487+0 2.835000+6 2.102887+0 600 3  2
+ 2.840000+6 2.126487+0 2.845000+6 2.152187+0 2.850000+6 2.180087+0 600 3  2
+ 2.855000+6 2.210187+0 2.860000+6 2.242487+0 2.865000+6 2.277387+0 600 3  2
+ 2.870000+6 2.314887+0 2.875000+6 2.355487+0 2.880000+6 2.399387+0 600 3  2
+ 2.885000+6 2.446987+0 2.890000+6 2.498687+0 2.895000+6 2.554787+0 600 3  2
+ 2.900000+6 2.615687+0 2.905000+6 2.681787+0 2.910000+6 2.753187+0 600 3  2
+ 2.915000+6 2.829587+0 2.920000+6 2.910287+0 2.924000+6 2.976787+0 600 3  2
+ 2.928000+6 3.043186+0 2.932000+6 3.106686+0 2.936000+6 3.163286+0 600 3  2
+ 2.940000+6 3.206986+0 2.944000+6 3.229686+0 2.948000+6 3.221186+0 600 3  2
+ 2.952000+6 3.170686+0 2.956000+6 3.068586+0 2.960000+6 2.910586+0 600 3  2
+ 2.964000+6 2.701286+0 2.968000+6 2.455686+0 2.972000+6 2.195986+0 600 3  2
+ 2.976000+6 1.945786+0 2.980000+6 1.723486+0 2.984000+6 1.539486+0 600 3  2
+ 2.988000+6 1.396186+0 2.992000+6 1.290786+0 2.996000+6 1.217586+0 600 3  2
+ 3.000000+6 1.170386+0 3.010000+6 1.129486+0 3.020000+6 1.150286+0 600 3  2
+ 3.030000+6 1.197586+0 3.040000+6 1.254686+0 3.050000+6 1.313986+0 600 3  2
+ 3.053000+6 1.331586+0 3.060000+6 1.372485+0 3.080000+6 1.482485+0 600 3  2
+ 3.100000+6 1.582585+0 3.120000+6 1.674385+0 3.140000+6 1.759885+0 600 3  2
+ 3.160000+6 1.840385+0 3.180000+6 1.917085+0 3.200000+6 1.990385+0 600 3  2
+ 3.220000+6 2.060884+0 3.240000+6 2.128484+0 3.260000+6 2.193184+0 600 3  2
+ 3.280000+6 2.254884+0 3.300000+6 2.313184+0 3.320000+6 2.367784+0 600 3  2
+ 3.340000+6 2.418284+0 3.360000+6 2.464384+0 3.380000+6 2.505783+0 600 3  2
+ 3.400000+6 2.541983+0 3.420000+6 2.572883+0 3.440000+6 2.598383+0 600 3  2
+ 3.460000+6 2.618183+0 3.480000+6 2.632383+0 3.500000+6 2.640983+0 600 3  2
+ 3.520000+6 2.644183+0 3.540000+6 2.642182+0 3.553000+6 2.637682+0 600 3  2
+ 3.560000+6 2.635282+0 3.580000+6 2.623782+0 3.600000+6 2.608082+0 600 3  2
+ 3.620000+6 2.588482+0 3.640000+6 2.565382+0 3.660000+6 2.539282+0 600 3  2
+ 3.680000+6 2.510481+0 3.700000+6 2.479481+0 3.720000+6 2.446481+0 600 3  2
+ 3.740000+6 2.411981+0 3.760000+6 2.376181+0 3.780000+6 2.339381+0 600 3  2
+ 3.800000+6 2.301880+0 3.820000+6 2.263880+0 3.840000+6 2.225680+0 600 3  2
+ 3.860000+6 2.187380+0 3.880000+6 2.149080+0 3.900000+6 2.111180+0 600 3  2
+ 3.920000+6 2.073579+0 3.940000+6 2.036679+0 3.960000+6 2.000679+0 600 3  2
+ 3.980000+6 1.965679+0 4.000000+6 1.932079+0 4.010000+6 1.915979+0 600 3  2
+ 4.020000+6 1.900379+0 4.030000+6 1.885478+0 4.040000+6 1.871378+0 600 3  2
+ 4.050000+6 1.858078+0 4.053000+6 1.854478+0 4.060000+6 1.845878+0 600 3  2
+ 4.070000+6 1.834978+0 4.080000+6 1.825478+0 4.090000+6 1.817978+0 600 3  2
+ 4.100000+6 1.812578+0 4.110000+6 1.809778+0 4.120000+6 1.810278+0 600 3  2
+ 4.130000+6 1.814478+0 4.140000+6 1.823278+0 4.150000+6 1.837178+0 600 3  2
+ 4.160000+6 1.857178+0 4.170000+6 1.883878+0 4.180000+6 1.917477+0 600 3  2
+ 4.190000+6 1.957877+0 4.200000+6 2.004277+0 4.210000+6 2.054877+0 600 3  2
+ 4.220000+6 2.106577+0 4.230000+6 2.155877+0 4.240000+6 2.198777+0 600 3  2
+ 4.250000+6 2.231877+0 4.260000+6 2.252777+0 4.270000+6 2.260877+0 600 3  2
+ 4.280000+6 2.256777+0 4.290000+6 2.242177+0 4.300000+6 2.219477+0 600 3  2
+ 4.310000+6 2.190877+0 4.320000+6 2.158477+0 4.330000+6 2.123976+0 600 3  2
+ 4.340000+6 2.088576+0 4.350000+6 2.053376+0 4.360000+6 2.018876+0 600 3  2
+ 4.370000+6 1.985376+0 4.380000+6 1.953276+0 4.390000+6 1.922576+0 600 3  2
+ 4.400000+6 1.893276+0 4.420000+6 1.838976+0 4.440000+6 1.789876+0 600 3  2
+ 4.460000+6 1.745376+0 4.480000+6 1.704876+0 4.500000+6 1.667675+0 600 3  2
+ 4.520000+6 1.633275+0 4.540000+6 1.601475+0 4.553000+6 1.582175+0 600 3  2
+ 4.560000+6 1.571675+0 4.580000+6 1.543775+0 4.600000+6 1.517475+0 600 3  2
+ 4.620000+6 1.492474+0 4.640000+6 1.468774+0 4.660000+6 1.446174+0 600 3  2
+ 4.680000+6 1.424474+0 4.700000+6 1.403574+0 4.720000+6 1.383374+0 600 3  2
+ 4.740000+6 1.363873+0 4.760000+6 1.344773+0 4.780000+6 1.326173+0 600 3  2
+ 4.800000+6 1.307773+0 4.810000+6 1.298573+0 4.812000+6 1.296673+0 600 3  2
+ 4.820000+6 1.287669+0 4.850000+6 1.260003+0 4.899900+6 1.223016+0 600 3  2
+ 4.900000+6 1.222979+0 4.919400+6 1.238662+0 4.920000+6 1.242827+0 600 3  2
+ 4.930000+6 1.310692+0 4.934500+6 1.341525+0 4.935500+6 1.719332+0 600 3  2
+ 4.936700+6 1.967061+0 4.938500+6 1.940655+0 4.939500+6 1.737162+0 600 3  2
+ 4.940000+6 1.693866+0 4.943200+6 1.417228+0 4.948100+6 1.277645+0 600 3  2
+ 4.950000+6 1.263948+0 4.954600+6 1.230141+0 4.958400+6 1.207183+0 600 3  2
+ 4.980000+6 1.162060+0 4.990000+6 1.141205+0 5.000000+6 1.120351+0 600 3  2
+ 5.001000+6 1.132431+0 5.030000+6 1.117621+0 5.053000+6 1.115501+0 600 3  2
+ 5.100000+6 1.091930+0 5.120000+6 1.048870+0 5.150000+6 1.063040+0 600 3  2
+ 5.180000+6 1.043219+0 5.200000+6 1.020759+0 5.230000+6 1.004789+0 600 3  2
+ 5.280000+6 9.654380-1 5.300000+6 9.571677-1 5.330000+6 9.328674-1 600 3  2
+ 5.335000+6 9.630673-1 5.340000+6 9.216672-1 5.360000+6 1.458567+0 600 3  2
+ 5.362000+6 1.697967+0 5.370000+6 1.864067+0 5.371000+6 1.844467+0 600 3  2
+ 5.378000+6 1.630767+0 5.380000+6 1.553867+0 5.390000+6 1.337667+0 600 3  2
+ 5.400000+6 1.202767+0 5.410000+6 1.133766+0 5.420000+6 1.098666+0 600 3  2
+ 5.430000+6 1.069966+0 5.440000+6 1.060366+0 5.460000+6 1.016466+0 600 3  2
+ 5.500000+6 9.905653-1 5.550000+6 9.727647-1 5.553000+6 9.817646-1 600 3  2
+ 5.600000+6 9.588636-1 5.650000+6 9.419625-1 5.700000+6 9.200614-1 600 3  2
+ 5.800000+6 9.098593-1 5.900000+6 8.853571-1 6.000000+6 8.753550-1 600 3  2
+ 6.050000+6 8.726539-1 6.053000+6 8.756538-1 6.125000+6 8.907518-1 600 3  2
+ 6.160000+6 9.140508-1 6.174000+6 9.388504-1 6.180000+6 9.455503-1 600 3  2
+ 6.181200+6 9.476662-1 6.190000+6 9.632120-1 6.200000+6 9.807917-1 600 3  2
+ 6.210000+6 1.023931+0 6.220000+6 1.038771+0 6.230000+6 1.085411+0 600 3  2
+ 6.240000+6 1.162250+0 6.250000+6 1.237489+0 6.285000+6 2.104878+0 600 3  2
+ 6.295000+6 2.382617+0 6.303000+6 2.263269+0 6.310000+6 2.011527+0 600 3  2
+ 6.320000+6 1.596266+0 6.330000+6 1.368506+0 6.340000+6 1.192705+0 600 3  2
+ 6.350000+6 1.146304+0 6.360000+6 1.224303+0 6.370000+6 1.066002+0 600 3  2
+ 6.390000+6 8.893001-1 6.400000+6 8.725991-1 6.410000+6 8.473981-1 600 3  2
+ 6.420000+6 8.254972-1 6.430000+6 8.413962-1 6.440000+6 8.276952-1 600 3  2
+ 6.450000+6 8.336942-1 6.470000+6 8.280922-1 6.490000+6 8.303902-1 600 3  2
+ 6.510000+6 8.043883-1 6.540000+6 7.057853-1 6.553000+6 6.317540-1 600 3  2
+ 6.560000+6 5.908833-1 6.570000+6 5.304422-1 6.580000+6 5.013212-1 600 3  2
+ 6.590000+6 5.050101-1 6.600000+6 5.140090-1 6.620000+6 5.769369-1 600 3  2
+ 6.640000+6 5.919048-1 6.658000+6 7.369228-1 6.665000+6 6.824821-1 600 3  2
+ 6.670000+6 6.701116-1 6.680000+6 6.613505-1 6.700000+6 6.555384-1 600 3  2
+ 6.750000+6 6.499931-1 6.810000+6 6.457667-1 6.920000+6 6.060450-1 600 3  2
+ 7.000000+6 5.736164-1 7.053000+6 5.726208-1 7.100000+6 5.691353-1 600 3  2
+ 7.140000+6 5.828107-1 7.180000+6 6.025460-1 7.200000+6 6.398751-1 600 3  2
+ 7.220000+6 6.678271-1 7.225000+6 6.763279-1 7.250000+6 7.467458-1 600 3  2
+ 7.270000+6 8.226378-1 7.280000+6 8.841454-1 7.340000+6 1.332045+0 600 3  2
+ 7.350000+6 1.429922+0 7.360000+6 1.422168+0 7.370000+6 1.463970+0 600 3  2
+ 7.400000+6 1.413788+0 7.420000+6 1.397957+0 7.470000+6 1.371370+0 600 3  2
+ 7.529000+6 1.378162+0 7.542000+6 1.363398+0 7.553000+6 1.355141+0 600 3  2
+ 7.594000+6 1.337997+0 7.620000+6 1.326286+0 7.650000+6 1.337031+0 600 3  2
+ 7.667000+6 1.390861+0 7.680000+6 1.414839+0 7.698000+6 1.525053+0 600 3  2
+ 7.700000+6 1.529955+0 7.725000+6 1.798866+0 7.745000+6 1.987272+0 600 3  2
+ 7.750000+6 1.954229+0 7.770000+6 1.823504+0 7.789000+6 1.683315+0 600 3  2
+ 7.810000+6 1.580566+0 7.819000+6 1.582205+0 7.860000+6 1.521730+0 600 3  2
+ 7.886400+6 1.492688+0 7.888000+6 1.474376+0 7.897000+6 1.471598+0 600 3  2
+ 7.930000+6 1.431961+0 7.936000+6 1.409819+0 8.000000+6 1.350856+0 600 3  2
+ 8.005000+6 1.354554+0 8.010000+6 1.305270+0 8.014000+6 1.334019+0 600 3  2
+ 8.044000+6 1.297253+0 8.053000+6 1.330648+0 8.079000+6 1.322818+0 600 3  2
+ 8.080000+6 1.314708+0 8.100000+6 1.317188+0 8.101000+6 1.331878+0 600 3  2
+ 8.105000+6 1.318278+0 8.109000+6 1.299968+0 8.120000+6 1.281957+0 600 3  2
+ 8.131000+6 1.248037+0 8.138000+6 1.233027+0 8.160000+6 1.156197+0 600 3  2
+ 8.166000+6 1.115987+0 8.200000+6 9.730368-1 8.210000+6 9.490267-1 600 3  2
+ 8.218000+6 9.418167-1 8.240000+6 9.209765-1 8.280000+6 8.771261-1 600 3  2
+ 8.295800+6 8.606960-1 8.296200+6 8.565960-1 8.320000+6 8.509958-1 600 3  2
+ 8.330000+6 8.374157-1 8.391000+6 8.025752-1 8.400000+6 7.975151-1 600 3  2
+ 8.426000+6 8.001749-1 8.448000+6 7.856947-1 8.450000+6 7.715646-1 600 3  2
+ 8.480000+6 7.762444-1 8.499500+6 7.571142-1 8.500000+6 7.491042-1 600 3  2
+ 8.520000+6 7.571640-1 8.553000+6 7.394138-1 8.600000+6 7.552142-1 600 3  2
+ 8.611000+6 7.563343-1 8.664000+6 7.480348-1 8.700000+6 7.451351-1 600 3  2
+ 8.708000+6 7.371952-1 8.750000+6 7.181856-1 8.768000+6 7.160857-1 600 3  2
+ 8.800000+6 7.068460-1 8.833000+6 6.889963-1 8.850000+6 6.772065-1 600 3  2
+ 8.885000+6 6.683168-1 8.920000+6 6.382271-1 8.940000+6 6.376873-1 600 3  2
+ 8.980000+6 6.329177-1 9.000000+6 6.306779-1 9.005000+6 6.443879-1 600 3  2
+ 9.020000+6 6.425181-1 9.030000+6 6.504482-1 9.045000+6 6.536783-1 600 3  2
+ 9.053000+6 6.692384-1 9.067000+6 6.683888-1 9.080000+6 6.856592-1 600 3  2
+ 9.149000+6 7.233312-1 9.163000+6 7.367917-1 9.180000+6 7.352822-1 600 3  2
+ 9.219000+6 7.314933-1 9.250000+6 7.246442-1 9.254000+6 7.333744-1 600 3  2
+ 9.300000+6 7.169557-1 9.360000+6 6.995975-1 9.400000+6 6.813887-1 600 3  2
+ 9.450000+6 6.715002-1 9.500000+6 6.693117-1 9.522000+6 6.697323-1 600 3  2
+ 9.553000+6 6.644933-1 9.560000+6 6.691734-1 9.590000+6 6.710539-1 600 3  2
+ 9.600000+6 6.714841-1 9.630000+6 6.801646-1 9.640000+6 6.874948-1 600 3  2
+ 9.678000+6 6.856355-1 9.680000+6 6.844055-1 9.692000+6 6.829957-1 600 3  2
+ 9.700000+6 6.854558-1 9.726000+6 6.703063-1 9.740000+6 6.762665-1 600 3  2
+ 9.750000+6 6.695867-1 9.800000+6 6.845276-1 9.821000+6 6.837680-1 600 3  2
+ 9.830000+6 6.863081-1 9.868000+6 6.787488-1 9.900000+6 6.717994-1 600 3  2
+ 9.917000+6 6.742096-1 9.921000+6 6.675397-1 1.000000+7 6.567711-1 600 3  2
+ 1.005000+7 6.434120-1 1.005300+7 6.368820-1 1.017000+7 6.420644-1 600 3  2
+ 1.025000+7 6.343860-1 1.030000+7 6.286370-1 1.037200+7 6.350785-1 600 3  2
+ 1.040000+7 6.433191-1 1.044800+7 6.650200-1 1.047800+7 6.781307-1 600 3  2
+ 1.050000+7 6.909111-1 1.050600+7 6.909012-1 1.053600+7 7.017418-1 600 3  2
+ 1.055000+7 6.982821-1 1.055300+7 7.084822-1 1.062000+7 7.254834-1 600 3  2
+ 1.069000+7 7.508846-1 1.070000+7 7.526048-1 1.075000+7 7.861757-1 600 3  2
+ 1.080000+7 8.128466-1 1.083000+7 8.325971-1 1.090000+7 8.733984-1 600 3  2
+ 1.094000+7 8.874491-1 1.100000+7 8.621401-1 1.100400+7 8.562302-1 600 3  2
+ 1.105300+7 8.669211-1 1.109600+7 8.635915-1 1.110000+7 8.685816-1 600 3  2
+ 1.116600+7 8.852923-1 1.117000+7 8.868723-1 1.125000+7 8.755831-1 600 3  2
+ 1.130000+7 8.730537-1 1.140000+7 8.727947-1 1.150000+7 8.644358-1 600 3  2
+ 1.155300+7 8.514563-1 1.170800+7 8.384571-1 1.175000+7 8.534774-1 600 3  2
+ 1.175100+7 8.485974-1 1.180000+7 8.577876-1 1.182800+7 8.700678-1 600 3  2
+ 1.190000+7 9.048182-1 1.190900+7 9.008382-1 1.191700+7 9.126283-1 600 3  2
+ 1.200000+7 8.994487-1 1.205000+7 9.099190-1 1.205300+7 9.133790-1 600 3  2
+ 1.208800+7 9.103387-1 1.210000+7 9.109886-1 1.219600+7 8.718877-1 600 3  2
+ 1.222400+7 8.650374-1 1.225000+7 8.612072-1 1.230000+7 8.484767-1 600 3  2
+ 1.240000+7 8.392258-1 1.250000+7 8.560648-1 1.255300+7 8.641743-1 600 3  2
+ 1.259900+7 8.697535-1 1.270000+7 8.872515-1 1.273800+7 8.895008-1 600 3  2
+ 1.279200+7 9.067198-1 1.290000+7 9.194677-1 1.299000+7 9.436460-1 600 3  2
+ 1.300000+7 9.419758-1 1.305300+7 9.368348-1 1.310000+7 9.360230-1 600 3  2
+ 1.312000+7 9.356122-1 1.325000+7 9.248772-1 1.328000+7 9.145161-1 600 3  2
+ 1.330000+7 9.156053-1 1.350000+7 9.052876-1 1.354000+7 9.100961-1 600 3  2
+ 1.355300+7 9.094356-1 1.358700+7 9.094540-1 1.364600+7 8.955912-1 600 3  2
+ 1.370000+7 8.891086-1 1.376700+7 8.808754-1 1.382200+7 8.600328-1 600 3  2
+ 1.383000+7 8.597924-1 1.396500+7 8.413460-1 1.400000+7 8.192143-1 600 3  2
+ 1.405300+7 8.249418-1 1.418200+7 8.314564-1 1.425000+7 8.372635-1 600 3  2
+ 1.436400+7 8.302987-1 1.441900+7 8.243664-1 1.447200+7 8.378942-1 600 3  2
+ 1.450000+7 8.434431-1 1.455300+7 8.538047-1 1.456600+7 8.545981-1 600 3  2
+ 1.465300+7 8.801097-1 1.469400+7 8.945456-1 1.475000+7 8.989307-1 600 3  2
+ 1.476700+7 8.973459-1 1.480700+7 9.021438-1 1.481200+7 9.039936-1 600 3  2
+ 1.483700+7 9.075423-1 1.486300+7 9.113290-1 1.488700+7 9.133517-1 600 3  2
+ 1.488800+7 9.133777-1 1.489200+7 9.190995-1 1.490600+7 9.213208-1 600 3  2
+ 1.490900+7 9.219146-1 1.492700+7 9.198577-1 1.495400+7 9.193623-1 600 3  2
+ 1.496200+7 9.188059-1 1.499600+7 9.230262-1 1.500000+7 9.175480-1 600 3  2
+ 1.500600+7 9.194399-1 1.504500+7 9.285723-1 1.505300+7 9.321515-1 600 3  2
+ 1.509300+7 9.415881-1 1.524800+7 9.588161-1 1.526300+7 9.589810-1 600 3  2
+ 1.544800+7 9.853929-1 1.547700+7 9.866832-1 1.550000+7 9.888609-1 600 3  2
+ 1.555300+7 9.938870-1 1.573100+7 1.006293+0 1.596600+7 1.025478+0 600 3  2
+ 1.597000+7 1.031307+0 1.599000+7 1.028462+0 1.600000+7 1.033794+0 600 3  2
+ 1.605300+7 1.018894+0 1.606800+7 1.016618+0 1.625600+7 9.836825-1 600 3  2
+ 1.634700+7 9.550681-1 1.644300+7 9.526551-1 1.650000+7 9.489244-1 600 3  2
+ 1.653200+7 9.469205-1 1.655300+7 9.429946-1 1.669500+7 9.195066-1 600 3  2
+ 1.682000+7 9.085254-1 1.682400+7 9.073067-1 1.697400+7 8.965813-1 600 3  2
+ 1.700000+7 8.966591-1 1.705300+7 8.967873-1 1.707400+7 8.992450-1 600 3  2
+ 1.713800+7 8.872509-1 1.729800+7 8.709475-1 1.730000+7 8.708043-1 600 3  2
+ 1.730100+7 8.852461-1 1.743100+7 8.758659-1 1.746700+7 8.733252-1 600 3  2
+ 1.750000+7 8.759863-1 1.755300+7 8.803935-1 1.761600+7 8.873125-1 600 3  2
+ 1.768700+7 8.896514-1 1.790000+7 9.059481-1 1.790100+7 9.086970-1 600 3  2
+ 1.800000+7 9.175296-1 1.805300+7 9.295115-1 1.808700+7 9.234012-1 600 3  2
+ 1.815800+7 9.357982-1 1.827300+7 9.289137-1 1.846000+7 9.228020-1 600 3  2
+ 1.850000+7 9.303026-1 1.851600+7 9.333388-1 1.855300+7 9.375123-1 600 3  2
+ 1.863200+7 9.463497-1 1.870000+7 9.528459-1 1.883300+7 9.569630-1 600 3  2
+ 1.900000+7 9.690280-1 1.903000+7 9.712030-1 1.903400+7 9.713274-1 600 3  2
+ 1.905300+7 9.731419-1 1.918500+7 9.777384-1 1.934600+7 9.801549-1 600 3  2
+ 1.950000+7 9.810585-1 1.951100+7 9.814346-1 1.955300+7 9.818500-1 600 3  2
+ 1.960000+7 9.795329-1 1.966100+7 9.815434-1 1.979400+7 9.857386-1 600 3  2
+ 1.989200+7 9.915297-1 2.000000+7 9.807161-1 2.000001+7 1.016000+0 600 3  2
+ 2.029547+7 1.002006+0 2.100000+7 9.370000-1 2.200000+7 9.170000-1 600 3  2
+ 2.300000+7 9.220000-1 2.400000+7 9.370000-1 2.427894+7 9.341339-1 600 3  2
+ 2.448686+7 9.289493-1 2.500000+7 9.180000-1 2.600000+7 9.123759-1 600 3  2
+ 2.700000+7 9.040000-1 2.705867+7 9.031742-1 2.730389+7 8.996533-1 600 3  2
+ 2.800000+7 8.893803-1 2.847293+7 8.825203-1 2.892336+7 8.760924-1 600 3  2
+ 2.900000+7 8.750014-1 3.000000+7 8.610000-1 3.100000+7 8.475646-1 600 3  2
+ 3.200000+7 8.346897-1 3.213834+7 8.329466-1 3.300000+7 8.222163-1 600 3  2
+ 3.400000+7 8.100199-1 3.451838+7 8.037855-1 3.500000+7 7.980000-1 600 3  2
+ 3.509196+7 7.968911-1 3.600000+7 7.852692-1 3.700000+7 7.714120-1 600 3  2
+ 3.800000+7 7.569679-1 3.900000+7 7.423791-1 4.000000+7 7.280000-1 600 3  2
+ 4.100000+7 7.140548-1 4.200000+7 7.005317-1 4.300000+7 6.873820-1 600 3  2
+ 4.400000+7 6.745635-1 4.500000+7 6.620427-1 4.600000+7 6.497897-1 600 3  2
+ 4.700000+7 6.377780-1 4.800000+7 6.259875-1 4.900000+7 6.143998-1 600 3  2
+ 5.000000+7 6.030000-1 5.100000+7 5.918521-1 5.200000+7 5.810179-1 600 3  2
+ 5.300000+7 5.704819-1 5.400000+7 5.602297-1 5.500000+7 5.502482-1 600 3  2
+ 5.600000+7 5.405250-1 5.658661+7 5.349370-1 5.700000+7 5.310488-1 600 3  2
+ 5.759370+7 5.255354-1 5.800000+7 5.218090-1 5.900000+7 5.127958-1 600 3  2
+ 6.000000+7 5.040000-1 6.100000+7 4.954320-1 6.200000+7 4.871018-1 600 3  2
+ 6.300000+7 4.789999-1 6.400000+7 4.711178-1 6.500000+7 4.634471-1 600 3  2
+ 6.600000+7 4.559799-1 6.700000+7 4.487085-1 6.800000+7 4.416260-1 600 3  2
+ 6.900000+7 4.347253-1 7.000000+7 4.280000-1 7.100000+7 4.214123-1 600 3  2
+ 7.200000+7 4.149361-1 7.300000+7 4.085808-1 7.400000+7 4.023547-1 600 3  2
+ 7.500000+7 3.962644-1 7.600000+7 3.903152-1 7.700000+7 3.845113-1 600 3  2
+ 7.800000+7 3.788561-1 7.900000+7 3.733518-1 8.000000+7 3.680000-1 600 3  2
+ 8.100000+7 3.627562-1 8.200000+7 3.575672-1 8.300000+7 3.524222-1 600 3  2
+ 8.400000+7 3.473120-1 8.500000+7 3.422283-1 8.600000+7 3.371643-1 600 3  2
+ 8.700000+7 3.321139-1 8.800000+7 3.270724-1 8.900000+7 3.220355-1 600 3  2
+ 9.000000+7 3.170000-1 9.100000+7 3.118312-1 9.200000+7 3.064431-1 600 3  2
+ 9.300000+7 3.009011-1 9.400000+7 2.952642-1 9.500000+7 2.895850-1 600 3  2
+ 9.600000+7 2.839101-1 9.700000+7 2.782807-1 9.800000+7 2.727326-1 600 3  2
+ 9.900000+7 2.672968-1 1.000000+8 2.620000-1 1.020000+8 2.514836-1 600 3  2
+ 1.040000+8 2.411081-1 1.060000+8 2.312362-1 1.080000+8 2.221358-1 600 3  2
+ 1.100000+8 2.140000-1 1.120000+8 2.071318-1 1.140000+8 2.012542-1 600 3  2
+ 1.160000+8 1.957531-1 1.180000+8 1.901329-1 1.200000+8 1.840000-1 600 3  2
+ 1.220000+8 1.776520-1 1.240000+8 1.715914-1 1.260000+8 1.658045-1 600 3  2
+ 1.280000+8 1.602782-1 1.300000+8 1.550000-1 1.320000+8 1.499682-1 600 3  2
+ 1.340000+8 1.451730-1 1.360000+8 1.405924-1 1.380000+8 1.362071-1 600 3  2
+ 1.400000+8 1.320000-1 1.420000+8 1.279372-1 1.440000+8 1.240005-1 600 3  2
+ 1.460000+8 1.201961-1 1.480000+8 1.165283-1 1.500000+8 1.130000-1 600 3  2
+ 0.000000+0 0.000000+0          0          0          0          0 600 3  0
+ 0.000000+0 0.000000+0          0          0          0          0 600 0  0
+ 6.000000+3 1.189800+1          0          3          0          0 600 4  2
+ 0.000000+0 1.189800+1          0          2          0          0 600 4  2
+ 0.000000+0 0.000000+0          0          0          1        248 600 4  2
+        248          2                                             600 4  2
+ 0.000000+0 1.000000-5          0          0          2          0 600 4  2
+ 0.000000+0 0.000000+0                                             600 4  2
+ 0.000000+0 1.000000+3          0          0          2          0 600 4  2
+ 1.401100-4 0.000000+0                                             600 4  2
+ 0.000000+0 5.000000+3          0          0          2          0 600 4  2
+ 6.982000-4 0.000000+0                                             600 4  2
+ 0.000000+0 1.000000+4          0          0          2          0 600 4  2
+ 1.372000-3 0.000000+0                                             600 4  2
+ 0.000000+0 5.000000+4          0          0          2          0 600 4  2
+ 6.603000-3 7.423100-5                                             600 4  2
+ 0.000000+0 1.000000+5          0          0          2          0 600 4  2
+ 1.245700-2 2.801300-4                                             600 4  2
+ 0.000000+0 1.100000+5          0          0          2          0 600 4  2
+ 1.339600-2 3.524300-4                                             600 4  2
+ 0.000000+0 1.200000+5          0          0          2          0 600 4  2
+ 1.424700-2 4.297600-4                                             600 4  2
+ 0.000000+0 1.300000+5          0          0          2          0 600 4  2
+ 1.491100-2 5.240000-4                                             600 4  2
+ 0.000000+0 1.400000+5          0          0          2          0 600 4  2
+ 1.512000-2 7.038700-4                                             600 4  2
+ 0.000000+0 1.450000+5          0          0          2          0 600 4  2
+ 1.499300-2 9.579300-4                                             600 4  2
+ 0.000000+0 1.475000+5          0          0          2          0 600 4  2
+ 1.516000-2 1.225300-3                                             600 4  2
+ 0.000000+0 1.500000+5          0          0          2          0 600 4  2
+ 1.627200-2 1.635400-3                                             600 4  2
+ 0.000000+0 1.529000+5          0          0          2          0 600 4  2
+ 1.967700-2 1.983700-3                                             600 4  2
+ 0.000000+0 1.550000+5          0          0          2          0 600 4  2
+ 2.200800-2 1.845300-3                                             600 4  2
+ 0.000000+0 1.575000+5          0          0          2          0 600 4  2
+ 2.305600-2 1.505600-3                                             600 4  2
+ 0.000000+0 1.600000+5          0          0          2          0 600 4  2
+ 2.311400-2 1.250600-3                                             600 4  2
+ 0.000000+0 1.650000+5          0          0          2          0 600 4  2
+ 2.283700-2 1.013300-3                                             600 4  2
+ 0.000000+0 1.700000+5          0          0          2          0 600 4  2
+ 2.278700-2 9.371100-4                                             600 4  2
+ 0.000000+0 1.750000+5          0          0          2          0 600 4  2
+ 2.294100-2 9.177400-4                                             600 4  2
+ 0.000000+0 1.800000+5          0          0          2          0 600 4  2
+ 2.322000-2 9.221200-4                                             600 4  2
+ 0.000000+0 1.900000+5          0          0          2          0 600 4  2
+ 2.397600-2 9.601900-4                                             600 4  2
+ 0.000000+0 2.000000+5          0          0          2          0 600 4  2
+ 2.486800-2 1.014300-3                                             600 4  2
+ 0.000000+0 3.000000+5          0          0          4          0 600 4  2
+ 3.389700-2 1.946500-3 6.334400-5 0.000000+0                       600 4  2
+ 0.000000+0 4.000000+5          0          0          4          0 600 4  2
+ 4.148600-2 3.011600-3 1.281000-4 0.000000+0                       600 4  2
+ 0.000000+0 5.000000+5          0          0          4          0 600 4  2
+ 4.780200-2 4.132600-3 2.230800-4 0.000000+0                       600 4  2
+ 0.000000+0 6.000000+5          0          0          4          0 600 4  2
+ 5.314500-2 5.274000-3 3.476700-4 0.000000+0                       600 4  2
+ 0.000000+0 7.000000+5          0          0          4          0 600 4  2
+ 5.744800-2 6.394900-3 4.974000-4-5.641100-5                       600 4  2
+ 0.000000+0 8.000000+5          0          0          4          0 600 4  2
+ 6.078900-2 7.486100-3 6.650900-4-1.013500-4                       600 4  2
+ 0.000000+0 9.000000+5          0          0          4          0 600 4  2
+ 6.322600-2 8.553600-3 8.401900-4-1.700600-4                       600 4  2
+ 0.000000+0 1.000000+6          0          0          4          0 600 4  2
+ 6.479700-2 9.618100-3 1.008100-3-2.704900-4                       600 4  2
+ 0.000000+0 1.100000+6          0          0          4          0 600 4  2
+ 6.550000-2 1.070900-2 1.146800-3-4.118800-4                       600 4  2
+ 0.000000+0 1.200000+6          0          0          4          0 600 4  2
+ 6.536000-2 1.188100-2 1.234700-3-6.050800-4                       600 4  2
+ 0.000000+0 1.300000+6          0          0          4          0 600 4  2
+ 6.436300-2 1.319900-2 1.240500-3-8.620300-4                       600 4  2
+ 0.000000+0 1.400000+6          0          0          6          0 600 4  2
+ 6.247500-2 1.475200-2 1.122800-3-1.195200-3 6.114500-5 0.000000+0 600 4  2
+ 0.000000+0 1.500000+6          0          0          6          0 600 4  2
+ 5.963500-2 1.664300-2 8.259800-4-1.615700-3 8.828800-5 0.000000+0 600 4  2
+ 0.000000+0 1.600000+6          0          0          6          0 600 4  2
+ 5.578100-2 1.897000-2 2.492400-4-2.126300-3 1.247900-4 0.000000+0 600 4  2
+ 0.000000+0 1.650000+6          0          0          6          0 600 4  2
+ 5.328500-2 2.039500-2-2.552000-4-2.416100-3 1.488000-4 0.000000+0 600 4  2
+ 0.000000+0 1.680000+6          0          0          6          0 600 4  2
+ 5.180600-2 2.117000-2-5.907000-4-2.578500-3 1.632100-4 0.000000+0 600 4  2
+ 0.000000+0 1.700000+6          0          0          6          0 600 4  2
+ 5.076500-2 2.158000-2-8.678800-4-2.658500-3 1.728200-4 0.000000+0 600 4  2
+ 0.000000+0 1.710000+6          0          0          6          0 600 4  2
+ 4.995100-2 2.184900-2-1.114800-3-2.661400-3 1.789500-4 0.000000+0 600 4  2
+ 0.000000+0 1.720000+6          0          0          6          0 600 4  2
+ 4.878600-2 2.243800-2-1.386900-3-2.581800-3 1.850800-4 0.000000+0 600 4  2
+ 0.000000+0 1.730000+6          0          0          6          0 600 4  2
+ 4.760800-2 2.426300-2-1.410200-3-2.435300-3 1.912100-4 0.000000+0 600 4  2
+ 0.000000+0 1.736000+6          0          0          6          0 600 4  2
+ 4.763000-2 2.514000-2-1.194900-3-2.453600-3 1.948900-4 0.000000+0 600 4  2
+ 0.000000+0 1.740000+6          0          0          6          0 600 4  2
+ 4.770900-2 2.508700-2-1.051500-3-2.525400-3 1.973400-4 0.000000+0 600 4  2
+ 0.000000+0 1.745000+6          0          0          6          0 600 4  2
+ 4.747100-2 2.454800-2-9.698700-4-2.660800-3 2.004000-4 0.000000+0 600 4  2
+ 0.000000+0 1.750000+6          0          0          6          0 600 4  2
+ 4.693000-2 2.410800-2-1.024200-3-2.804400-3 2.034700-4 0.000000+0 600 4  2
+ 0.000000+0 1.755000+6          0          0          6          0 600 4  2
+ 4.639400-2 2.402300-2-1.150300-3-2.917200-3 2.065300-4 0.000000+0 600 4  2
+ 0.000000+0 1.760000+6          0          0          6          0 600 4  2
+ 4.596400-2 2.415400-2-1.286800-3-2.997300-3 2.096000-4 0.000000+0 600 4  2
+ 0.000000+0 1.770000+6          0          0          6          0 600 4  2
+ 4.529100-2 2.458900-2-1.529300-3-3.104400-3 2.157200-4 0.000000+0 600 4  2
+ 0.000000+0 1.780000+6          0          0          6          0 600 4  2
+ 4.468800-2 2.503500-2-1.736800-3-3.183100-3 2.218500-4 0.000000+0 600 4  2
+ 0.000000+0 1.790000+6          0          0          6          0 600 4  2
+ 4.408700-2 2.545600-2-1.925600-3-3.252000-3 2.279800-4 0.000000+0 600 4  2
+ 0.000000+0 1.800000+6          0          0          6          0 600 4  2
+ 4.347500-2 2.586000-2-2.104400-3-3.316800-3 2.341100-4 0.000000+0 600 4  2
+ 0.000000+0 1.820000+6          0          0          6          0 600 4  2
+ 4.190500-2 2.677700-2-2.611800-3-3.411200-3 2.482700-4 0.000000+0 600 4  2
+ 0.000000+0 1.850000+6          0          0          6          0 600 4  2
+ 3.950300-2 2.812800-2-3.355400-3-3.548400-3 2.695000-4 0.000000+0 600 4  2
+ 0.000000+0 1.900000+6          0          0          6          0 600 4  2
+ 3.462400-2 3.058600-2-5.085300-3-3.596600-3 3.065600-4 0.000000+0 600 4  2
+ 0.000000+0 1.925000+6          0          0          6          0 600 4  2
+ 3.169000-2 3.189100-2-6.267500-3-3.474400-3 3.245600-4 0.000000+0 600 4  2
+ 0.000000+0 1.950000+6          0          0          6          0 600 4  2
+ 2.825000-2 3.325300-2-7.815600-3-3.157700-3 3.406800-4 0.000000+0 600 4  2
+ 0.000000+0 1.960000+6          0          0          6          0 600 4  2
+ 2.667000-2 3.381800-2-8.585700-3-2.943400-3 3.461000-4 0.000000+0 600 4  2
+ 0.000000+0 1.970000+6          0          0          6          0 600 4  2
+ 2.492900-2 3.440500-2-9.476900-3-2.654700-3 3.505500-4 0.000000+0 600 4  2
+ 0.000000+0 1.980000+6          0          0          6          0 600 4  2
+ 2.298000-2 3.502600-2-1.052400-2-2.265700-3 3.536500-4 0.000000+0 600 4  2
+ 0.000000+0 1.990000+6          0          0          6          0 600 4  2
+ 2.075900-2 3.570000-2-1.178000-2-1.736900-3 3.547800-4 0.000000+0 600 4  2
+ 0.000000+0 2.000000+6          0          0          6          0 600 4  2
+ 1.816100-2 3.648000-2-1.332200-2-1.006900-3 3.530600-4 0.000000+0 600 4  2
+ 0.000000+0 2.020000+6          0          0          6          0 600 4  2
+ 1.079700-2 3.894000-2-1.806100-2 1.571100-3 3.379400-4 0.000000+0 600 4  2
+ 0.000000+0 2.040000+6          0          0          6          0 600 4  2
+-2.062700-3 4.600500-2-2.688000-2 7.934200-3 2.678500-4 0.000000+0 600 4  2
+ 0.000000+0 2.060000+6          0          0          4          0 600 4  2
+-3.518300-2 9.691510-2-4.969100-2 3.288000-2                       600 4  2
+ 0.000000+0 2.070000+6          0          0          6          0 600 4  2
+-6.030500-2 2.755900-1-6.113000-2 7.791200-2-3.519000-4 0.000000+0 600 4  2
+ 0.000000+0 2.080000+6          0          0          6          0 600 4  2
+ 5.407200-2 4.256200-1 3.582300-2 4.466600-2 5.298500-4 0.000000+0 600 4  2
+ 0.000000+0 2.090000+6          0          0          6          0 600 4  2
+ 7.744500-2 1.978400-1 4.476200-2-1.025600-2 9.477500-4 0.000000+0 600 4  2
+ 0.000000+0 2.100000+6          0          0          6          0 600 4  2
+ 6.315400-2 1.231700-1 3.078800-2-1.740600-2 9.142000-4 0.000000+0 600 4  2
+ 0.000000+0 2.110000+6          0          0          6          0 600 4  2
+ 5.284100-2 9.624000-2 2.202800-2-1.789700-2 8.752700-4 0.000000+0 600 4  2
+ 0.000000+0 2.120000+6          0          0          6          0 600 4  2
+ 4.583400-2 8.401510-2 1.651300-2-1.743800-2 8.529400-4 0.000000+0 600 4  2
+ 0.000000+0 2.130000+6          0          0          6          0 600 4  2
+ 4.073300-2 7.767810-2 1.275700-2-1.691400-2 8.426000-4 0.000000+0 600 4  2
+ 0.000000+0 2.140000+6          0          0          6          0 600 4  2
+ 3.677000-2 7.417900-2 1.002200-2-1.648200-2 8.402000-4 0.000000+0 600 4  2
+ 0.000000+0 2.150000+6          0          0          6          0 600 4  2
+ 3.352500-2 7.223900-2 7.923800-3-1.615600-2 8.432400-4 0.000000+0 600 4  2
+ 0.000000+0 2.300000+6          0          0          6          0 600 4  2
+ 6.206700-3 8.469710-2-4.603100-3-1.697100-2 1.109700-3 0.000000+0 600 4  2
+ 0.000000+0 2.450000+6          0          0          6          0 600 4  2
+-1.572700-2 1.180300-1-1.182800-2-2.089400-2 1.541800-3 0.000000+0 600 4  2
+ 0.000000+0 2.600000+6          0          0          6          0 600 4  2
+-3.655900-2 1.684700-1-1.863200-2-2.550600-2 2.040700-3 0.000000+0 600 4  2
+ 0.000000+0 2.750000+6          0          0          6          0 600 4  2
+-4.791300-2 2.415900-1-2.207500-2-2.924100-2 2.102900-3 0.000000+0 600 4  2
+ 0.000000+0 2.780000+6          0          0          6          0 600 4  2
+-4.374300-2 2.590700-1-2.019700-2-3.010300-2 1.553200-3 6.194700-5 600 4  2
+ 0.000000+0 2.800000+6          0          0          6          0 600 4  2
+-2.816600-2 2.684900-1-1.352800-2-3.224100-2-2.143700-4 2.081800-4 600 4  2
+ 0.000000+0 2.805000+6          0          0          6          0 600 4  2
+-1.392900-2 2.682800-1-7.163900-3-3.401800-2-1.776200-3 3.361000-4 600 4  2
+ 0.000000+0 2.810000+6          0          0          6          0 600 4  2
+ 3.059500-2 2.605400-1 1.474000-2-3.815400-2-6.325900-3 7.101800-4 600 4  2
+ 0.000000+0 2.815000+6          0          0          6          0 600 4  2
+ 1.010200-1 2.822200-1 1.866700-1 6.405100-2 1.085800-2-5.477000-4 600 4  2
+ 0.000000+0 2.820000+6          0          0          6          0 600 4  2
+-1.161000-1 3.100300-1-4.142900-2-1.114100-2 1.161100-2-7.458500-4 600 4  2
+ 0.000000+0 2.830000+6          0          0          6          0 600 4  2
+-7.678010-2 3.054800-1-3.155400-2-2.194500-2 5.970400-3-2.935000-4 600 4  2
+ 0.000000+0 2.840000+6          0          0          6          0 600 4  2
+-6.628800-2 3.108600-1-2.785500-2-2.349100-2 4.736400-3-1.950300-4 600 4  2
+ 0.000000+0 2.880000+6          0          0          6          0 600 4  2
+-4.664700-2 3.445800-1-1.939900-2-2.140900-2 3.340900-3-9.901500-5 600 4  2
+ 0.000000+0 2.900000+6          0          0          6          0 600 4  2
+-3.385000-2 3.644500-1-1.328300-2-1.771900-2 2.856400-3-8.198900-5 600 4  2
+ 0.000000+0 2.920000+6          0          0          6          0 600 4  2
+-1.298400-2 3.836000-1-3.016400-3-1.111100-2 2.175100-3-6.937400-5 600 4  2
+ 0.000000+0 2.940000+6          0          0          6          0 600 4  2
+ 2.403500-2 3.919400-1 1.578000-2 9.418900-4 1.038900-3-6.077300-5 600 4  2
+ 0.000000+0 2.960000+6          0          0          6          0 600 4  2
+ 8.727510-2 3.502100-1 4.947600-2 2.166000-2-8.154700-4-6.569800-5 600 4  2
+ 0.000000+0 2.980000+6          0          0          6          0 600 4  2
+ 1.405500-1 1.844800-1 8.226010-2 3.900400-2-2.167800-3-1.100700-4 600 4  2
+ 0.000000+0 3.000000+6          0          0          4          0 600 4  2
+ 7.872310-2 4.029700-2 5.622400-2 1.844600-2                       600 4  2
+ 0.000000+0 3.020000+6          0          0          6          0 600 4  2
+-4.886400-3 6.621410-2 1.352200-2-9.094900-3 2.605800-3-1.658800-4 600 4  2
+ 0.000000+0 3.040000+6          0          0          6          0 600 4  2
+-4.590200-2 1.295900-1-8.942300-3-2.253900-2 3.838300-3-1.536600-4 600 4  2
+ 0.000000+0 3.080000+6          0          0          6          0 600 4  2
+-7.009800-2 2.193400-1-2.348800-2-3.036900-2 4.576600-3-1.340200-4 600 4  2
+ 0.000000+0 3.120000+6          0          0          6          0 600 4  2
+-7.229700-2 2.716000-1-2.572300-2-3.095300-2 4.688500-3-1.233400-4 600 4  2
+ 0.000000+0 3.200000+6          0          0          6          0 600 4  2
+-6.205300-2 3.309700-1-2.133700-2-2.723200-2 4.487100-3-1.138200-4 600 4  2
+ 0.000000+0 3.300000+6          0          0          6          0 600 4  2
+-4.077700-2 3.682500-1-1.014700-2-1.950200-2 3.891800-3-1.115400-4 600 4  2
+ 0.000000+0 3.400000+6          0          0          6          0 600 4  2
+-1.657200-2 3.823000-1 3.931300-3-1.027300-2 3.028700-3-1.163400-4 600 4  2
+ 0.000000+0 3.500000+6          0          0          6          0 600 4  2
+ 6.739100-3 3.803400-1 1.911300-2-5.874600-4 1.975000-3-1.286100-4 600 4  2
+ 0.000000+0 3.600000+6          0          0          6          0 600 4  2
+ 2.632600-2 3.674100-1 3.410800-2 8.834100-3 8.050000-4-1.495200-4 600 4  2
+ 0.000000+0 3.700000+6          0          0          6          0 600 4  2
+ 4.016800-2 3.475100-1 4.801900-2 1.759300-2-4.245900-4-1.803100-4 600 4  2
+ 0.000000+0 3.800000+6          0          0          6          0 600 4  2
+ 4.670500-2 3.233200-1 6.021800-2 2.558900-2-1.681400-3-2.222200-4 600 4  2
+ 0.000000+0 3.900000+6          0          0          6          0 600 4  2
+ 4.448100-2 2.957800-1 7.000710-2 3.297100-2-2.954900-3-2.765700-4 600 4  2
+ 0.000000+0 4.000000+6          0          0          6          0 600 4  2
+ 3.360800-2 2.627000-1 7.576000-2 4.010500-2-4.239000-3-3.441000-4 600 4  2
+ 0.000000+0 4.050000+6          0          0          6          0 600 4  2
+ 2.864900-2 2.414400-1 7.577100-2 4.367400-2-4.863500-3-3.814400-4 600 4  2
+ 0.000000+0 4.100000+6          0          0          6          0 600 4  2
+ 3.506800-2 2.137400-1 7.227410-2 4.701700-2-5.413900-3-4.165800-4 600 4  2
+ 0.000000+0 4.150000+6          0          0          6          0 600 4  2
+ 8.182700-2 1.773000-1 6.411200-2 4.898700-2-5.731400-3-4.375800-4 600 4  2
+ 0.000000+0 4.200000+6          0          0          6          0 600 4  2
+ 2.136500-1 1.419500-1 5.589800-2 4.674400-2-5.586600-3-4.268000-4 600 4  2
+ 0.000000+0 4.250000+6          0          0          6          0 600 4  2
+ 3.795200-1 1.380800-1 6.223300-2 4.028800-2-5.298000-3-4.075900-4 600 4  2
+ 0.000000+0 4.300000+6          0          0          6          0 600 4  2
+ 4.446100-1 1.606400-1 8.098800-2 3.630700-2-5.595400-3-4.356000-4 600 4  2
+ 0.000000+0 4.350000+6          0          0          6          0 600 4  2
+ 4.305000-1 1.788000-1 9.744400-2 3.623500-2-6.324900-3-5.001000-4 600 4  2
+ 0.000000+0 4.400000+6          0          0          6          0 600 4  2
+ 3.980900-1 1.866700-1 1.086900-1 3.770800-2-7.149500-3-5.757700-4 600 4  2
+ 0.000000+0 4.450000+6          0          0          6          0 600 4  2
+ 3.683800-1 1.880500-1 1.165000-1 3.946000-2-7.962200-3-6.544900-4 600 4  2
+ 0.000000+0 4.500000+6          0          0          6          0 600 4  2
+ 3.446600-1 1.860100-1 1.223600-1 4.110000-2-8.751400-3-7.354300-4 600 4  2
+ 0.000000+0 4.600000+6          0          0          6          0 600 4  2
+ 3.115100-1 1.774500-1 1.309900-1 4.378500-2-1.029800-2-9.074100-4 600 4  2
+ 0.000000+0 4.700000+6          0          0          6          0 600 4  2
+ 2.899700-1 1.666200-1 1.372800-1 4.575300-2-1.187100-2-1.099300-3 600 4  2
+ 0.000000+0 4.800000+6          0          0          6          0 600 4  2
+ 2.743300-1 1.545400-1 1.412700-1 4.720000-2-1.355100-2-1.319900-3 600 4  2
+ 0.000000+0 4.880000+6          0          0          6          0 600 4  2
+ 2.629000-1 1.410400-1 1.384500-1 4.832900-2-1.513000-2-1.533900-3 600 4  2
+ 0.000000+0 4.900000+6          0          0          6          0 600 4  2
+ 2.590700-1 1.339700-1 1.322400-1 4.885300-2-1.567700-2-1.605200-3 600 4  2
+ 0.000000+0 4.920000+6          0          0          6          0 600 4  2
+ 2.528200-1 1.127300-1 1.027100-1 5.011300-2-1.665100-2-1.721900-3 600 4  2
+ 0.000000+0 4.925000+6          0          0          6          0 600 4  2
+ 2.525200-1 9.546700-2 7.149400-2 5.049100-2-1.708800-2-1.771400-3 600 4  2
+ 0.000000+0 4.930000+6          0          0          6          0 600 4  2
+ 2.851000-1 6.948500-2-1.690100-2 4.550800-2-1.610600-2-1.673700-3 600 4  2
+ 0.000000+0 4.935000+6          0          0          6          0 600 4  2
+ 3.629300-1 2.309100-1 1.876200-1 2.851600-2-8.949900-3-9.323300-4 600 4  2
+ 0.000000+0 4.940000+6          0          0          6          0 600 4  2
+ 2.964600-1 1.966500-1 2.070900-1 4.048200-2-1.297700-2-1.355100-3 600 4  2
+ 0.000000+0 4.960000+6          0          0          6          0 600 4  2
+ 2.657400-1 1.564200-1 1.727000-1 4.630600-2-1.556700-2-1.641600-3 600 4  2
+ 0.000000+0 4.980000+6          0          0          6          0 600 4  2
+ 2.601800-1 1.475300-1 1.654100-1 4.713800-2-1.627700-2-1.733200-3 600 4  2
+ 0.000000+0 5.000000+6          0          0          6          0 600 4  2
+ 2.460000-1 1.244000-1 1.080000-1 4.000000-2-3.000000-3 0.000000+0 600 4  2
+ 0.000000+0 5.200000+6          0          0          6          0 600 4  2
+ 2.350000-1 1.063000-1 9.200010-2 3.716000-2-5.670000-3 0.000000+0 600 4  2
+ 0.000000+0 5.250000+6          0          0          6          0 600 4  2
+ 2.340000-1 1.029500-1 7.700010-2 3.645000-2-6.500000-3 0.000000+0 600 4  2
+ 0.000000+0 5.285000+6          0          0          6          0 600 4  2
+ 2.396000-1 1.006000-1 5.000000-2 3.595000-2-7.080000-3 0.000000+0 600 4  2
+ 0.000000+0 5.300000+6          0          0          6          0 600 4  2
+ 2.420000-1 1.000000-1 4.700000-2 3.574000-2-7.330000-3 0.000000+0 600 4  2
+ 0.000000+0 5.320000+6          0          0          6          0 600 4  2
+ 2.932000-1 1.040000-1 4.633000-2 3.545000-2-7.670000-3 0.000000+0 600 4  2
+ 0.000000+0 5.325000+6          0          0          6          0 600 4  2
+ 3.060000-1 1.170000-1 4.700000-2 3.538000-2-7.750000-3 0.000000+0 600 4  2
+ 0.000000+0 5.350000+6          0          0          6          0 600 4  2
+ 3.700000-1 1.820000-1 8.013000-2 3.472000-2-8.170000-3 0.000000+0 600 4  2
+ 0.000000+0 5.360000+6          0          0          6          0 600 4  2
+ 3.810000-1 1.846700-1 9.338000-2 3.445000-2-8.330000-3 0.000000+0 600 4  2
+ 0.000000+0 5.365000+6          0          0          6          0 600 4  2
+ 3.805000-1 1.860000-1 1.000000-1 3.432000-2-8.420000-3 0.000000+0 600 4  2
+ 0.000000+0 5.380000+6          0          0          6          0 600 4  2
+ 3.790000-1 1.900000-1 1.094300-1 3.392000-2-8.670000-3 0.000000+0 600 4  2
+ 0.000000+0 5.400000+6          0          0          6          0 600 4  2
+ 3.195000-1 1.883100-1 1.220000-1 3.339000-2-9.000000-3 0.000000+0 600 4  2
+ 0.000000+0 5.420000+6          0          0          6          0 600 4  2
+ 2.600000-1 1.866300-1 1.268000-1 3.286000-2-9.600000-3 0.000000+0 600 4  2
+ 0.000000+0 5.470000+6          0          0          6          0 600 4  2
+ 2.250000-1 1.824100-1 1.364000-1 3.153000-2-1.110000-2 0.000000+0 600 4  2
+ 0.000000+0 5.500000+6          0          0          6          0 600 4  2
+ 2.186200-1 1.798700-1 1.400000-1 3.073000-2-1.200000-2 0.000000+0 600 4  2
+ 0.000000+0 5.550000+6          0          0          6          0 600 4  2
+ 2.080000-1 1.756600-1 1.402500-1 2.940000-2-1.350000-2 0.000000+0 600 4  2
+ 0.000000+0 5.700000+6          0          0          6          0 600 4  2
+ 1.943300-1 1.630000-1 1.410000-1 2.460000-2-1.800000-2 0.000000+0 600 4  2
+ 0.000000+0 5.950000+6          0          0          6          0 600 4  2
+ 1.715600-1 1.615000-1 1.440000-1 1.660000-2-2.800000-2 0.000000+0 600 4  2
+ 0.000000+0 6.050000+6          0          0          6          0 600 4  2
+ 1.630000-1 1.630000-1 1.600000-1 1.400000-2-3.294000-2 0.000000+0 600 4  2
+ 0.000000+0 6.100000+6          0          0          6          0 600 4  2
+ 1.550000-1 1.670000-1 1.790000-1 1.300000-2-3.588000-2 2.000000-3 600 4  2
+ 0.000000+0 6.150000+6          0          0          6          0 600 4  2
+ 1.369200-1 1.710000-1 1.980000-1 1.400000-2-3.882000-2 7.000000-3 600 4  2
+ 0.000000+0 6.185000+6          0          0          6          0 600 4  2
+ 1.242700-1 1.793100-1 2.164100-1 1.600000-2-4.000000-2 1.313000-2 600 4  2
+ 0.000000+0 6.200000+6          0          0          6          0 600 4  2
+ 1.188500-1 1.828700-1 2.243000-1 2.080000-2-4.000000-2 1.700000-2 600 4  2
+ 0.000000+0 6.210000+6          0          0          6          0 600 4  2
+ 1.152300-1 1.852500-1 2.295600-1 2.400000-2-3.840000-2 2.000000-2 600 4  2
+ 0.000000+0 6.225000+6          0          0          6          0 600 4  2
+ 1.098100-1 1.888100-1 2.374400-1 4.680000-2-3.600000-2 2.450000-2 600 4  2
+ 0.000000+0 6.230000+6          0          0          6          0 600 4  2
+ 1.080000-1 1.900000-1 2.400700-1 5.440000-2-2.970000-2 2.600000-2 600 4  2
+ 0.000000+0 6.250000+6          0          0          6          0 600 4  2
+ 1.060000-1 2.050000-1 2.505900-1 8.480010-2-4.500000-3 3.200000-2 600 4  2
+ 0.000000+0 6.260000+6          0          0          6          0 600 4  2
+ 1.120000-1 2.125000-1 2.558500-1 1.000000-1 8.100000-3 3.280000-2 600 4  2
+ 0.000000+0 6.275000+6          0          0          6          0 600 4  2
+ 1.492000-1 2.265000-1 2.637400-1 1.228000-1 2.700000-2 3.400000-2 600 4  2
+ 0.000000+0 6.285000+6          0          0          6          0 600 4  2
+ 1.740000-1 2.395000-1 2.690000-1 1.380000-1 3.960000-2 3.320000-2 600 4  2
+ 0.000000+0 6.300000+6          0          0          6          0 600 4  2
+ 2.112000-1 2.590000-1 2.680000-1 1.608000-1 5.850000-2 3.200000-2 600 4  2
+ 0.000000+0 6.310000+6          0          0          6          0 600 4  2
+ 2.360000-1 2.720000-1 2.673400-1 1.760000-1 7.110000-2 2.980000-2 600 4  2
+ 0.000000+0 6.320000+6          0          0          6          0 600 4  2
+ 2.608000-1 2.850000-1 2.666700-1 1.820000-1 8.370000-2 2.760000-2 600 4  2
+ 0.000000+0 6.325000+6          0          0          6          0 600 4  2
+ 2.732000-1 2.870000-1 2.650000-1 1.820000-1 9.000000-2 2.650000-2 600 4  2
+ 0.000000+0 6.340000+6          0          0          6          0 600 4  2
+ 3.104000-1 2.930000-1 2.350000-1 1.820000-1 9.200010-2 2.320000-2 600 4  2
+ 0.000000+0 6.350000+6          0          0          6          0 600 4  2
+ 3.352000-1 2.910000-1 2.150000-1 1.820000-1 9.000000-2 2.100000-2 600 4  2
+ 0.000000+0 6.360000+6          0          0          6          0 600 4  2
+ 3.600000-1 2.890000-1 2.072000-1 1.780000-1 8.350010-2 1.880000-2 600 4  2
+ 0.000000+0 6.390000+6          0          0          6          0 600 4  2
+ 3.626100-1 2.830000-1 1.838000-1 1.557100-1 6.400000-2 1.220000-2 600 4  2
+ 0.000000+0 6.400000+6          0          0          6          0 600 4  2
+ 3.634800-1 2.767500-1 1.760000-1 1.475900-1 6.136000-2 1.000000-2 600 4  2
+ 0.000000+0 6.430000+6          0          0          6          0 600 4  2
+ 3.660900-1 2.580000-1 1.710000-1 1.232400-1 5.345000-2 3.400000-3 600 4  2
+ 0.000000+0 6.450000+6          0          0          6          0 600 4  2
+ 3.678300-1 2.566700-1 1.715000-1 1.070000-1 4.818000-2-1.000000-3 600 4  2
+ 0.000000+0 6.460000+6          0          0          6          0 600 4  2
+ 3.680000-1 2.560000-1 1.717500-1 1.065000-1 4.555000-2-2.000000-3 600 4  2
+ 0.000000+0 6.470000+6          0          0          6          0 600 4  2
+ 3.885000-1 2.685000-1 1.720000-1 1.060000-1 4.291000-2-3.000000-3 600 4  2
+ 0.000000+0 6.480000+6          0          0          6          0 600 4  2
+ 4.090000-1 2.810000-1 1.780600-1 1.055000-1 4.027000-2-4.000000-3 600 4  2
+ 0.000000+0 6.490000+6          0          0          6          0 600 4  2
+ 4.295000-1 2.935000-1 1.841300-1 1.060000-1 3.764000-2-4.330000-3 600 4  2
+ 0.000000+0 6.500000+6          0          0          6          0 600 4  2
+ 4.500000-1 3.060000-1 1.901900-1 1.115000-1 3.500000-2-4.670000-3 600 4  2
+ 0.000000+0 6.530000+6          0          0          6          0 600 4  2
+ 4.515000-1 3.100000-1 2.107500-1 1.280000-1 2.960000-2-4.330000-3 600 4  2
+ 0.000000+0 6.540000+6          0          0          6          0 600 4  2
+ 4.520000-1 3.090000-1 2.180000-1 1.290000-1 2.780000-2-4.000000-3 600 4  2
+ 0.000000+0 6.550000+6          0          0          6          0 600 4  2
+ 4.500000-1 2.858300-1 2.186700-1 1.300000-1 2.600000-2-2.500000-3 600 4  2
+ 0.000000+0 6.570000+6          0          0          6          0 600 4  2
+ 3.900000-1 2.395000-1 2.200000-1 1.280000-1 2.240000-2 5.000000-4 600 4  2
+ 0.000000+0 6.600000+6          0          0          6          0 600 4  2
+ 3.000000-1 1.700000-1 1.950000-1 1.167500-1 1.700000-2 5.000000-3 600 4  2
+ 0.000000+0 6.610000+6          0          0          6          0 600 4  2
+ 2.700000-1 1.600000-1 1.898000-1 1.130000-1 1.560000-2 6.000000-3 600 4  2
+ 0.000000+0 6.620000+6          0          0          6          0 600 4  2
+ 2.625700-1 1.500000-1 1.846000-1 1.092500-1 1.420000-2 7.000000-3 600 4  2
+ 0.000000+0 6.650000+6          0          0          6          0 600 4  2
+ 2.402900-1 1.200000-1 1.690000-1 9.800000-2 1.000000-2 5.000000-3 600 4  2
+ 0.000000+0 6.680000+6          0          0          6          0 600 4  2
+ 2.180000-1 1.050000-1 1.534000-1 8.900000-2 5.800000-3 3.200000-3 600 4  2
+ 0.000000+0 6.700000+6          0          0          6          0 600 4  2
+ 2.138000-1 9.500010-2 1.430000-1 8.300000-2 3.000000-3 2.000000-3 600 4  2
+ 0.000000+0 6.730000+6          0          0          6          0 600 4  2
+ 2.075100-1 8.000000-2 1.358000-1 7.400000-2-3.000000-4 1.140000-3 600 4  2
+ 0.000000+0 6.800000+6          0          0          6          0 600 4  2
+ 1.998700-1 6.483000-2 1.190000-1 5.700000-2-8.000000-3 0.000000+0 600 4  2
+ 0.000000+0 6.850000+6          0          0          6          0 600 4  2
+ 1.964400-1 5.400000-2 1.100000-1 4.600000-2-1.200000-2 0.000000+0 600 4  2
+ 0.000000+0 6.950000+6          0          0          6          0 600 4  2
+ 1.958600-1 4.500000-2 8.700010-2 3.100000-2-1.400000-2 0.000000+0 600 4  2
+ 0.000000+0 6.970000+6          0          0          6          0 600 4  2
+ 1.970000-1 4.420000-2 8.140000-2 2.860000-2-1.420000-2 0.000000+0 600 4  2
+ 0.000000+0 7.000000+6          0          0          6          0 600 4  2
+ 2.067500-1 4.300000-2 7.300000-2 2.500000-2-1.300000-2 0.000000+0 600 4  2
+ 0.000000+0 7.050000+6          0          0          6          0 600 4  2
+ 2.230000-1 4.500000-2 5.750000-2 2.100000-2-1.000000-2 0.000000+0 600 4  2
+ 0.000000+0 7.110000+6          0          0          6          0 600 4  2
+ 2.640000-1 5.680000-2 4.033000-2 1.900000-2-5.200000-3 0.000000+0 600 4  2
+ 0.000000+0 7.130000+6          0          0          6          0 600 4  2
+ 2.900000-1 6.440010-2 3.700000-2 1.900000-2-3.600000-3 0.000000+0 600 4  2
+ 0.000000+0 7.150000+6          0          0          6          0 600 4  2
+ 3.160000-1 7.200010-2 3.700000-2 1.900000-2-2.000000-3 0.000000+0 600 4  2
+ 0.000000+0 7.160000+6          0          0          6          0 600 4  2
+ 3.290000-1 8.560010-2 3.700000-2 1.940000-2-1.050000-3 0.000000+0 600 4  2
+ 0.000000+0 7.170000+6          0          0          6          0 600 4  2
+ 3.420000-1 9.920010-2 3.950000-2 1.980000-2-1.000000-4 0.000000+0 600 4  2
+ 0.000000+0 7.200000+6          0          0          6          0 600 4  2
+ 4.098500-1 1.400000-1 4.700000-2 2.100000-2 2.750000-3 0.000000+0 600 4  2
+ 0.000000+0 7.250000+6          0          0          6          0 600 4  2
+ 5.229200-1 2.266700-1 7.000000-2 2.300000-2 7.500000-3 0.000000+0 600 4  2
+ 0.000000+0 7.300000+6          0          0          6          0 600 4  2
+ 6.360000-1 3.133300-1 1.015000-1 2.600000-2 1.225000-2 0.000000+0 600 4  2
+ 0.000000+0 7.325000+6          0          0          6          0 600 4  2
+ 6.450000-1 3.566700-1 1.172500-1 2.750000-2 1.463000-2 0.000000+0 600 4  2
+ 0.000000+0 7.350000+6          0          0          6          0 600 4  2
+ 6.370000-1 3.950000-1 1.330000-1 2.900000-2 1.700000-2 0.000000+0 600 4  2
+ 0.000000+0 7.390000+6          0          0          6          0 600 4  2
+ 5.143300-1 4.300000-1 1.538000-1 3.300000-2 2.020000-2 0.000000+0 600 4  2
+ 0.000000+0 7.400000+6          0          0          6          0 600 4  2
+ 4.836700-1 4.300000-1 1.590000-1 3.400000-2 2.100000-2 0.000000+0 600 4  2
+ 0.000000+0 7.440000+6          0          0          6          0 600 4  2
+ 3.610000-1 4.400000-1 1.742000-1 3.800000-2 2.180000-2 0.000000+0 600 4  2
+ 0.000000+0 7.450000+6          0          0          6          0 600 4  2
+ 3.536700-1 4.420000-1 1.780000-1 3.900000-2 2.200000-2 0.000000+0 600 4  2
+ 0.000000+0 7.500000+6          0          0          6          0 600 4  2
+ 3.170000-1 4.380000-1 1.915000-1 4.800000-2 2.200000-2 5.700000-4 600 4  2
+ 0.000000+0 7.550000+6          0          0          6          0 600 4  2
+ 2.980000-1 4.180000-1 2.050000-1 6.918000-2 2.200000-2 2.000000-3 600 4  2
+ 0.000000+0 7.580000+6          0          0          6          0 600 4  2
+ 2.866000-1 4.050000-1 2.101400-1 8.188000-2 2.260000-2 5.300000-3 600 4  2
+ 0.000000+0 7.600000+6          0          0          6          0 600 4  2
+ 2.790000-1 4.058600-1 2.135700-1 9.035000-2 2.300000-2 7.500000-3 600 4  2
+ 0.000000+0 7.635000+6          0          0          6          0 600 4  2
+ 2.722000-1 4.073700-1 2.195700-1 1.051800-1 3.000000-2 1.135000-2 600 4  2
+ 0.000000+0 7.670000+6          0          0          6          0 600 4  2
+ 2.680000-1 4.195600-1 2.255700-1 1.200000-1 4.583000-2 1.367000-2 600 4  2
+ 0.000000+0 7.700000+6          0          0          6          0 600 4  2
+ 2.701000-1 4.300000-1 2.307100-1 1.248000-1 5.939000-2 1.350000-2 600 4  2
+ 0.000000+0 7.740000+6          0          0          6          0 600 4  2
+ 2.750000-1 4.752000-1 2.375700-1 1.292500-1 7.748010-2 1.069000-2 600 4  2
+ 0.000000+0 7.750000+6          0          0          6          0 600 4  2
+ 2.812500-1 4.865000-1 2.392900-1 1.298800-1 8.200010-2 9.540000-3 600 4  2
+ 0.000000+0 7.770000+6          0          0          6          0 600 4  2
+ 2.937500-1 5.091000-1 2.427100-1 1.311200-1 8.600010-2 7.230000-3 600 4  2
+ 0.000000+0 7.780000+6          0          0          6          0 600 4  2
+ 3.000000-1 5.204000-1 2.444300-1 1.317500-1 8.600010-2 6.080000-3 600 4  2
+ 0.000000+0 7.790000+6          0          0          6          0 600 4  2
+ 3.209100-1 5.317000-1 2.461400-1 1.323800-1 8.600010-2 4.920000-3 600 4  2
+ 0.000000+0 7.800000+6          0          0          6          0 600 4  2
+ 3.418200-1 5.430000-1 2.478600-1 1.330000-1 8.400000-2 3.770000-3 600 4  2
+ 0.000000+0 7.810000+6          0          0          6          0 600 4  2
+ 3.627300-1 5.476700-1 2.495700-1 1.330700-1 8.200010-2 2.620000-3 600 4  2
+ 0.000000+0 7.830000+6          0          0          6          0 600 4  2
+ 4.045500-1 5.570000-1 2.530000-1 1.332000-1 7.433000-2 3.100000-4 600 4  2
+ 0.000000+0 7.850000+6          0          0          6          0 600 4  2
+ 4.463600-1 5.543300-1 2.564300-1 1.333300-1 6.667000-2-2.000000-3 600 4  2
+ 0.000000+0 8.000000+6          0          0          6          0 600 4  2
+ 5.000000-1 5.000000-1 2.400000-1 1.000000-1 2.400000-2-1.200000-2 600 4  2
+ 0.000000+0 8.150000+6          0          0          6          0 600 4  2
+ 6.337000-1 5.299000-1 3.526000-1 2.108000-1 8.000000-2 8.000000-3 600 4  2
+ 0.000000+0 8.200000+6          0          0          6          0 600 4  2
+ 6.548000-1 5.360000-1 3.612000-1 2.180000-1 8.000000-2 8.000000-3 600 4  2
+ 0.000000+0 8.250000+6          0          0          6          0 600 4  2
+ 6.510000-1 5.000000-1 3.523000-1 2.067000-1 6.625010-2 7.330000-3 600 4  2
+ 0.000000+0 8.350000+6          0          0          6          0 600 4  2
+ 5.674000-1 4.400000-1 3.321000-1 1.689000-1 4.000000-2 5.110000-3 600 4  2
+ 0.000000+0 8.450000+6          0          0          6          0 600 4  2
+ 5.033000-1 4.070000-1 3.187000-1 1.410000-1 3.000000-2 4.000000-3 600 4  2
+ 0.000000+0 8.500000+6          0          0          6          0 600 4  2
+ 4.600000-1 3.600000-1 3.000000-1 1.100000-1 4.000000-3 1.000000-3 600 4  2
+ 0.000000+0 8.705000+6          0          0          6          0 600 4  2
+ 3.745000-1 3.338000-1 3.019000-1 1.015000-1 1.371000-2 1.648000-2 600 4  2
+ 0.000000+0 9.000000+6          0          0          6          0 600 4  2
+ 2.800000-1 2.300000-1 2.900000-1 9.000000-2 1.000000-3 5.000000-3 600 4  2
+ 0.000000+0 9.500000+6          0          0          6          0 600 4  2
+ 4.600000-1 3.800000-1 3.100000-1 1.400000-1 4.000000-2 5.000000-3 600 4  2
+ 0.000000+0 1.000000+7          0          0          6          0 600 4  2
+ 5.500000-1 4.200000-1 3.300000-1 1.500000-1 3.000000-2 6.000000-3 600 4  2
+ 0.000000+0 1.050000+7          0          0          6          0 600 4  2
+ 5.300000-1 4.300000-1 3.300000-1 1.300000-1 4.000000-2 3.500000-2 600 4  2
+ 0.000000+0 1.100000+7          0          0          6          0 600 4  2
+ 6.000000-1 4.600000-1 3.200000-1 1.300000-1 4.000000-2 1.000000-2 600 4  2
+ 0.000000+0 1.150000+7          0          0          6          0 600 4  2
+ 5.600000-1 4.400000-1 3.100000-1 1.400000-1 3.000000-2 2.000000-2 600 4  2
+ 0.000000+0 1.200000+7          0          0          6          0 600 4  2
+ 5.400000-1 4.100000-1 3.200000-1 1.400000-1 5.000000-2 3.000000-2 600 4  2
+ 0.000000+0 1.250000+7          0          0          6          0 600 4  2
+ 5.100000-1 4.000000-1 3.200000-1 1.600000-1 5.000000-2 2.000000-2 600 4  2
+ 0.000000+0 1.300000+7          0          0          6          0 600 4  2
+ 5.800000-1 4.600000-1 3.500000-1 1.800000-1 7.000000-2 3.000000-2 600 4  2
+ 0.000000+0 1.350000+7          0          0          6          0 600 4  2
+ 5.700000-1 4.400000-1 3.400000-1 1.800000-1 6.000000-2 2.000000-2 600 4  2
+ 0.000000+0 1.400000+7          0          0          6          0 600 4  2
+ 6.000000-1 4.500000-1 3.200000-1 2.000000-1 7.000000-2 4.000000-2 600 4  2
+ 0.000000+0 1.450000+7          0          0          6          0 600 4  2
+ 5.900000-1 4.700000-1 3.200000-1 2.000000-1 8.000000-2 4.000000-2 600 4  2
+ 0.000000+0 1.500000+7          0          0          6          0 600 4  2
+ 6.300000-1 4.600000-1 3.100000-1 2.000000-1 9.000000-2 4.700000-2 600 4  2
+ 0.000000+0 1.600000+7          0          0          6          0 600 4  2
+ 6.600000-1 4.800000-1 3.200000-1 2.100000-1 1.000000-1 2.000000-2 600 4  2
+ 0.000000+0 1.700000+7          0          0          6          0 600 4  2
+ 6.800000-1 4.900000-1 3.300000-1 2.000000-1 1.070000-1 5.000000-2 600 4  2
+ 0.000000+0 1.800000+7          0          0          6          0 600 4  2
+ 7.000000-1 4.900000-1 3.300000-1 2.000000-1 1.110000-1 5.000000-2 600 4  2
+ 0.000000+0 1.900000+7          0          0          6          0 600 4  2
+ 7.200000-1 5.100000-1 3.500000-1 2.000000-1 1.120000-1 4.300000-2 600 4  2
+ 0.000000+0 2.000000+7          0          0          6          0 600 4  2
+ 7.300000-1 5.200000-1 3.500000-1 2.000000-1 1.130000-1 4.000000-2 600 4  2
+ 0.000000+0 0.000000+0          0          0          1         17 600 4  2
+         17          2                                             600 4  2
+ 0.000000+0 2.000000+7          0          0          1         91 600 4  2
+         91          4                                             600 4  2
+-1.000000+0 2.918440-2-9.993910-1 2.905243-2-9.975640-1 2.866425-2 600 4  2
+-9.945220-1 2.803957-2-9.902680-1 2.720933-2-9.848080-1 2.621558-2 600 4  2
+-9.781480-1 2.510600-2-9.702960-1 2.393493-2-9.612620-1 2.275676-2 600 4  2
+-9.510570-1 2.162464-2-9.396930-1 2.058554-2-9.271840-1 1.968091-2 600 4  2
+-9.135450-1 1.894099-2-8.987940-1 1.838679-2-8.829480-1 1.802674-2 600 4  2
+-8.660250-1 1.785763-2-8.480480-1 1.786664-2-8.290380-1 1.803315-2 600 4  2
+-8.090170-1 1.832982-2-7.880110-1 1.872702-2-7.660440-1 1.919601-2 600 4  2
+-7.431450-1 1.971165-2-7.193400-1 2.025884-2-6.946580-1 2.083095-2 600 4  2
+-6.691310-1 2.143501-2-6.427880-1 2.209553-2-6.156620-1 2.285158-2 600 4  2
+-5.877850-1 2.375741-2-5.591930-1 2.488562-2-5.299190-1 2.631811-2 600 4  2
+-5.000000-1 2.814850-2-4.694720-1 3.047401-2-4.383710-1 3.339286-2 600 4  2
+-4.067370-1 3.699847-2-3.746070-1 4.137164-2-3.420200-1 4.657565-2 600 4  2
+-3.090170-1 5.265034-2-2.756370-1 5.960784-2-2.419220-1 6.742262-2 600 4  2
+-2.079120-1 7.604580-2-1.736480-1 8.536095-2-1.391730-1 9.523980-2 600 4  2
+-1.045280-1 1.054969-1-6.975650-2 1.159200-1-3.489950-2 1.262599-1 600 4  2
+-2.320510-8 1.362484-1 3.489950-2 1.455951-1 6.975650-2 1.540136-1 600 4  2
+ 1.045280-1 1.612336-1 1.391730-1 1.670059-1 1.736480-1 1.711450-1 600 4  2
+ 2.079120-1 1.735340-1 2.419220-1 1.741498-1 2.756370-1 1.730925-1 600 4  2
+ 3.090170-1 1.706134-1 3.420200-1 1.671470-1 3.746070-1 1.633283-1 600 4  2
+ 4.067370-1 1.600291-1 4.383710-1 1.583570-1 4.694720-1 1.597087-1 600 4  2
+ 5.000000-1 1.657563-1 5.299190-1 1.784351-1 5.591930-1 1.999871-1 600 4  2
+ 5.877850-1 2.328652-1 6.156610-1 2.797619-1 6.427880-1 3.435196-1 600 4  2
+ 6.691310-1 4.270671-1 6.946580-1 5.333139-1 7.193400-1 6.650647-1 600 4  2
+ 7.431450-1 8.249076-1 7.660440-1 1.015059+0 7.880110-1 1.237107+0 600 4  2
+ 8.090170-1 1.492146+0 8.290380-1 1.780316+0 8.480480-1 2.100967+0 600 4  2
+ 8.660250-1 2.452177+0 8.829480-1 2.831060+0 8.987940-1 3.233514+0 600 4  2
+ 9.135450-1 3.654300+0 9.271840-1 4.087001+0 9.396930-1 4.524308+0 600 4  2
+ 9.510570-1 4.958030+0 9.612620-1 5.379457+0 9.702960-1 5.779358+0 600 4  2
+ 9.781480-1 6.148759+0 9.848080-1 6.478952+0 9.902680-1 6.761476+0 600 4  2
+ 9.945220-1 6.989551+0 9.975640-1 7.156760+0 9.993910-1 7.258627+0 600 4  2
+ 1.000000+0 7.293221+0                                             600 4  2
+ 0.000000+0 2.300000+7          0          0          1         91 600 4  2
+         91          4                                             600 4  2
+-1.000000+0 1.432763-2-9.993910-1 1.425943-2-9.975640-1 1.405874-2 600 4  2
+-9.945220-1 1.374028-2-9.902680-1 1.332507-2-9.848080-1 1.284238-2 600 4  2
+-9.781480-1 1.232383-2-9.702960-1 1.180608-2-9.612620-1 1.132268-2 600 4  2
+-9.510570-1 1.090678-2-9.396930-1 1.058501-2-9.271840-1 1.037771-2 600 4  2
+-9.135450-1 1.029629-2-8.987940-1 1.034326-2-8.829480-1 1.051211-2 600 4  2
+-8.660250-1 1.078690-2-8.480480-1 1.114382-2-8.290380-1 1.155441-2 600 4  2
+-8.090170-1 1.198544-2-7.880110-1 1.240534-2-7.660440-1 1.278209-2 600 4  2
+-7.431450-1 1.309134-2-7.193400-1 1.331646-2-6.946580-1 1.345156-2 600 4  2
+-6.691310-1 1.350323-2-6.427880-1 1.349332-2-6.156620-1 1.345817-2 600 4  2
+-5.877850-1 1.344825-2-5.591930-1 1.353037-2-5.299190-1 1.378194-2 600 4  2
+-5.000000-1 1.428987-2-4.694720-1 1.514801-2-4.383710-1 1.645450-2 600 4  2
+-4.067370-1 1.830398-2-3.746070-1 2.078517-2-3.420200-1 2.397828-2 600 4  2
+-3.090170-1 2.794542-2-2.756370-1 3.273095-2-2.419220-1 3.835548-2 600 4  2
+-2.079120-1 4.481382-2-1.736480-1 5.206802-2-1.391730-1 6.005056-2 600 4  2
+-1.045280-1 6.866162-2-6.975650-2 7.775998-2-3.489950-2 8.718281-2 600 4  2
+-2.320510-8 9.673803-2 3.489950-2 1.061936-1 6.975650-2 1.153118-1 600 4  2
+ 1.045280-1 1.238411-1 1.391730-1 1.315353-1 1.736480-1 1.381508-1 600 4  2
+ 2.079120-1 1.434886-1 2.419220-1 1.474082-1 2.756370-1 1.498317-1 600 4  2
+ 3.090170-1 1.508182-1 3.420200-1 1.505468-1 3.746070-1 1.493751-1 600 4  2
+ 4.067370-1 1.478979-1 4.383710-1 1.469446-1 4.694720-1 1.476396-1 600 4  2
+ 5.000000-1 1.514471-1 5.299190-1 1.601747-1 5.591930-1 1.760206-1 600 4  2
+ 5.877850-1 2.015415-1 6.156610-1 2.396767-1 6.427880-1 2.936908-1 600 4  2
+ 6.691310-1 3.671401-1 6.946580-1 4.637388-1 7.193400-1 5.873086-1 600 4  2
+ 7.431450-1 7.415767-1 7.660440-1 9.300333-1 7.880110-1 1.155702+0 600 4  2
+ 8.090170-1 1.421046+0 8.290380-1 1.727429+0 8.480480-1 2.075342+0 600 4  2
+ 8.660250-1 2.463844+0 8.829480-1 2.890421+0 8.987940-1 3.351238+0 600 4  2
+ 9.135450-1 3.840385+0 9.271840-1 4.350663+0 9.396930-1 4.873059+0 600 4  2
+ 9.510570-1 5.397307+0 9.612620-1 5.912092+0 9.702960-1 6.405345+0 600 4  2
+ 9.781480-1 6.864830+0 9.848080-1 7.278038+0 9.902680-1 7.633622+0 600 4  2
+ 9.945220-1 7.922340+0 9.975640-1 8.134897+0 9.993910-1 8.264685+0 600 4  2
+ 1.000000+0 8.308388+0                                             600 4  2
+ 0.000000+0 2.700000+7          0          0          1         91 600 4  2
+         91          4                                             600 4  2
+-1.000000+0 6.641922-3-9.993910-1 6.593190-3-9.975640-1 6.450811-3 600 4  2
+-9.945220-1 6.226052-3-9.902680-1 5.936935-3-9.848080-1 5.606729-3 600 4  2
+-9.781480-1 5.262530-3-9.702960-1 4.933276-3-9.612620-1 4.647835-3 600 4  2
+-9.510570-1 4.432973-3-9.396930-1 4.311619-3-9.271840-1 4.301111-3 600 4  2
+-9.135450-1 4.412299-3-8.987940-1 4.648316-3-8.829480-1 5.004596-3 600 4  2
+-8.660250-1 5.468927-3-8.480480-1 6.022049-3-8.290380-1 6.639058-3 600 4  2
+-8.090170-1 7.290805-3-7.880110-1 7.945357-3-7.660440-1 8.571231-3 600 4  2
+-7.431450-1 9.138415-3-7.193400-1 9.620968-3-6.946580-1 9.999094-3 600 4  2
+-6.691310-1 1.026188-2-6.427880-1 1.040592-2-6.156620-1 1.043797-2 600 4  2
+-5.877850-1 1.037717-2-5.591930-1 1.025166-2-5.299190-1 1.010281-2 600 4  2
+-5.000000-1 9.979301-3-4.694720-1 9.941077-3-4.383710-1 1.005643-2 600 4  2
+-4.067370-1 1.039971-2-3.746070-1 1.104880-2-3.420200-1 1.208695-2 600 4  2
+-3.090170-1 1.359539-2-2.756370-1 1.565185-2-2.419220-1 1.833146-2 600 4  2
+-2.079120-1 2.169563-2-1.736480-1 2.579763-2-1.391730-1 3.066893-2 600 4  2
+-1.045280-1 3.632436-2-6.975650-2 4.275037-2-3.489950-2 4.990742-2 600 4  2
+-2.320510-8 5.772038-2 3.489950-2 6.608206-2 6.975650-2 7.484641-2 600 4  2
+ 1.045280-1 8.383535-2 1.391730-1 9.283119-2 1.736480-1 1.016021-1 600 4  2
+ 2.079120-1 1.098810-1 2.419220-1 1.174297-1 2.756370-1 1.240028-1 600 4  2
+ 3.090170-1 1.294219-1 3.420200-1 1.335919-1 3.746070-1 1.365269-1 600 4  2
+ 4.067370-1 1.384381-1 4.383710-1 1.397343-1 4.694720-1 1.411336-1 600 4  2
+ 5.000000-1 1.436869-1 5.299190-1 1.488606-1 5.591930-1 1.585860-1 600 4  2
+ 5.877850-1 1.753081-1 6.156610-1 2.020091-1 6.427880-1 2.422308-1 600 4  2
+ 6.691310-1 3.000411-1 6.946580-1 3.800068-1 7.193400-1 4.870550-1 600 4  2
+ 7.431450-1 6.263595-1 7.660440-1 8.031352-1 7.880110-1 1.022361+0 600 4  2
+ 8.090170-1 1.288620+0 8.290380-1 1.605453+0 8.480480-1 1.975386+0 600 4  2
+ 8.660250-1 2.399239+0 8.829480-1 2.876192+0 8.987940-1 3.402899+0 600 4  2
+ 9.135450-1 3.973770+0 9.271840-1 4.580612+0 9.396930-1 5.212836+0 600 4  2
+ 9.510570-1 5.857492+0 9.612620-1 6.499543+0 9.702960-1 7.122221+0 600 4  2
+ 9.781480-1 7.709199+0 9.848080-1 8.242257+0 9.902680-1 8.705016+0 600 4  2
+ 9.945220-1 9.081770+0 9.975640-1 9.360920+0 9.993910-1 9.532920+0 600 4  2
+ 1.000000+0 9.590256+0                                             600 4  2
+ 0.000000+0 3.000000+7          0          0          1         91 600 4  2
+         91          4                                             600 4  2
+-1.000000+0 5.300947-3-9.993910-1 5.248339-3-9.975640-1 5.094060-3 600 4  2
+-9.945220-1 4.848461-3-9.902680-1 4.528282-3-9.848080-1 4.155194-3 600 4  2
+-9.781480-1 3.754684-3-9.702960-1 3.354305-3-9.612620-1 2.982079-3 600 4  2
+-9.510570-1 2.664655-3-9.396930-1 2.425858-3-9.271840-1 2.285265-3 600 4  2
+-9.135450-1 2.256982-3-8.987940-1 2.348934-3-8.829480-1 2.562775-3 600 4  2
+-8.660250-1 2.893243-3-8.480480-1 3.328998-3-8.290380-1 3.853089-3 600 4  2
+-8.090170-1 4.444194-3-7.880110-1 5.077539-3-7.660440-1 5.726644-3 600 4  2
+-7.431450-1 6.364607-3-7.193400-1 6.965702-3-6.946580-1 7.506954-3 600 4  2
+-6.691310-1 7.968518-3-6.427880-1 8.336486-3-6.156620-1 8.603075-3 600 4  2
+-5.877850-1 8.766851-3-5.591930-1 8.833506-3-5.299190-1 8.816484-3 600 4  2
+-5.000000-1 8.739200-3-4.694720-1 8.632851-3-4.383710-1 8.535719-3 600 4  2
+-4.067370-1 8.498139-3-3.746070-1 8.574712-3-3.420200-1 8.832083-3 600 4  2
+-3.090170-1 9.341857-3-2.756370-1 1.018135-2-2.419220-1 1.143199-2 600 4  2
+-2.079120-1 1.317685-2-1.736480-1 1.549819-2-1.391730-1 1.847176-2 600 4  2
+-1.045280-1 2.216276-2-6.975650-2 2.662391-2-3.489950-2 3.188325-2 600 4  2
+-2.320510-8 3.794459-2 3.489950-2 4.477797-2 6.975650-2 5.231537-2 600 4  2
+ 1.045280-1 6.044979-2 1.391730-1 6.902884-2 1.736480-1 7.786297-2 600 4  2
+ 2.079120-1 8.671142-2 2.419220-1 9.533295-2 2.756370-1 1.034435-1 600 4  2
+ 3.090170-1 1.107963-1 3.420200-1 1.171772-1 3.746070-1 1.224381-1 600 4  2
+ 4.067370-1 1.265718-1 4.383710-1 1.297477-1 4.694720-1 1.323857-1 600 4  2
+ 5.000000-1 1.352290-1 5.299190-1 1.394188-1 5.591930-1 1.465802-1 600 4  2
+ 5.877850-1 1.588953-1 6.156610-1 1.791732-1 6.427880-1 2.109006-1 600 4  2
+ 6.691310-1 2.582832-1 6.946580-1 3.261993-1 7.193400-1 4.201781-1 600 4  2
+ 7.431450-1 5.462680-1 7.660440-1 7.108489-1 7.880110-1 9.203598-1 600 4  2
+ 8.090170-1 1.181060+0 8.290380-1 1.498413+0 8.480480-1 1.876951+0 600 4  2
+ 8.660250-1 2.319509+0 8.829480-1 2.826668+0 8.987940-1 3.396635+0 600 4  2
+ 9.135450-1 4.024389+0 9.271840-1 4.701846+0 9.396930-1 5.417295+0 600 4  2
+ 9.510570-1 6.156017+0 9.612620-1 6.900189+0 9.702960-1 7.629614+0 600 4  2
+ 9.781480-1 8.322310+0 9.848080-1 8.956867+0 9.902680-1 9.511314+0 600 4  2
+ 9.945220-1 9.965073+0 9.975640-1 1.030257+1 9.993910-1 1.051096+1 600 4  2
+ 1.000000+0 1.058120+1                                             600 4  2
+ 0.000000+0 3.500000+7          0          0          1         91 600 4  2
+         91          4                                             600 4  2
+-1.000000+0 4.407910-3-9.993910-1 4.363853-3-9.975640-1 4.233998-3 600 4  2
+-9.945220-1 4.025240-3-9.902680-1 3.748343-3-9.848080-1 3.417788-3 600 4  2
+-9.781480-1 3.050552-3-9.702960-1 2.665277-3-9.612620-1 2.281234-3 600 4  2
+-9.510570-1 1.917607-3-9.396930-1 1.592043-3-9.271840-1 1.320206-3 600 4  2
+-9.135450-1 1.115066-3-8.987940-1 9.863568-4-8.829480-1 9.406916-4 600 4  2
+-8.660250-1 9.808308-4-8.480480-1 1.106618-3-8.290380-1 1.314293-3 600 4  2
+-8.090170-1 1.597875-3-7.880110-1 1.948615-3-7.660440-1 2.356139-3 600 4  2
+-7.431450-1 2.808491-3-7.193400-1 3.292693-3-6.946580-1 3.794925-3 600 4  2
+-6.691310-1 4.301146-3-6.427880-1 4.796863-3-6.156620-1 5.268017-3 600 4  2
+-5.877850-1 5.700866-3-5.591930-1 6.082844-3-5.299190-1 6.403027-3 600 4  2
+-5.000000-1 6.653456-3-4.694720-1 6.829823-3-4.383710-1 6.933119-3 600 4  2
+-4.067370-1 6.971263-3-3.746070-1 6.960369-3-3.420200-1 6.926906-3 600 4  2
+-3.090170-1 6.908185-3-2.756370-1 6.953995-3-2.419220-1 7.126454-3 600 4  2
+-2.079120-1 7.499442-3-1.736480-1 8.157475-3-1.391730-1 9.192025-3 600 4  2
+-1.045280-1 1.070087-2-6.975650-2 1.278074-2-3.489950-2 1.552295-2 600 4  2
+-2.320510-8 1.900569-2 3.489950-2 2.328899-2 6.975650-2 2.840491-2 600 4  2
+ 1.045280-1 3.435136-2 1.391730-1 4.108282-2 1.736480-1 4.851042-2 600 4  2
+ 2.079120-1 5.649524-2 2.419220-1 6.485307-2 2.756370-1 7.335813-2 600 4  2
+ 3.090170-1 8.175896-2 3.420200-1 8.977905-2 3.746070-1 9.718510-2 600 4  2
+ 4.067370-1 1.037626-1 4.383710-1 1.094261-1 4.694720-1 1.142306-1 600 4  2
+ 5.000000-1 1.184899-1 5.299190-1 1.228264-1 5.591930-1 1.282985-1 600 4  2
+ 5.877850-1 1.365105-1 6.156610-1 1.497265-1 6.427880-1 1.709851-1 600 4  2
+ 6.691310-1 2.042250-1 6.946580-1 2.543640-1 7.193400-1 3.273581-1 600 4  2
+ 7.431450-1 4.301536-1 7.660440-1 5.706318-1 7.880110-1 7.574035-1 600 4  2
+ 8.090170-1 9.994806-1 8.290380-1 1.305704+0 8.480480-1 1.684445+0 600 4  2
+ 8.660250-1 2.142550+0 8.829480-1 2.684700+0 8.987940-1 3.312567+0 600 4  2
+ 9.135450-1 4.023937+0 9.271840-1 4.811976+0 9.396930-1 5.664647+0 600 4  2
+ 9.510570-1 6.564731+0 9.612620-1 7.489771+0 9.702960-1 8.413046+0 600 4  2
+ 9.781480-1 9.304081+0 9.848080-1 1.013062+1 9.902680-1 1.086053+1 600 4  2
+ 9.945220-1 1.146455+1 9.975640-1 1.191574+1 9.993910-1 1.219515+1 600 4  2
+ 1.000000+0 1.229036+1                                             600 4  2
+ 0.000000+0 4.000000+7          0          0          1         91 600 4  2
+         91          4                                             600 4  2
+-1.000000+0 2.966437-3-9.993910-1 2.942537-3-9.975640-1 2.871928-3 600 4  2
+-9.945220-1 2.757710-3-9.902680-1 2.604914-3-9.848080-1 2.420167-3 600 4  2
+-9.781480-1 2.211008-3-9.702960-1 1.986100-3-9.612620-1 1.753963-3 600 4  2
+-9.510570-1 1.523430-3-9.396930-1 1.302452-3-9.271840-1 1.098587-3 600 4  2
+-9.135450-1 9.182848-4-8.987940-1 7.670406-4-8.829480-1 6.494915-4 600 4  2
+-8.660250-1 5.693700-4-8.480480-1 5.297709-4-8.290380-1 5.332086-4 600 4  2
+-8.090170-1 5.818235-4-7.880110-1 6.773920-4-7.660440-1 8.212987-4 600 4  2
+-7.431450-1 1.014394-3-7.193400-1 1.256746-3-6.946580-1 1.547250-3 600 4  2
+-6.691310-1 1.883199-3-6.427880-1 2.259821-3-6.156620-1 2.670068-3 600 4  2
+-5.877850-1 3.104476-3-5.591930-1 3.550864-3-5.299190-1 3.995087-3 600 4  2
+-5.000000-1 4.421605-3-4.694720-1 4.814157-3-4.383710-1 5.157234-3 600 4  2
+-4.067370-1 5.437673-3-3.746070-1 5.646400-3-3.420200-1 5.780750-3 600 4  2
+-3.090170-1 5.846165-3-2.756370-1 5.858988-3-2.419220-1 5.848090-3 600 4  2
+-2.079120-1 5.856221-3-1.736480-1 5.941095-3-1.391730-1 6.174816-3 600 4  2
+-1.045280-1 6.642428-3-6.975650-2 7.438861-3-3.489950-2 8.664578-3 600 4  2
+-2.320510-8 1.042144-2 3.489950-2 1.280566-2 6.975650-2 1.589928-2 600 4  2
+ 1.045280-1 1.976535-2 1.391730-1 2.443977-2 1.736480-1 2.992102-2 600 4  2
+ 2.079120-1 3.616620-2 2.419220-1 4.308479-2 2.756370-1 5.053833-2 600 4  2
+ 3.090170-1 5.834426-2 3.420200-1 6.628342-2 3.746070-1 7.411772-2 600 4  2
+ 4.067370-1 8.160996-2 4.383710-1 8.856624-2 4.694720-1 9.486425-2 600 4  2
+ 5.000000-1 1.005331-1 5.299190-1 1.058335-1 5.591930-1 1.113344-1 600 4  2
+ 5.877850-1 1.180854-1 6.156610-1 1.276877-1 6.427880-1 1.425312-1 600 4  2
+ 6.691310-1 1.659374-1 6.946580-1 2.023163-1 7.193400-1 2.574045-1 600 4  2
+ 7.431450-1 3.383311-1 7.660440-1 4.536997-1 7.880110-1 6.135657-1 600 4  2
+ 8.090170-1 8.292157-1 8.290380-1 1.112762+0 8.480480-1 1.476552+0 600 4  2
+ 8.660250-1 1.932253+0 8.829480-1 2.489853+0 8.987940-1 3.156217+0 600 4  2
+ 9.135450-1 3.933952+0 9.271840-1 4.819781+0 9.396930-1 5.803397+0 600 4  2
+ 9.510570-1 6.866504+0 9.612620-1 7.983036+0 9.702960-1 9.119117+0 600 4  2
+ 9.781480-1 1.023366+1 9.848080-1 1.128362+1 9.902680-1 1.222279+1 600 4  2
+ 9.945220-1 1.300697+1 9.975640-1 1.359737+1 9.993910-1 1.396459+1 600 4  2
+ 1.000000+0 1.408871+1                                             600 4  2
+ 0.000000+0 5.000000+7          0          0          1         91 600 4  2
+         91          4                                             600 4  2
+-1.000000+0 4.842836-4-9.993910-1 4.841722-4-9.975640-1 4.838883-4 600 4  2
+-9.945220-1 4.836255-4-9.902680-1 4.837067-4-9.848080-1 4.844762-4 600 4  2
+-9.781480-1 4.862710-4-9.702960-1 4.892706-4-9.612620-1 4.933557-4 600 4  2
+-9.510570-1 4.981089-4-9.396930-1 5.027809-4-9.271840-1 5.063795-4 600 4  2
+-9.135450-1 5.077479-4-8.987940-1 5.056802-4-8.829480-1 4.990720-4 600 4  2
+-8.660250-1 4.870715-4-8.480480-1 4.693236-4-8.290380-1 4.461844-4 600 4  2
+-8.090170-1 4.189811-4-7.880110-1 3.901055-4-7.660440-1 3.631239-4 600 4  2
+-7.431450-1 3.427315-4-7.193400-1 3.345823-4-6.946580-1 3.450630-4 600 4  2
+-6.691310-1 3.808819-4-6.427880-1 4.486172-4-6.156620-1 5.540975-4 600 4  2
+-5.877850-1 7.019027-4-5.591930-1 8.948627-4-5.299190-1 1.133657-3 600 4  2
+-5.000000-1 1.416233-3-4.694720-1 1.738036-3-4.383710-1 2.091158-3 600 4  2
+-4.067370-1 2.464245-3-3.746070-1 2.843010-3-3.420200-1 3.210820-3 600 4  2
+-3.090170-1 3.549958-3-2.756370-1 3.843480-3-2.419220-1 4.078323-3 600 4  2
+-2.079120-1 4.247787-3-1.736480-1 4.354710-3-1.391730-1 4.414010-3 600 4  2
+-1.045280-1 4.454951-3-6.975650-2 4.522659-3-3.489950-2 4.678749-3 600 4  2
+-2.320510-8 5.001465-3 3.489950-2 5.584254-3 6.975650-2 6.531613-3 600 4  2
+ 1.045280-1 7.953013-3 1.391730-1 9.953360-3 1.736480-1 1.262269-2 600 4  2
+ 2.079120-1 1.602722-2 2.419220-1 2.019499-2 2.756370-1 2.511266-2 600 4  2
+ 3.090170-1 3.071865-2 3.420200-1 3.690028-2 3.746070-1 4.349644-2 600 4  2
+ 4.067370-1 5.030849-2 4.383710-1 5.711954-2 4.694720-1 6.372383-2 600 4  2
+ 5.000000-1 6.997237-2 5.299190-1 7.582565-2 5.591930-1 8.141939-2 600 4  2
+ 5.877850-1 8.716121-2 6.156610-1 9.383643-2 6.427880-1 1.027737-1 600 4  2
+ 6.691310-1 1.160212-1 6.946580-1 1.366263-1 7.193400-1 1.689279-1 600 4  2
+ 7.431450-1 2.188661-1 7.660440-1 2.944055-1 7.880110-1 4.058961-1 600 4  2
+ 8.090170-1 5.663709-1 8.290380-1 7.917138-1 8.480480-1 1.100410+0 600 4  2
+ 8.660250-1 1.513124+0 8.829480-1 2.051220+0 8.987940-1 2.735265+0 600 4  2
+ 9.135450-1 3.582593+0 9.271840-1 4.603949+0 9.396930-1 5.800337+0 600 4  2
+ 9.510570-1 7.159809+0 9.612620-1 8.654393+0 9.702960-1 1.023885+1 600 4  2
+ 9.781480-1 1.185343+1 9.848080-1 1.342146+1 9.902680-1 1.486067+1 600 4  2
+ 9.945220-1 1.608811+1 9.975640-1 1.702762+1 9.993910-1 1.761752+1 600 4  2
+ 1.000000+0 1.781816+1                                             600 4  2
+ 0.000000+0 6.000000+7          0          0          1         91 600 4  2
+         91          4                                             600 4  2
+-1.000000+0 1.825404-5-9.993910-1 1.891510-5-9.975640-1 2.096705-5 600 4  2
+-9.945220-1 2.459190-5-9.902680-1 3.002164-5-9.848080-1 3.747633-5 600 4  2
+-9.781480-1 4.715513-5-9.702960-1 5.923846-5-9.612620-1 7.388000-5 600 4  2
+-9.510570-1 9.114129-5-9.396930-1 1.108998-4-9.271840-1 1.327645-4 600 4  2
+-9.135450-1 1.560859-4-8.987940-1 1.800096-4-8.829480-1 2.035147-4 600 4  2
+-8.660250-1 2.255460-4-8.480480-1 2.449352-4-8.290380-1 2.605286-4 600 4  2
+-8.090170-1 2.712552-4-7.880110-1 2.764162-4-7.660440-1 2.757395-4 600 4  2
+-7.431450-1 2.696459-4-7.193400-1 2.592135-4-6.946580-1 2.462262-4 600 4  2
+-6.691310-1 2.332017-4-6.427880-1 2.234328-4-6.156620-1 2.210366-4 600 4  2
+-5.877850-1 2.309279-4-5.591930-1 2.587838-4-5.299190-1 3.108576-4 600 4  2
+-5.000000-1 3.937719-4-4.694720-1 5.138563-4-4.383710-1 6.761231-4 600 4  2
+-4.067370-1 8.830660-4-3.746070-1 1.133452-3-3.420200-1 1.421770-3 600 4  2
+-3.090170-1 1.738286-3-2.756370-1 2.069680-3-2.419220-1 2.399960-3 600 4  2
+-2.079120-1 2.711568-3-1.736480-1 2.986313-3-1.391730-1 3.207610-3 600 4  2
+-1.045280-1 3.363906-3-6.975650-2 3.453352-3-3.489950-2 3.489603-3 600 4  2
+-2.320510-8 3.506559-3 3.489950-2 3.562345-3 6.975650-2 3.739039-3 600 4  2
+ 1.045280-1 4.140335-3 1.391730-1 4.886918-3 1.736480-1 6.108773-3 600 4  2
+ 2.079120-1 7.934789-3 2.419220-1 1.047790-2 2.756370-1 1.381714-2 600 4  2
+ 3.090170-1 1.797516-2 3.420200-1 2.290607-2 3.746070-1 2.848448-2 600 4  2
+ 4.067370-1 3.451264-2 4.383710-1 4.073375-2 4.694720-1 4.685899-2 600 4  2
+ 5.000000-1 5.261188-2 5.299190-1 5.778613-2 5.591930-1 6.232010-2 600 4  2
+ 5.877850-1 6.639208-2 6.156610-1 7.052560-2 6.427880-1 7.569483-2 600 4  2
+ 6.691310-1 8.345551-2 6.946580-1 9.611637-2 7.193400-1 1.169683-1 600 4  2
+ 7.431450-1 1.506177-1 7.660440-1 2.034163-1 7.880110-1 2.840457-1 600 4  2
+ 8.090170-1 4.041793-1 8.290380-1 5.792858-1 8.480480-1 8.293459-1 600 4  2
+ 8.660250-1 1.179310+0 8.829480-1 1.658909+0 8.987940-1 2.301539+0 600 4  2
+ 9.135450-1 3.141504+0 9.271840-1 4.210496+0 9.396930-1 5.531385+0 600 4  2
+ 9.510570-1 7.111418+0 9.612620-1 8.935105+0 9.702960-1 1.095726+1 600 4  2
+ 9.781480-1 1.310077+1 9.848080-1 1.525592+1 9.902680-1 1.729191+1 600 4  2
+ 9.945220-1 1.906749+1 9.975640-1 2.044985+1 9.993910-1 2.132715+1 600 4  2
+ 1.000000+0 2.162811+1                                             600 4  2
+ 0.000000+0 7.000000+7          0          0          1         91 600 4  2
+         91          4                                             600 4  2
+-1.000000+0 3.144765-5-9.993910-1 3.118808-5-9.975640-1 3.044655-5 600 4  2
+-9.945220-1 2.932912-5-9.902680-1 2.800125-5-9.848080-1 2.668081-5 600 4  2
+-9.781480-1 2.563048-5-9.702960-1 2.513817-5-9.612620-1 2.549477-5 600 4  2
+-9.510570-1 2.698367-5-9.396930-1 2.989155-5-9.271840-1 3.450621-5 600 4  2
+-9.135450-1 4.105898-5-8.987940-1 4.964068-5-8.829480-1 6.015608-5 600 4  2
+-8.660250-1 7.236791-5-8.480480-1 8.595824-5-8.290380-1 1.005432-4 600 4  2
+-8.090170-1 1.156130-4-7.880110-1 1.304930-4-7.660440-1 1.443975-4 600 4  2
+-7.431450-1 1.565371-4-7.193400-1 1.662056-4-6.946580-1 1.726355-4 600 4  2
+-6.691310-1 1.750524-4-6.427880-1 1.728746-4-6.156620-1 1.661302-4 600 4  2
+-5.877850-1 1.560750-4-5.591930-1 1.454743-4-5.299190-1 1.387531-4 600 4  2
+-5.000000-1 1.417888-4-4.694720-1 1.615506-4-4.383710-1 2.054441-4 600 4  2
+-4.067370-1 2.805790-4-3.746070-1 3.931182-4-3.420200-1 5.479547-4 600 4  2
+-3.090170-1 7.483109-4-2.756370-1 9.947242-4-2.419220-1 1.282961-3 600 4  2
+-2.079120-1 1.601624-3-1.736480-1 1.931498-3-1.391730-1 2.247047-3 600 4  2
+-1.045280-1 2.520979-3-6.975650-2 2.729256-3-3.489950-2 2.855323-3 600 4  2
+-2.320510-8 2.894268-3 3.489950-2 2.856820-3 6.975650-2 2.777292-3 600 4  2
+ 1.045280-1 2.721351-3 1.391730-1 2.791175-3 1.736480-1 3.125076-3 600 4  2
+ 2.079120-1 3.888962-3 2.419220-1 5.260672-3 2.756370-1 7.409709-3 600 4  2
+ 3.090170-1 1.047371-2 3.420200-1 1.453086-2 3.746070-1 1.956862-2 600 4  2
+ 4.067370-1 2.545148-2 4.383710-1 3.191164-2 4.694720-1 3.855090-2 600 4  2
+ 5.000000-1 4.488881-2 5.299190-1 5.043295-2 5.591930-1 5.478351-2 600 4  2
+ 5.877850-1 5.775558-2 6.156610-1 5.953699-2 6.427880-1 6.085432-2 600 4  2
+ 6.691310-1 6.313859-2 6.946580-1 6.867821-2 7.193400-1 8.073635-2 600 4  2
+ 7.431450-1 1.037065-1 7.660440-1 1.433528-1 7.880110-1 2.072040-1 600 4  2
+ 8.090170-1 3.051666-1 8.290380-1 4.504551-1 8.480480-1 6.608515-1 600 4  2
+ 8.660250-1 9.602150-1 8.829480-1 1.379907+0 8.987940-1 1.959554+0 600 4  2
+ 9.135450-1 2.746564+0 9.271840-1 3.792278+0 9.396930-1 5.146690+0 600 4  2
+ 9.510570-1 6.847530+0 9.612620-1 8.907636+0 9.702960-1 1.130003+1 600 4  2
+ 9.781480-1 1.394492+1 9.848080-1 1.670554+1 9.902680-1 1.939554+1 600 4  2
+ 9.945220-1 2.179764+1 9.975640-1 2.369990+1 9.993910-1 2.492180+1 600 4  2
+ 1.000000+0 2.534400+1                                             600 4  2
+ 0.000000+0 8.000000+7          0          0          1         91 600 4  2
+         91          4                                             600 4  2
+-1.000000+0 4.048679-5-9.993910-1 4.025362-5-9.975640-1 3.949007-5 600 4  2
+-9.945220-1 3.809434-5-9.902680-1 3.608261-5-9.848080-1 3.360996-5 600 4  2
+-9.781480-1 3.085117-5-9.702960-1 2.791387-5-9.612620-1 2.490000-5 600 4  2
+-9.510570-1 2.198994-5-9.396930-1 1.944804-5-9.271840-1 1.753862-5 600 4  2
+-9.135450-1 1.652341-5-8.987940-1 1.670352-5-8.829480-1 1.840579-5 600 4  2
+-8.660250-1 2.189526-5-8.480480-1 2.732712-5-8.290380-1 3.485995-5 600 4  2
+-8.090170-1 4.473619-5-7.880110-1 5.712508-5-7.660440-1 7.181365-5 600 4  2
+-7.431450-1 8.805283-5-7.193400-1 1.046691-4-6.946580-1 1.202174-4 600 4  2
+-6.691310-1 1.330279-4-6.427880-1 1.413438-4-6.156620-1 1.438263-4 600 4  2
+-5.877850-1 1.401558-4-5.591930-1 1.311967-4-5.299190-1 1.186093-4 600 4  2
+-5.000000-1 1.044782-4-4.694720-1 9.158422-5-4.383710-1 8.422445-5 600 4  2
+-4.067370-1 8.890563-5-3.746070-1 1.144182-4-3.420200-1 1.712474-4 600 4  2
+-3.090170-1 2.701736-4-2.756370-1 4.199016-4-2.419220-1 6.242578-4 600 4  2
+-2.079120-1 8.809655-4-1.736480-1 1.182314-3-1.391730-1 1.516196-3 600 4  2
+-1.045280-1 1.864811-3-6.975650-2 2.200632-3-3.489950-2 2.485809-3 600 4  2
+-2.320510-8 2.678961-3 3.489950-2 2.747104-3 6.975650-2 2.680419-3 600 4  2
+ 1.045280-1 2.499286-3 1.391730-1 2.259861-3 1.736480-1 2.061059-3 600 4  2
+ 2.079120-1 2.052315-3 2.419220-1 2.437334-3 2.756370-1 3.460849-3 600 4  2
+ 3.090170-1 5.379602-3 3.420200-1 8.422445-3 3.746070-1 1.274428-2 600 4  2
+ 4.067370-1 1.837845-2 4.383710-1 2.518604-2 4.694720-1 3.282280-2 600 4  2
+ 5.000000-1 4.071645-2 5.299190-1 4.810898-2 5.591930-1 5.415311-2 600 4  2
+ 5.877850-1 5.808904-2 6.156610-1 5.946838-2 6.427880-1 5.842613-2 600 4  2
+ 6.691310-1 5.597348-2 6.946580-1 5.427885-2 7.193400-1 5.689372-2 600 4  2
+ 7.431450-1 6.888902-2 7.660440-1 9.687938-2 7.880110-1 1.490396-1 600 4  2
+ 8.090170-1 2.352608-1 8.290380-1 3.676053-1 8.480480-1 5.613379-1 600 4  2
+ 8.660250-1 8.365589-1 8.829480-1 1.220707+0 8.987940-1 1.751450+0 600 4  2
+ 9.135450-1 2.479065+0 9.271840-1 3.466678+0 9.396930-1 4.786304+0 600 4  2
+ 9.510570-1 6.509160+0 9.612620-1 8.688666+0 9.702960-1 1.133538+1 600 4  2
+ 9.781480-1 1.439007+1 9.848080-1 1.770386+1 9.902680-1 2.103694+1 600 4  2
+ 9.945220-1 2.409092+1 9.975640-1 2.655091+1 9.993910-1 2.814705+1 600 4  2
+ 1.000000+0 2.870104+1                                             600 4  2
+ 0.000000+0 9.000000+7          0          0          1         91 600 4  2
+         91          4                                             600 4  2
+-1.000000+0 3.518460-5-9.993910-1 3.512166-5-9.975640-1 3.481358-5 600 4  2
+-9.945220-1 3.408260-5-9.902680-1 3.293797-5-9.848080-1 3.156380-5 600 4  2
+-9.781480-1 3.008857-5-9.702960-1 2.846483-5-9.612620-1 2.661164-5 600 4  2
+-9.510570-1 2.457194-5-9.396930-1 2.246326-5-9.271840-1 2.035469-5 600 4  2
+-9.135450-1 1.828653-5-8.987940-1 1.640147-5-8.829480-1 1.497591-5 600 4  2
+-8.660250-1 1.434638-5-8.480480-1 1.490935-5-8.290380-1 1.718755-5 600 4  2
+-8.090170-1 2.172746-5-7.880110-1 2.881343-5-7.660440-1 3.831735-5 600 4  2
+-7.431450-1 4.989497-5-7.193400-1 6.321537-5-6.946580-1 7.795721-5 600 4  2
+-6.691310-1 9.361875-5-6.427880-1 1.095211-4-6.156620-1 1.249219-4 600 4  2
+-5.877850-1 1.387824-4-5.591930-1 1.491247-4-5.299190-1 1.528741-4 600 4  2
+-5.000000-1 1.470041-4-4.694720-1 1.305355-4-4.383710-1 1.058712-4 600 4  2
+-4.067370-1 7.875103-5-3.746070-1 5.734341-5-3.420200-1 5.125779-5 600 4  2
+-3.090170-1 7.089547-5-2.756370-1 1.274859-4-2.419220-1 2.337774-4 600 4  2
+-2.079120-1 4.037063-4-1.736480-1 6.483237-4-1.391730-1 9.685496-4 600 4  2
+-1.045280-1 1.349586-3-6.975650-2 1.762744-3-3.489950-2 2.172253-3 600 4  2
+-2.320510-8 2.538828-3 3.489950-2 2.817022-3 6.975650-2 2.955556-3 600 4  2
+ 1.045280-1 2.908551-3 1.391730-1 2.660943-3 1.736480-1 2.252540-3 600 4  2
+ 2.079120-1 1.791280-3 2.419220-1 1.458277-3 2.756370-1 1.507143-3 600 4  2
+ 3.090170-1 2.259961-3 3.420200-1 4.084974-3 3.746070-1 7.343459-3 600 4  2
+ 4.067370-1 1.230960-2 4.383710-1 1.908045-2 4.694720-1 2.749776-2 600 4  2
+ 5.000000-1 3.708495-2 5.299190-1 4.702304-2 5.591930-1 5.616047-2 600 4  2
+ 5.877850-1 6.315011-2 6.156610-1 6.669903-2 6.427880-1 6.597479-2 600 4  2
+ 6.691310-1 6.107210-2 6.946580-1 5.351125-2 7.193400-1 4.672170-2 600 4  2
+ 7.431450-1 4.640910-2 7.660440-1 6.072582-2 7.880110-1 1.000890-1 600 4  2
+ 8.090170-1 1.767802-1 8.290380-1 3.045959-1 8.480480-1 4.988139-1 600 4  2
+ 8.660250-1 7.770302-1 8.829480-1 1.161059+0 8.987940-1 1.680607+0 600 4  2
+ 9.135450-1 2.378476+0 9.271840-1 3.315385+0 9.396930-1 4.571190+0 600 4  2
+ 9.510570-1 6.241250+0 9.612620-1 8.418671+0 9.702960-1 1.116577+1 600 4  2
+ 9.781480-1 1.446785+1 9.848080-1 1.819011+1 9.902680-1 2.205866+1 600 4  2
+ 9.945220-1 2.568962+1 9.975640-1 2.866049+1 9.993910-1 3.060578+1 600 4  2
+ 1.000000+0 3.128277+1                                             600 4  2
+ 0.000000+0 1.000000+8          0          0          1         91 600 4  2
+         91          4                                             600 4  2
+-1.000000+0 2.127263-5-9.993910-1 2.142198-5-9.975640-1 2.188088-5 600 4  2
+-9.945220-1 2.265205-5-9.902680-1 2.366831-5-9.848080-1 2.482405-5 600 4  2
+-9.781480-1 2.607494-5-9.702960-1 2.740991-5-9.612620-1 2.873391-5 600 4  2
+-9.510570-1 2.983957-5-9.396930-1 3.053169-5-9.271840-1 3.071463-5 600 4  2
+-9.135450-1 3.038255-5-8.987940-1 2.949914-5-8.829480-1 2.806230-5 600 4  2
+-8.660250-1 2.621021-5-8.480480-1 2.423009-5-8.290380-1 2.243311-5 600 4  2
+-8.090170-1 2.114320-5-7.880110-1 2.086291-5-7.660440-1 2.235999-5 600 4  2
+-7.431450-1 2.655013-5-7.193400-1 3.440303-5-6.946580-1 4.697355-5 600 4  2
+-6.691310-1 6.517669-5-6.427880-1 8.893923-5-6.156620-1 1.162859-4 600 4  2
+-5.877850-1 1.434025-4-5.591930-1 1.659885-4-5.299190-1 1.809623-4 600 4  2
+-5.000000-1 1.872419-4-4.694720-1 1.851199-4-4.383710-1 1.748990-4 600 4  2
+-4.067370-1 1.559557-4-3.746070-1 1.273848-4-3.420200-1 9.096210-5 600 4  2
+-3.090170-1 5.517482-5-2.756370-1 3.673263-5-2.419220-1 5.690231-5 600 4  2
+-2.079120-1 1.354344-4-1.736480-1 2.878178-4-1.391730-1 5.271308-4 600 4  2
+-1.045280-1 8.649147-4-6.975650-2 1.304773-3-3.489950-2 1.829677-3 600 4  2
+-2.320510-8 2.392406-3 3.489950-2 2.919814-3 6.975650-2 3.330863-3 600 4  2
+ 1.045280-1 3.553122-3 1.391730-1 3.528925-3 1.736480-1 3.221694-3 600 4  2
+ 2.079120-1 2.642744-3 2.419220-1 1.893740-3 2.756370-1 1.202001-3 600 4  2
+ 3.090170-1 9.203970-4 3.420200-1 1.500472-3 3.746070-1 3.459431-3 600 4  2
+ 4.067370-1 7.329359-3 4.383710-1 1.355078-2 4.694720-1 2.230941-2 600 4  2
+ 5.000000-1 3.337611-2 5.299190-1 4.602548-2 5.591930-1 5.899829-2 600 4  2
+ 5.877850-1 7.054763-2 6.156610-1 7.858286-2 6.427880-1 8.107276-2 600 4  2
+ 6.691310-1 7.673157-2 6.946580-1 6.582658-2 7.193400-1 5.099404-2 600 4  2
+ 7.431450-1 3.801268-2 7.660440-1 3.640618-2 7.880110-1 5.957224-2 600 4  2
+ 8.090170-1 1.241726-1 8.290380-1 2.489294-1 8.480480-1 4.532773-1 600 4  2
+ 8.660250-1 7.563998-1 8.829480-1 1.177069+0 8.987940-1 1.735825+0 600 4  2
+ 9.135450-1 2.460511+0 9.271840-1 3.394725+0 9.396930-1 4.605636+0 600 4  2
+ 9.510570-1 6.189058+0 9.612620-1 8.261178+0 9.702960-1 1.093083+1 600 4  2
+ 9.781480-1 1.424461+1 9.848080-1 1.811142+1 9.902680-1 2.225339+1 600 4  2
+ 9.945220-1 2.622459+1 9.975640-1 2.951604+1 9.993910-1 3.168241+1 600 4  2
+ 1.000000+0 3.243639+1                                             600 4  2
+ 0.000000+0 1.100000+8          0          0          1         73 600 4  2
+         73          4                                             600 4  2
+-1.000000+0 1.065988-8-9.990480-1 1.083934-8-9.961950-1 1.135740-8 600 4  2
+-9.914450-1 1.244153-8-9.848080-1 1.475732-8-9.762960-1 1.914876-8 600 4  2
+-9.659260-1 2.645553-8-9.537170-1 3.745513-8-9.396930-1 5.300277-8 600 4  2
+-9.238800-1 7.422588-8-9.063080-1 1.020613-7-8.870110-1 1.365994-7 600 4  2
+-8.660250-1 1.772370-7-8.433910-1 2.232777-7-8.191520-1 2.741552-7 600 4  2
+-7.933530-1 3.290151-7-7.660440-1 3.864663-7-7.372770-1 4.458557-7 600 4  2
+-7.071070-1 5.096806-7-6.755900-1 5.855539-7-6.427880-1 6.882208-7 600 4  2
+-6.087610-1 8.432130-7-5.735760-1 1.091749-6-5.373000-1 1.493688-6 600 4  2
+-5.000000-1 2.126153-6-4.617490-1 3.079441-6-4.226180-1 4.453613-6 600 4  2
+-3.826830-1 6.353314-6-3.420200-1 8.876977-6-3.007060-1 1.210466-5 600 4  2
+-2.588190-1 1.609775-5-2.164400-1 2.092617-5-1.736480-1 2.673074-5 600 4  2
+-1.305260-1 3.384016-5-8.715580-2 4.296417-5-4.361940-2 5.546758-5 600 4  2
+-2.320510-8 7.367587-5 4.361940-2 1.011190-4 8.715570-2 1.426211-4 600 4  2
+ 1.305260-1 2.041852-4 1.736480-1 2.926005-4 2.164400-1 4.148634-4 600 4  2
+ 2.588190-1 5.777477-4 3.007060-1 7.884855-4 3.420200-1 1.058041-3 600 4  2
+ 3.826830-1 1.408892-3 4.226180-1 1.888801-3 4.617490-1 2.590614-3 600 4  2
+ 5.000000-1 3.674528-3 5.373000-1 5.383576-3 5.735760-1 8.035975-3 600 4  2
+ 6.087610-1 1.197261-2 6.427880-1 1.744223-2 6.755900-1 2.443255-2 600 4  2
+ 7.071070-1 3.252520-2 7.372770-1 4.097819-2 7.660440-1 4.944199-2 600 4  2
+ 7.933530-1 5.994739-2 8.191520-1 8.102632-2 8.433910-1 1.348361-1 600 4  2
+ 8.660250-1 2.676683-1 8.870110-1 5.628652-1 9.063080-1 1.152695+0 600 4  2
+ 9.238800-1 2.222383+0 9.396930-1 3.996290+0 9.537170-1 6.696066+0 600 4  2
+ 9.659260-1 1.046596+1 9.762960-1 1.527487+1 9.848080-1 2.082607+1 600 4  2
+ 9.914450-1 2.652398+1 9.961950-1 3.154187+1 9.990480-1 3.500649+1 600 4  2
+ 1.000000+0 3.624562+1                                             600 4  2
+ 0.000000+0 1.200000+8          0          0          1         73 600 4  2
+         73          4                                             600 4  2
+-1.000000+0 1.676273-8-9.990480-1 1.690423-8-9.961950-1 1.630838-8 600 4  2
+-9.914450-1 1.493066-8-9.848080-1 1.405587-8-9.762960-1 1.325658-8 600 4  2
+-9.659260-1 1.258412-8-9.537170-1 1.313897-8-9.396930-1 1.495495-8 600 4  2
+-9.238800-1 1.858003-8-9.063080-1 2.505903-8-8.870110-1 3.479104-8 600 4  2
+-8.660250-1 4.908962-8-8.433910-1 6.917348-8-8.191520-1 9.513797-8 600 4  2
+-7.933530-1 1.279383-7-7.660440-1 1.687498-7-7.372770-1 2.180065-7 600 4  2
+-7.071070-1 2.762409-7-6.755900-1 3.435693-7-6.427880-1 4.209362-7 600 4  2
+-6.087610-1 5.119588-7-5.735760-1 6.229539-7-5.373000-1 7.676158-7 600 4  2
+-5.000000-1 9.744352-7-4.617490-1 1.290355-6-4.226180-1 1.783347-6 600 4  2
+-3.826830-1 2.544941-6-3.420200-1 3.693141-6-3.007060-1 5.373645-6 600 4  2
+-2.588190-1 7.751441-6-2.164400-1 1.099800-5-1.736480-1 1.528926-5 600 4  2
+-1.305260-1 2.081371-5-8.715580-2 2.780162-5-4.361940-2 3.661491-5 600 4  2
+-2.320510-8 4.794378-5 4.361940-2 6.312454-5 8.715570-2 8.453177-5 600 4  2
+ 1.305260-1 1.159738-4 1.736480-1 1.630646-4 2.164400-1 2.335013-4 600 4  2
+ 2.588190-1 3.371544-4 3.007060-1 4.860228-4 3.420200-1 6.946295-4 600 4  2
+ 3.826830-1 9.820444-4 4.226180-1 1.377470-3 4.617490-1 1.931524-3 600 4  2
+ 5.000000-1 2.734322-3 5.373000-1 3.938453-3 5.735760-1 5.778116-3 600 4  2
+ 6.087610-1 8.566840-3 6.427880-1 1.264768-2 6.755900-1 1.827294-2 600 4  2
+ 7.071070-1 2.542228-2 7.372770-1 3.366848-2 7.660440-1 4.239503-2 600 4  2
+ 7.933530-1 5.198434-2 8.191520-1 6.698190-2 8.433910-1 1.025792-1 600 4  2
+ 8.660250-1 1.956808-1 8.870110-1 4.207742-1 9.063080-1 9.081057-1 600 4  2
+ 9.238800-1 1.857011+0 9.396930-1 3.531695+0 9.537170-1 6.223011+0 600 4  2
+ 9.659260-1 1.016329+1 9.762960-1 1.539857+1 9.848080-1 2.165298+1 600 4  2
+ 9.914450-1 2.825334+1 9.961950-1 3.419024+1 9.990480-1 3.834820+1 600 4  2
+ 1.000000+0 3.984576+1                                             600 4  2
+ 0.000000+0 1.300000+8          0          0          1         73 600 4  2
+         73          4                                             600 4  2
+-1.000000+0 2.482188-9-9.990480-1 6.618845-9-9.961950-1 8.673930-9 600 4  2
+-9.914450-1 5.671072-9-9.848080-1 7.068990-9-9.762960-1 7.724059-9 600 4  2
+-9.659260-1 5.925160-9-9.537170-1 7.545227-9-9.396930-1 7.922731-9 600 4  2
+-9.238800-1 7.293409-9-9.063080-1 9.880451-9-8.870110-1 1.134863-8 600 4  2
+-8.660250-1 1.362160-8-8.433910-1 2.001270-8-8.191520-1 2.705929-8 600 4  2
+-7.933530-1 3.845909-8-7.660440-1 5.714268-8-7.372770-1 8.095210-8 600 4  2
+-7.071070-1 1.149505-7-6.755900-1 1.613299-7-6.427880-1 2.188502-7 600 4  2
+-6.087610-1 2.926315-7-5.735760-1 3.826545-7-5.373000-1 4.879617-7 600 4  2
+-5.000000-1 6.154767-7-4.617490-1 7.706621-7-4.226180-1 9.708073-7 600 4  2
+-3.826830-1 1.259414-6-3.420200-1 1.704311-6-3.007060-1 2.415140-6 600 4  2
+-2.588190-1 3.551179-6-2.164400-1 5.315647-6-1.736480-1 7.963789-6 600 4  2
+-1.305260-1 1.178190-5-8.715580-2 1.705091-5-4.361940-2 2.403376-5 600 4  2
+-2.320510-8 3.296594-5 4.361940-2 4.413056-5 8.715570-2 5.811663-5 600 4  2
+ 1.305260-1 7.628001-5 1.736480-1 1.014334-4 2.164400-1 1.387370-4 600 4  2
+ 2.588190-1 1.966819-4 3.007060-1 2.880748-4 3.420200-1 4.307656-4 600 4  2
+ 3.826830-1 6.480422-4 4.226180-1 9.694749-4 4.617490-1 1.433950-3 600 4  2
+ 5.000000-1 2.097713-3 5.373000-1 3.049985-3 5.735760-1 4.436027-3 600 4  2
+ 6.087610-1 6.480665-3 6.427880-1 9.493817-3 6.755900-1 1.382597-2 600 4  2
+ 7.071070-1 1.974256-2 7.372770-1 2.723306-2 7.660440-1 3.592378-2 600 4  2
+ 7.933530-1 4.557660-2 8.191520-1 5.816223-2 8.433910-1 8.313894-2 600 4  2
+ 8.660250-1 1.480084-1 8.870110-1 3.158101-1 9.063080-1 7.087736-1 600 4  2
+ 9.238800-1 1.531872+0 9.396930-1 3.081670+0 9.537170-1 5.717521+0 600 4  2
+ 9.659260-1 9.771687+0 9.762960-1 1.539138+1 9.848080-1 2.234849+1 600 4  2
+ 9.914450-1 2.990526+1 9.961950-1 3.685315+1 9.990480-1 4.179092+1 600 4  2
+ 1.000000+0 4.358330+1                                             600 4  2
+ 0.000000+0 1.400000+8          0          0          1         73 600 4  2
+         73          4                                             600 4  2
+-1.000000+0 1.966737-8-9.990480-1 6.58904-10-9.961950-1 9.149104-9 600 4  2
+-9.914450-1 3.985535-9-9.848080-1 2.847519-9-9.762960-1 6.153476-9 600 4  2
+-9.659260-1 1.918398-9-9.537170-1 5.277888-9-9.396930-1 6.091078-9 600 4  2
+-9.238800-1 9.54267-10-9.063080-1 8.472073-9-8.870110-1 7.563394-9 600 4  2
+-8.660250-1 4.693303-9-8.433910-1 1.213409-8-8.191520-1 1.023109-8 600 4  2
+-7.933530-1 1.055389-8-7.660440-1 2.031428-8-7.372770-1 2.309122-8 600 4  2
+-7.071070-1 3.531966-8-6.755900-1 6.021101-8-6.427880-1 8.593472-8 600 4  2
+-6.087610-1 1.325759-7-5.735760-1 1.986640-7-5.373000-1 2.754018-7 600 4  2
+-5.000000-1 3.818273-7-4.617490-1 5.089140-7-4.226180-1 6.499413-7 600 4  2
+-3.826830-1 8.252030-7-3.420200-1 1.037819-6-3.007060-1 1.332850-6 600 4  2
+-2.588190-1 1.818049-6-2.164400-1 2.630580-6-1.736480-1 4.006432-6 600 4  2
+-1.305260-1 6.270848-6-8.715580-2 9.779086-6-4.361940-2 1.493214-5 600 4  2
+-2.320510-8 2.207049-5 4.361940-2 3.135855-5 8.715570-2 4.281337-5 600 4  2
+ 1.305260-1 5.641333-5 1.736480-1 7.260714-5 2.164400-1 9.335468-5 600 4  2
+ 2.588190-1 1.235169-4 3.007060-1 1.727865-4 3.420200-1 2.578275-4 600 4  2
+ 3.826830-1 4.038245-4 4.226180-1 6.449593-4 4.617490-1 1.023637-3 600 4  2
+ 5.000000-1 1.589931-3 5.373000-1 2.405140-3 5.735760-1 3.554202-3 600 4  2
+ 6.087610-1 5.170245-3 6.427880-1 7.467285-3 6.755900-1 1.075992-2 600 4  2
+ 7.071070-1 1.542972-2 7.372770-1 2.179344-2 7.660440-1 2.990931-2 600 4  2
+ 7.933530-1 3.960447-2 8.191520-1 5.154460-2 8.433910-1 7.101263-2 600 4  2
+ 8.660250-1 1.170599-1 8.870110-1 2.401447-1 9.063080-1 5.497860-1 600 4  2
+ 9.238800-1 1.248184+0 9.396930-1 2.654876+0 9.537170-1 5.193689+0 600 4  2
+ 9.659260-1 9.305390+0 9.762960-1 1.526274+1 9.848080-1 2.291704+1 600 4  2
+ 9.914450-1 3.148465+1 9.961950-1 3.954350+1 9.990480-1 4.535973+1 600 4  2
+ 1.000000+0 4.748712+1                                             600 4  2
+ 0.000000+0 1.500000+8          0          0          1         73 600 4  2
+         73          4                                             600 4  2
+-1.000000+0 7.880476-8-9.990480-1 8.264850-9-9.961950-1 2.813697-8 600 4  2
+-9.914450-1 2.090919-8-9.848080-1 3.700832-9-9.762960-1 1.507888-8 600 4  2
+-9.659260-1 1.609324-8-9.537170-1 8.931603-9-9.396930-1 9.998513-9 600 4  2
+-9.238800-1 1.137033-8-9.063080-1 1.406148-8-8.870110-1 8.206144-9 600 4  2
+-8.660250-1 5.232081-9-8.433910-1 1.917116-8-8.191520-1 7.481294-9 600 4  2
+-7.933530-1 4.43328-10-7.660440-1 2.187236-8-7.372770-1 5.761463-9 600 4  2
+-7.071070-1 6.522411-9-6.755900-1 2.884215-8-6.427880-1 1.956148-8 600 4  2
+-6.087610-1 4.382851-8-5.735760-1 8.927022-8-5.373000-1 1.187533-7 600 4  2
+-5.000000-1 2.014997-7-4.617490-1 3.051650-7-4.226180-1 4.062942-7 600 4  2
+-3.826830-1 5.683408-7-3.420200-1 7.374017-7-3.007060-1 9.115746-7 600 4  2
+-2.588190-1 1.177193-6-2.164400-1 1.545773-6-1.736480-1 2.183051-6 600 4  2
+-1.305260-1 3.387079-6-8.715580-2 5.449061-6-4.361940-2 8.864304-6 600 4  2
+-2.320510-8 1.414974-5 4.361940-2 2.162717-5 8.715570-2 3.149856-5 600 4  2
+ 1.305260-1 4.350237-5 1.736480-1 5.695658-5 2.164400-1 7.158622-5 600 4  2
+ 2.588190-1 8.860160-5 3.007060-1 1.129730-4 3.420200-1 1.567041-4 600 4  2
+ 3.826830-1 2.419522-4 4.226180-1 4.037418-4 4.617490-1 6.900518-4 600 4  2
+ 5.000000-1 1.157773-3 5.373000-1 1.867083-3 5.735760-1 2.878853-3 600 4  2
+ 6.087610-1 4.263986-3 6.427880-1 6.135305-3 6.755900-1 8.699601-3 600 4  2
+ 7.071070-1 1.230476-2 7.372770-1 1.742195-2 7.660440-1 2.450043-2 600 4  2
+ 7.933530-1 3.377521-2 8.191520-1 4.556725-2 8.433910-1 6.254962-2 600 4  2
+ 8.660250-1 9.689422-2 8.870110-1 1.866362-1 9.063080-1 4.254073-1 600 4  2
+ 9.238800-1 1.004911+0 9.396930-1 2.257054+0 9.537170-1 4.662732+0 600 4  2
+ 9.659260-1 8.776377+0 9.762960-1 1.502007+1 9.848080-1 2.336084+1 600 4  2
+ 9.914450-1 3.299517+1 9.961950-1 4.227645+1 9.990480-1 4.908353+1 600 4  2
+ 1.000000+0 5.159358+1                                             600 4  2
+ 0.000000+0 0.000000+0          0          0          0          0 600 4  0
+ 0.000000+0 0.000000+0          0          0          0          0 600 0  0
+ 6.000000+3 1.189800+1          0          0          0          1 60033  2
+ 0.000000+0 0.000000+0          0          2          0          4 60033  2
+ 0.000000+0 0.000000+0          0          1         78         39 60033  2
+ 1.000000-5 0.000000+0 1.000000+3 9.500000-7 2.500000+5 9.500000-7 60033  2
+ 5.000000+5 7.600000-6 6.000000+5 7.600000-6 7.000000+5 7.600000-6 60033  2
+ 8.000000+5 7.600000-6 9.000000+5 7.600000-6 1.000000+6 7.600000-6 60033  2
+ 1.100000+6 7.600000-6 1.200000+6 7.600000-6 1.300000+6 7.600000-6 60033  2
+ 1.400000+6 7.600000-6 1.500000+6 1.520000-5 1.600000+6 1.520000-5 60033  2
+ 1.700000+6 1.520000-5 1.800000+6 1.520000-5 1.900000+6 1.520000-5 60033  2
+ 2.000000+6 9.500000-5 2.500000+6 9.500000-5 3.000000+6 9.500000-5 60033  2
+ 3.500000+6 9.500000-5 4.000000+6 9.500000-5 4.500000+6 9.500000-5 60033  2
+ 4.812000+6 3.800000-4 5.000000+6 3.800000-4 6.000000+6 3.800000-4 60033  2
+ 7.000000+6 3.800000-4 8.000000+6 3.800000-4 9.000000+6 8.550000-4 60033  2
+ 1.000000+7 8.550000-4 1.100000+7 1.520000-3 1.200000+7 1.520000-3 60033  2
+ 1.300000+7 2.375000-3 1.400000+7 2.375000-3 1.500000+7 4.655000-3 60033  2
+ 1.700000+7 9.500000-3 2.000000+7 0.000000+0 1.500000+8 0.000000+0 60033  2
+ 0.000000+0 0.000000+0          0          1         30         15 60033  2
+ 1.000000-5 0.000000+0 1.000000+3 1.200000-5 2.500000+5 1.200000-5 60033  2
+ 5.000000+5 1.200000-5 7.500000+5 1.200000-5 1.000000+6 1.200000-5 60033  2
+ 1.250000+6 1.200000-5 1.500000+6 1.200000-5 1.750000+6 1.200000-5 60033  2
+ 2.000000+6 2.500000-5 4.812000+6 1.000000-4 1.000000+7 4.000000-4 60033  2
+ 1.500000+7 9.000000-4 2.000000+7 0.000000+0 1.500000+8 0.000000+0 60033  2
+ 0.000000+0 0.000000+0          0          1         10          5 60033  2
+ 1.000000-5 4.000000-6 1.000000+3 8.000000-6 1.000000+6 2.500000-5 60033  2
+ 2.000000+7 0.000000+0 1.500000+8 0.000000+0                       60033  2
+ 0.000000+0 0.000000+0          0          8         78         39 60033  2
+ 1.000000-5 0.000000+0 1.000000+3 1.120800-6 2.500000+5 7.931300-7 60033  2
+ 5.000000+5 4.633000-6 6.000000+5 4.115500-6 7.000000+5 3.669900-6 60033  2
+ 8.000000+5 3.284200-6 9.000000+5 2.949400-6 1.000000+6 2.657200-6 60033  2
+ 1.100000+6 2.401600-6 1.200000+6 2.177300-6 1.300000+6 1.980100-6 60033  2
+ 1.400000+6 1.806200-6 1.500000+6 3.305800-6 1.600000+6 3.031100-6 60033  2
+ 1.700000+6 2.784100-6 1.800000+6 2.586200-6 1.900000+6 2.399600-6 60033  2
+ 2.000000+6 1.395100-5 2.500000+6 1.271200-5 3.000000+6 6.849200-6 60033  2
+ 3.500000+6 3.487400-5 4.000000+6 1.866500-5 4.500000+6 1.390600-5 60033  2
+ 4.812000+6 3.362900-5 5.000000+6 2.510200-5 6.000000+6 1.532700-5 60033  2
+ 7.000000+6 6.580800-6 8.000000+6 3.649600-5 9.000000+6 1.789700-5 60033  2
+ 1.000000+7 1.941300-5 1.100000+7 5.946800-5 1.200000+7 6.471700-5 60033  2
+ 1.300000+7 1.109100-4 1.400000+7 8.389000-5 1.500000+7 2.062500-4 60033  2
+ 1.700000+7 4.019600-4 2.000000+7 0.000000+0 1.500000+8 0.000000+0 60033  2
+ 0.000000+0 0.000000+0          0          0          0          0 60033  0
+ 0.000000+0 0.000000+0          0          0          0          0 600 0  0
+ 0.000000+0 0.000000+0          0          0          0          0   0 0  0
+                                                                    -1 0  0

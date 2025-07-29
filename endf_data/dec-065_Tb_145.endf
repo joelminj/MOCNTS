@@ -1,0 +1,35 @@
+ ENDF/B-VIII.1                                                         0  0
+ 6.514500+4 1.436843+2         -1          0          0          02244 1451
+ 0.000000+0 1.000000+0          0          0          0          62244 1451
+ 0.000000+0 0.000000+0          1          0          4          82244 1451
+ 0.000000+0 0.000000+0          0          0         17          22244 1451
+ 65-Tb-145  NNDC       EVAL-APR11 Conversion from N. Wallet Cards 2244 1451
+ /ENSDF/              DIST-AUG24 REV1-NOV19            20240830   2244 1451
+---- ENDF/B-VIII.1    MATERIAL 2244         REVISION 1            2244 1451
+----- RADIOACTIVE DECAY DATA                                      2244 1451
+------ ENDF-6                                                     2244 1451
+*********************** Begin Description *********************** 2244 1451
+**         ENDF/B-VII.1 RADIOACTIVE DECAY DATA FILE            ** 2244 1451
+** Produced at the NNDC from the Nuclear Wallet Cards database ** 2244 1451
+**                      Author: J.K. Tuli                      ** 2244 1451
+**               Translated into ENDF format by:               ** 2244 1451
+**    T.D. Johnson, E.A. McCutchan and A.A. Sonzogni, 2011     ** 2244 1451
+***************************************************************** 2244 1451
+Parent Excitation Energy: Unknown                                 2244 1451
+Parent Spin & Parity: (3/2+)                                      2244 1451
+Parent half-life: unknown, taken equal to that of the isomer      2244 1451
+Decay Mode: EC=100.00%                                            2244 1451
+************************ End Description ************************ 2244 1451
+                                1        451         23          02244 1451
+                                8        457          5          02244 1451
+ 0.000000+0 0.000000+0          0          0          0          02244 1  0
+                                                                  2244 0  0
+ 6.514500+4 1.436843+2          0          0          0          02244 8457
+ 3.090000+1 6.000000-1          0          0          6          02244 8457
+ 2.348839+6 0.000000+0 2.348839+6 0.000000+0 0.000000+0 0.000000+02244 8457
+ 5.500000+0 -1.00000+0          0          0          6          12244 8457
+ 2.000000+0 0.000000+0 7.046517+6 0.000000+0 1.000000+0 0.000000+02244 8457
+                                                                  2244 8  0
+                                                                  2244 0  0
+ 0.000000+0 0.000000+0          0          0          0          0   0 0  0
+                                                                    -1 0  0

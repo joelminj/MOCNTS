@@ -1,0 +1,6 @@
+name = "MOCNTS"
+uuid = "506d4b17-8471-4a2e-8dd8-f0f91e61f825"
+authors = ["joelminj <joelminjkonrad@gmail.com>"]
+version = "0.1.0"
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
