@@ -5,7 +5,7 @@ module Flattener
 using ..Primitives: Region, XPlane, YPlane, ZCylinder, Halfspace, RegionIntersection, RegionUnion, RegionComplement
 using ..Hierarchy
 using ..FlattenedGeometry
-using ..ProblemManager
+using ...Types: Problem, AbstractUniverse  # Import from shared Types module
 
 export flatten_geometry
 

@@ -49,27 +49,15 @@ root_universe = Universe(0, Dict(1 => c_moderator, 2 => c_fuel))
 
 #======= 2. DEFINE MATERIALS =======#
 
-# Materials for ProblemManager (solver)
-mat_fuel = MOCNTS.ProblemManager.Material(101, "UO2 Fuel", 10.4, Dict("U-235" => 0.04, "U-238" => 0.96, "O-16" => 2.0)) # Note: Composition is simplified
-mat_water = MOCNTS.ProblemManager.Material(102, "Water", 1.0, Dict("H-1" => 2.0, "O-16" => 1.0)) # Note: Composition is simplified
+# Materials using the unified Material type from MOCNTS.Types
+mat_fuel = MOCNTS.Types.Material(101, "UO2 Fuel", 10.4, Dict("U-235" => 0.04, "U-238" => 0.96, "O-16" => 2.0)) # Note: Composition is simplified
+mat_water = MOCNTS.Types.Material(102, "Water", 1.0, Dict("H-1" => 2.0, "O-16" => 1.0)) # Note: Composition is simplified
 materials = Dict(101 => mat_fuel, 102 => mat_water)
-
-# Materials for GeometryTracer (geometry)
-mat_fuel_geom = MOCNTS.GeometryTracer.ProblemManager.Material(101, "UO2 Fuel", 10.4, Dict("U-235" => 0.04, "U-238" => 0.96, "O-16" => 2.0))
-mat_water_geom = MOCNTS.GeometryTracer.ProblemManager.Material(102, "Water", 1.0, Dict("H-1" => 2.0, "O-16" => 1.0))
-materials_geom = Dict(101 => mat_fuel_geom, 102 => mat_water_geom)
 
 
 #======= 3. DEFINE SOLVER SETTINGS =======#
 # Increase the number of azimuthal angles and decrease ray spacing for better coverage
-settings = MOCNTS.ProblemManager.SolverSettings(
-    128,    # number of azimuthal angles (increase for better coverage)
-    8,      # number of polar angles
-    0.05,   # ray spacing (cm) - finer for better coverage
-    0.01,   # convergence criterion
-    100     # max iterations
-)
-settings_geom = MOCNTS.GeometryTracer.ProblemManager.SolverSettings(
+settings = MOCNTS.Types.SolverSettings(
     128,    # number of azimuthal angles (increase for better coverage)
     8,      # number of polar angles
     0.05,   # ray spacing (cm) - finer for better coverage
@@ -86,9 +74,8 @@ universes = Dict(0 => root_universe)
 
 
 
-# Create both problem types
-problem_geom = MOCNTS.GeometryTracer.ProblemManager.Problem(materials_geom, universes, 0, settings_geom)
-problem = MOCNTS.ProblemManager.Problem(materials, universes, 0, settings)
+# Create the unified problem using shared types
+problem = MOCNTS.Types.Problem(materials, universes, 0, settings)
 
 
 #======= 5. RUN THE SOLVER PIPELINE =======#
@@ -129,7 +116,7 @@ dummy_xs_data = Dict(
 # processed_xs = process_nuclear_data!(problem) # UNCOMMENT FOR REAL NJOY RUN
 
 println("Step 2: Flattening geometry...")
-flat_geometry_incomplete = flatten_geometry(problem_geom)
+flat_geometry_incomplete = flatten_geometry(problem)
 
 # Manual FSR Area Calculation (since the flattener doesn't do this yet)
 mod_area = pin_pitch^2 - π * fuel_radius^2
@@ -153,9 +140,9 @@ end
 bounding_box = (-half_pitch-0.01, -half_pitch-0.01, half_pitch+0.01, half_pitch+0.01)
 
 println("Step 3: Generating tracks...")
-# Pass both the problem geometry and the bounding box for track generation
+# Pass the problem and the bounding box for track generation
 println("Using bounding box: ", bounding_box)
-tracks = generate_tracks(problem_geom, flat_geometry, bounding_box)
+tracks = generate_tracks(problem, flat_geometry, bounding_box)
 
 if isnothing(tracks) || isempty(tracks)
     println("Error: No tracks were generated. Check geometry and ray tracer settings.")

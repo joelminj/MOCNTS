@@ -8,21 +8,23 @@ MOCNTS main module
 Includes submodules and re-exports key types
 """
 
+# --- Shared Types (must come first) ---
+include("Types.jl")
+
 # --- Geometry ---
 include("GeometryTracer/GeometryTracer.jl")
 
 # --- Physics and Problem Definition ---
 include("ProblemManager/ProblemManager.jl")
-include("NuclearDataManager/AtomicData.jl")
 include("NuclearDataManager/NuclearDataManager.jl")
 
 # --- Solver ---
 include("MOCSolver/MOCSolver.jl")
 
 # Make the modules available to code that uses MOCNTS
+using .Types
 using .GeometryTracer
 using .ProblemManager
-using .AtomicData
 using .NuclearDataManager
 using .MOCSolver
 

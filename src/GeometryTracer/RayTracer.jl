@@ -5,7 +5,7 @@ module RayTracer
 using LinearAlgebra
 using ..Primitives: Region, Surface, XPlane, YPlane, ZCylinder, Halfspace, RegionIntersection, RegionUnion, RegionComplement
 using ..FlattenedGeometry
-using ..ProblemManager
+using ...Types: Problem  # Import Problem type from shared Types module
 
 export Track, Segment, generate_tracks
 

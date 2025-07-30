@@ -2,7 +2,7 @@
 
 module MOCSolver
 
-using ..ProblemManager
+using ..Types: Problem  # Use shared types
 using ..NuclearDataManager: MicroscopicXS
 using ..GeometryTracer
 using ..GeometryTracer.FlattenedGeometry # To get the number of FSRs
