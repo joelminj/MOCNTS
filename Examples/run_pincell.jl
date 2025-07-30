@@ -2,13 +2,11 @@
 
 # Import the main module to get access to all the functions and types
 using MOCNTS
-using MOCNTS.GeometryTracer.Hierarchy: Cell, Universe
-using MOCNTS: ZCylinder, XPlane, YPlane, Halfspace, RegionIntersection, RegionUnion, RegionComplement
 using LinearAlgebra # For norm()
 using MOCNTS.NuclearDataManager: MicroscopicXS
 using MOCNTS.Flattener: flatten_geometry, FlatGeometry
 using MOCNTS.GeometryTracer: generate_tracks
-using MOCNTS: solve
+
 println("Starting MOCNTS Pincell Benchmark...")
 
 #======= 1. DEFINE GEOMETRY =======#
@@ -22,8 +20,6 @@ s_box_left = XPlane(-half_pitch)
 s_box_right = XPlane(half_pitch)
 s_box_bottom = YPlane(-half_pitch)
 s_box_top = YPlane(half_pitch)
-# Regions defined by these surfaces
-
 
 # Moderator is just the box
 r_moderator = RegionIntersection([
@@ -46,36 +42,25 @@ c_fuel = Cell(2, r_fuel, 101)
 # The root universe containing these cells
 root_universe = Universe(0, Dict(1 => c_moderator, 2 => c_fuel))
 
-
 #======= 2. DEFINE MATERIALS =======#
-
-# Materials using the unified Material type from MOCNTS.Types
-mat_fuel = MOCNTS.Types.Material(101, "UO2 Fuel", 10.4, Dict("U-235" => 0.04, "U-238" => 0.96, "O-16" => 2.0)) # Note: Composition is simplified
-mat_water = MOCNTS.Types.Material(102, "Water", 1.0, Dict("H-1" => 2.0, "O-16" => 1.0)) # Note: Composition is simplified
+# Materials using the unified Material type
+mat_fuel = Material(101, "UO2 Fuel", 10.4, Dict("U-235" => 0.04, "U-238" => 0.96, "O-16" => 2.0))
+mat_water = Material(102, "Water", 1.0, Dict("H-1" => 2.0, "O-16" => 1.0))
 materials = Dict(101 => mat_fuel, 102 => mat_water)
 
-
 #======= 3. DEFINE SOLVER SETTINGS =======#
-# Increase the number of azimuthal angles and decrease ray spacing for better coverage
-settings = MOCNTS.Types.SolverSettings(
-    128,    # number of azimuthal angles (increase for better coverage)
+settings = SolverSettings(
+    128,    # number of azimuthal angles
     8,      # number of polar angles
-    0.05,   # ray spacing (cm) - finer for better coverage
+    0.05,   # ray spacing (cm)
     0.01,   # convergence criterion
     100     # max iterations
 )
 
 
 #======= 4. ASSEMBLE THE PROBLEM =======#
-# In a real case, we'd have a dictionary of all universes. For the pincell,
-# the root universe is the only one.
 universes = Dict(0 => root_universe)
-
-
-
-
-# Create the unified problem using shared types
-problem = MOCNTS.Types.Problem(materials, universes, 0, settings)
+problem = Problem(materials, universes, 0, settings)
 
 
 #======= 5. RUN THE SOLVER PIPELINE =======#

@@ -37,7 +37,10 @@ struct MicroscopicXS
     scatter_matrix::Matrix{Float64}   # Scattering probability from group g' to g
 end
 
-function process_nuclear_data!(problem::Problem)
+function process_nuclear_data!(problem::Problem; 
+                               njoy_exe_path::Union{String, Nothing} = nothing,
+                               endf_data_dir::Union{String, Nothing} = nothing,
+                               output_dir::String = "xs_data")
 
     # A dictionary to the problem to store the results
     processed_xs = Dict{String, MicroscopicXS}()
@@ -51,33 +54,31 @@ function process_nuclear_data!(problem::Problem)
     (nuclides, temps) = collect_nuclides_and_temps(problem)
     
     # Define paths for our workflow
-    njoy_input_path = "xs_data/njoy.inp"
-    xs_output_dir = "xs_data"
+    njoy_input_path = joinpath(output_dir, "njoy.inp")
     
-    # === ACTION REQUIRED: UPDATE THESE PATHS ===
-    # Use your specific path to the NJOY executable
-    njoy_exe = "C:\\Users\\poste\\NJOY2016\\build\\njoy.exe" 
-    # Use the path to your NEW directory with plain-text .endf files
-    endf_dir = "D:\\MOCNTS\\endf_data"
-    # ==========================================
+    # Check if NJOY processing is requested
+    if njoy_exe_path !== nothing && endf_data_dir !== nothing
+        println("Generating NJOY input deck...")
+        generate_njoy_input(nuclides, temps, endf_data_dir, njoy_input_path)
 
-    println("Generating NJOY input deck...")
-    generate_njoy_input(nuclides, temps, endf_dir, njoy_input_path)
+        println("Running NJOY...")
+        run_njoy(njoy_exe_path, njoy_input_path, output_dir, endf_data_dir)
 
-    println("Running NJOY...")
-    run_njoy(njoy_exe, njoy_input_path, xs_output_dir, endf_dir)
+        println("Parsing NJOY output...")
+        for nuclide in nuclides
+            for temp in temps
+                gendl_tape_path = joinpath(output_dir, "tape24")
+                xs_data = parse_njoy_output(gendl_tape_path, nuclide, temp)
+                processed_xs["$(nuclide)_$(temp)K"] = xs_data
 
-    println("Parsing NJOY output...")
-    for nuclide in nuclides
-        for temp in temps
-            gendl_tape_path = joinpath(xs_output_dir, "tape24")
-            xs_data = parse_njoy_output(gendl_tape_path, nuclide, temp)
-            processed_xs["$(nuclide)_$(temp)K"] = xs_data
-
-            # In a real run, NJOY appends to tape24, so we would need to
-            # delete it before running for the next nuclide.
-            # For simplicity now, we assume one nuclide or manual cleanup.
+                # In a real run, NJOY appends to tape24, so we would need to
+                # delete it before running for the next nuclide.
+                # For simplicity now, we assume one nuclide or manual cleanup.
+            end
         end
+    else
+        println("Warning: NJOY processing skipped. No executable path or ENDF data directory provided.")
+        println("         You must provide dummy cross-section data or set njoy_exe_path and endf_data_dir parameters.")
     end
 
     println("Nuclear data processing complete!")
