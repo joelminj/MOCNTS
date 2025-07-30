@@ -69,7 +69,7 @@ settings = MOCNTS.ProblemManager.SolverSettings(
     0.01,   # convergence criterion
     100     # max iterations
 )
-settings_geom = MOCNTS.GeometryTracer.SolverSettings(
+settings_geom = MOCNTS.GeometryTracer.ProblemManager.SolverSettings(
     128,    # number of azimuthal angles (increase for better coverage)
     8,      # number of polar angles
     0.05,   # ray spacing (cm) - finer for better coverage
