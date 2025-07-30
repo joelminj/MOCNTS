@@ -2,13 +2,11 @@
 
 # Import the main module to get access to all the functions and types
 using MOCNTS
-using MOCNTS.GeometryTracer.Hierarchy: Cell, Universe
-using MOCNTS: ZCylinder, XPlane, YPlane, Halfspace, RegionIntersection, RegionUnion, RegionComplement
 using LinearAlgebra # For norm()
 using MOCNTS.NuclearDataManager: MicroscopicXS
 using MOCNTS.Flattener: flatten_geometry, FlatGeometry
 using MOCNTS.GeometryTracer: generate_tracks
-using MOCNTS: solve
+
 println("Starting MOCNTS Pincell Benchmark...")
 
 #======= 1. DEFINE GEOMETRY =======#
@@ -22,8 +20,6 @@ s_box_left = XPlane(-half_pitch)
 s_box_right = XPlane(half_pitch)
 s_box_bottom = YPlane(-half_pitch)
 s_box_top = YPlane(half_pitch)
-# Regions defined by these surfaces
-
 
 # Moderator is just the box
 r_moderator = RegionIntersection([
@@ -46,49 +42,25 @@ c_fuel = Cell(2, r_fuel, 101)
 # The root universe containing these cells
 root_universe = Universe(0, Dict(1 => c_moderator, 2 => c_fuel))
 
-
 #======= 2. DEFINE MATERIALS =======#
-
-# Materials for ProblemManager (solver)
-mat_fuel = MOCNTS.ProblemManager.Material(101, "UO2 Fuel", 10.4, Dict("U-235" => 0.04, "U-238" => 0.96, "O-16" => 2.0)) # Note: Composition is simplified
-mat_water = MOCNTS.ProblemManager.Material(102, "Water", 1.0, Dict("H-1" => 2.0, "O-16" => 1.0)) # Note: Composition is simplified
+# Materials using the unified Material type
+mat_fuel = Material(101, "UO2 Fuel", 10.4, Dict("U-235" => 0.04, "U-238" => 0.96, "O-16" => 2.0))
+mat_water = Material(102, "Water", 1.0, Dict("H-1" => 2.0, "O-16" => 1.0))
 materials = Dict(101 => mat_fuel, 102 => mat_water)
 
-# Materials for GeometryTracer (geometry)
-mat_fuel_geom = MOCNTS.GeometryTracer.ProblemManager.Material(101, "UO2 Fuel", 10.4, Dict("U-235" => 0.04, "U-238" => 0.96, "O-16" => 2.0))
-mat_water_geom = MOCNTS.GeometryTracer.ProblemManager.Material(102, "Water", 1.0, Dict("H-1" => 2.0, "O-16" => 1.0))
-materials_geom = Dict(101 => mat_fuel_geom, 102 => mat_water_geom)
-
-
 #======= 3. DEFINE SOLVER SETTINGS =======#
-# Increase the number of azimuthal angles and decrease ray spacing for better coverage
-settings = MOCNTS.ProblemManager.SolverSettings(
-    128,    # number of azimuthal angles (increase for better coverage)
+settings = SolverSettings(
+    128,    # number of azimuthal angles
     8,      # number of polar angles
-    0.05,   # ray spacing (cm) - finer for better coverage
-    0.01,   # convergence criterion
-    100     # max iterations
-)
-settings_geom = MOCNTS.GeometryTracer.ProblemManager.SolverSettings(
-    128,    # number of azimuthal angles (increase for better coverage)
-    8,      # number of polar angles
-    0.05,   # ray spacing (cm) - finer for better coverage
+    0.05,   # ray spacing (cm)
     0.01,   # convergence criterion
     100     # max iterations
 )
 
 
 #======= 4. ASSEMBLE THE PROBLEM =======#
-# In a real case, we'd have a dictionary of all universes. For the pincell,
-# the root universe is the only one.
 universes = Dict(0 => root_universe)
-
-
-
-
-# Create both problem types
-problem_geom = MOCNTS.GeometryTracer.ProblemManager.Problem(materials_geom, universes, 0, settings_geom)
-problem = MOCNTS.ProblemManager.Problem(materials, universes, 0, settings)
+problem = Problem(materials, universes, 0, settings)
 
 
 #======= 5. RUN THE SOLVER PIPELINE =======#
@@ -129,7 +101,7 @@ dummy_xs_data = Dict(
 # processed_xs = process_nuclear_data!(problem) # UNCOMMENT FOR REAL NJOY RUN
 
 println("Step 2: Flattening geometry...")
-flat_geometry_incomplete = flatten_geometry(problem_geom)
+flat_geometry_incomplete = flatten_geometry(problem)
 
 # Manual FSR Area Calculation (since the flattener doesn't do this yet)
 mod_area = pin_pitch^2 - π * fuel_radius^2
@@ -153,9 +125,9 @@ end
 bounding_box = (-half_pitch-0.01, -half_pitch-0.01, half_pitch+0.01, half_pitch+0.01)
 
 println("Step 3: Generating tracks...")
-# Pass both the problem geometry and the bounding box for track generation
+# Pass the problem and the bounding box for track generation
 println("Using bounding box: ", bounding_box)
-tracks = generate_tracks(problem_geom, flat_geometry, bounding_box)
+tracks = generate_tracks(problem, flat_geometry, bounding_box)
 
 if isnothing(tracks) || isempty(tracks)
     println("Error: No tracks were generated. Check geometry and ray tracer settings.")

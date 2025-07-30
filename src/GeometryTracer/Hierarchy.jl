@@ -5,11 +5,10 @@ module Hierarchy
 include("Primitives.jl")
 
 using ..Primitives: Region  # Import our previously defined primitives
+using ...Types: AbstractUniverse  # Import from shared Types module
 
 # Export list
-export Cell, Universe, Lattice, AbstractUniverse
-
-abstract type AbstractUniverse end
+export Cell, Universe, Lattice
 
 #======= Hierarchical Geometry Types =======#
 

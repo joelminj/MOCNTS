@@ -8,8 +8,6 @@ module GeometryTracer
 # Include submodules
 include("Primitives.jl")
 include("Hierarchy.jl")
-# Include ProblemManager so it is available to submodules
-include("../ProblemManager/ProblemManager.jl")
 include("FlattenedGeometry.jl")
 include("Flattener.jl")
 include("RayTracer.jl")
@@ -18,7 +16,6 @@ include("RayTracer.jl")
 # Make submodules available
 using .Primitives
 using .Hierarchy
-using .ProblemManager
 using .FlattenedGeometry
 using .Flattener
 using .RayTracer
